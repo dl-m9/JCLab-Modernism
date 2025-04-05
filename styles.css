@@ -59,6 +59,10 @@ header {
 .profile-image {
     flex: 1;
     text-align: right;
+    position: relative;
+    width: 180px;
+    height: 180px;
+    margin-left: auto;
 }
 
 #profile-img {
@@ -67,6 +71,35 @@ header {
     border-radius: 4px;
     object-fit: cover;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    position: relative;
+    background-image: url('assets/profile.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.profile-image::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 180px;
+    height: 180px;
+    background-image: url('assets/profile2.png');
+    background-size: cover;
+    background-position: center;
+    border-radius: 4px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.profile-image:hover::after {
+    opacity: 1;
+}
+
+.profile-image:hover #profile-img {
+    opacity: 0;
 }
 
 h1 {
