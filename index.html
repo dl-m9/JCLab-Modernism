@@ -298,6 +298,15 @@
         
         // Mobile navigation horizontal scroll handling
         document.addEventListener('DOMContentLoaded', function() {
+            // Make all links open in a new tab
+            document.querySelectorAll('a').forEach(link => {
+                // Skip navigation links that are meant for scrolling within the page
+                if (!link.getAttribute('href').startsWith('#')) {
+                    link.setAttribute('target', '_blank');
+                    link.setAttribute('rel', 'noopener noreferrer');
+                }
+            });
+            
             const navLinks = document.querySelector('.nav-links');
             if (navLinks) {
                 // Check if scrollable
