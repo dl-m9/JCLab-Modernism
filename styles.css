@@ -812,14 +812,32 @@ nav {
     transform: translateX(5px);
 }
 
-.pub-number {
+.pub-venue-label {
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 40px;
-    background-color: var(--primary-color);
-    color: white;
-    font-weight: 600;
+    width: 150px;
+    background-color: rgba(0, 102, 204, 0.1);
+    color: var(--primary-color);
+    text-align: center;
+    padding: 1rem 0.5rem;
+    border-radius: 4px;
+}
+
+.pub-number {
+    font-size: 1.5rem;
+    font-weight: 800;
+    margin-bottom: 0.5rem;
+}
+
+.venue-text {
+    font-size: 1rem;
+    line-height: 1.2;
+    font-weight: 800;
+    /* text-transform: uppercase; */
+    word-break: break-word;
+    hyphens: auto;
 }
 
 .pub-content {
@@ -849,6 +867,45 @@ nav {
     flex-wrap: wrap;
     gap: 0.5rem;
     margin-top: 0.5rem;
+}
+
+/* Responsive adjustments for publications */
+@media (max-width: 768px) {
+    .pub-venue-label {
+        width: 100px;
+        padding: 0.8rem 0.3rem;
+    }
+    
+    .pub-number {
+        font-size: 1rem;
+        margin-bottom: 0.3rem;
+    }
+    
+    .venue-text {
+        font-size: 0.7rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .publication {
+        flex-direction: column;
+    }
+    
+    .pub-venue-label {
+        width: 100%;
+        flex-direction: row;
+        padding: 0.5rem;
+        justify-content: space-between;
+    }
+    
+    .pub-number {
+        margin-bottom: 0;
+        margin-right: 0.5rem;
+    }
+    
+    .venue-text {
+        text-align: right;
+    }
 }
 
 .tag {

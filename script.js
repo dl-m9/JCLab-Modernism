@@ -202,16 +202,41 @@ function loadPublications() {
     fetch(publicationsJsonPath)
         .then(response => response.json())
         .then(publications => {
+            // Counter for auto-numbering publications
+            let counter = 1;
+            
             publications.forEach(pub => {
                 const pubElement = document.createElement('div');
                 const classes = ['publication', pub.type];
                 if (pub.isFirstAuthor) classes.push('first-author');
                 pubElement.className = classes.join(' ');
                 
-                // Create publication number
+                // Create venue/type label for left side
+                const venueElement = document.createElement('div');
+                venueElement.className = 'pub-venue-label';
+                
+                // Determine what text to show in the left column
+                let venueText = '';
+                if (pub.type === 'preprint') {
+                    venueText = 'Preprint';
+                } else if (pub.venue) {
+                    // Extract short venue name from the venue string or tags
+                    const venueTag = pub.tags.find(tag => tag.class === 'venue-tag');
+                    venueText = venueTag ? venueTag.text : pub.venue.split(',')[0].split(' ').pop();
+                }
+                
+                // Create publication number - display in ascending order (1-15)
                 const numberElement = document.createElement('span');
                 numberElement.className = 'pub-number';
-                numberElement.textContent = pub.number;
+                numberElement.textContent = counter++;
+                
+                venueElement.appendChild(numberElement);
+                
+                // Add venue text below the number
+                const venueTextElement = document.createElement('span');
+                venueTextElement.className = 'venue-text';
+                venueTextElement.textContent = venueText;
+                venueElement.appendChild(venueTextElement);
                 
                 // Create publication content container
                 const contentElement = document.createElement('div');
@@ -228,12 +253,12 @@ function loadPublications() {
                 authorsElement.innerHTML = pub.authors;
                 contentElement.appendChild(authorsElement);
                 
-                // Add venue if it exists
+                // Add full venue if it exists (for accepted papers)
                 if (pub.venue) {
-                    const venueElement = document.createElement('p');
-                    venueElement.className = 'venue';
-                    venueElement.textContent = pub.venue;
-                    contentElement.appendChild(venueElement);
+                    const fullVenueElement = document.createElement('p');
+                    fullVenueElement.className = 'venue';
+                    fullVenueElement.textContent = pub.venue;
+                    contentElement.appendChild(fullVenueElement);
                 }
                 
                 // Add tags
@@ -241,6 +266,9 @@ function loadPublications() {
                 tagsContainer.className = 'pub-tags';
                 
                 pub.tags.forEach(tag => {
+                    // Skip venue tag as we're now showing it on the left
+                    if (tag.class === 'venue-tag') return;
+                    
                     if (tag.link) {
                         const tagLink = document.createElement('a');
                         tagLink.href = tag.link;
@@ -258,7 +286,7 @@ function loadPublications() {
                 contentElement.appendChild(tagsContainer);
                 
                 // Combine elements and add to publications list
-                pubElement.appendChild(numberElement);
+                pubElement.appendChild(venueElement);
                 pubElement.appendChild(contentElement);
                 publicationsList.appendChild(pubElement);
             });
