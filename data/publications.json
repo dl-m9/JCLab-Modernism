@@ -1,6 +1,5 @@
 [
   {
-    "number": 1,
     "title": "Task-Aware Parameter-Efficient Fine-Tuning of Large Pre-Trained Models at the Edge",
     "authors": "<strong><u>Senkang \"Forest\" Hu</u></strong>, Yanan Ma, Yihang Tao, Zhengru Fang, Zihan Fang, Yiqin Deng, Sam Kwong, Yuguang Fang",
     "type": "preprint",
@@ -13,12 +12,11 @@
       {
         "text": "PDF",
         "class": "code-tag",
-        "link": "https://www.researchgate.net/publication/390057227"
+        "link": "https://arxiv.org/pdf/2504.03718"
       }
     ]
   },
   {
-    "number": 2,
     "title": "CP-Guard+: A New Paradigm for Malicious Agent Detection and Defense in Collaborative Perception",
     "authors": "<strong><u>Senkang \"Forest\" Hu</u></strong>, Yihang Tao, Zihang Fang, Guowen Xu, Yiqin Deng, Sam Kwong, Yuguang Fang",
     "type": "preprint",
@@ -36,7 +34,6 @@
     ]
   },
   {
-    "number": 3,
     "title": "AgentsCoMerge: Large Language Model Empowered Collaborative Decision Making for Multi-Lane Merging",
     "authors": "<strong><u>Senkang \"Forest\" Hu</u></strong>, Zhengru Fang, Zihan Fang, Yiqin Deng, Xianhao Chen, Yuguang Fang, Sam Kwong",
     "type": "preprint",
@@ -54,7 +51,6 @@
     ]
   },
   {
-    "number": 4,
     "title": "AgentsCoDriver: Large Language Model Empowered Collaborative Driving with Lifelong Learning",
     "authors": "<strong><u>Senkang \"Forest\" Hu</u></strong>, Zhengru Fang, Zihan Fang, Xianhao Chen, Yuguang Fang",
     "type": "preprint",
@@ -77,7 +73,6 @@
     ]
   },
   {
-    "number": 5,
     "title": "Collaborative Perception for Autonomous Driving: Challenges, Possible Solutions and Opportunities",
     "authors": "<strong><u>Senkang \"Forest\" Hu</u></strong>, Zhengru Fang, Yiqin Deng, Xianhao Chen, Yuguang Fang",
     "type": "preprint",
@@ -95,7 +90,6 @@
     ]
   },
   {
-    "number": 6,
     "title": "Sense4FL: Vehicular Crowdsensing Enhanced Federated Learning for Autonomous Driving",
     "authors": "Yanan Ma, <strong><u>Senkang \"Forest\" Hu</u></strong>, Zhengru Fang, Yun Ji, Yiqin Deng, Yuguang Fang",
     "type": "preprint",
@@ -113,7 +107,6 @@
     ]
   },
   {
-    "number": 7,
     "title": "GCP: Guarded Collaborative Perception with Spatial-Temporal Aware Malicious Agent Detection",
     "authors": "Yihang Tao<sup>#</sup>, <strong><u>Senkang \"Forest\" Hu</u></strong><sup>#</sup>, Yue Hu, Haonan An, Hangcheng Cao, Yuguang Fang",
     "type": "preprint",
@@ -131,7 +124,6 @@
     ]
   },
   {
-    "number": 8,
     "title": "IC3M: In-Car Multimodal Multi-object Monitoring for Abnormal Status of Both Driver and Passengers",
     "authors": "Zihan Fang, Zheng Lin, <strong><u>Senkang \"Forest\" Hu</u></strong>, Hangcheng Cao, Xianhao Chen, and Yuguang Fang",
     "type": "preprint",
@@ -149,7 +141,6 @@
     ]
   },
   {
-    "number": 9,
     "title": "Direct-CP: Directed Collaborative Perception for Connected and Autonomous Vehicles via Proactive Attention",
     "authors": "Yihang Tao, <strong><u>Senkang \"Forest\" Hu</u></strong>, Zhengru Fang, Yuguang Fang",
     "type": "accepted",
@@ -168,7 +159,6 @@
     ]
   },
   {
-    "number": 10,
     "title": "CP-Guard: Malicious Agent Detection and Defense in Collaborative Bird's Eye View Perception",
     "authors": "<strong><u>Senkang \"Forest\" Hu</u></strong><sup>#</sup>, Yihang Tao<sup>#</sup>, Guowen Xu, Yiqin Deng, Xianhao Chen, Yuguang Fang, Sam Kwong",
     "type": "accepted",
@@ -187,7 +177,6 @@
     ]
   },
   {
-    "number": 11,
     "title": "Toward Full-scene Domain Generalization in Multi-agent Collaborative Bird's Eye View Segmentation for Connected and Autonomous Driving",
     "authors": "<strong><u>Senkang \"Forest\" Hu</u></strong>, Zhengru Fang, Yiqin Deng, Xianhao Chen, Yuguang Fang, and Sam Kwong",
     "type": "accepted",
@@ -206,7 +195,6 @@
     ]
   },
   {
-    "number": 12,
     "title": "Adaptive Communications in Collaborative Perception with Domain Alignment for Autonomous Driving",
     "authors": "<strong><u>Senkang \"Forest\" Hu</u></strong>, Zhengru Fang, Haonan An, Guowen Xu, Yuan Zhou, Xianhao Chen, and Yuguang Fang",
     "type": "accepted",
@@ -225,7 +213,6 @@
     ]
   },
   {
-    "number": 13,
     "title": "Prioritized Information Bottleneck Theoretic Framework with Distributed Online Learning for Edge Video Analytics",
     "authors": "Zhengru Fang, <strong><u>Senkang \"Forest\" Hu</u></strong>, Jingjing Wang, Yiqin Deng, Xianhao Chen, Yuguang Fang",
     "type": "accepted",
@@ -249,7 +236,6 @@
     ]
   },
   {
-    "number": 14,
     "title": "PACP: Priority-Aware Collaborative Perception for Connected and Autonomous Vehicles",
     "authors": "Zhengru Fang, <strong><u>Senkang \"Forest\" Hu</u></strong>, Haonan An, Yuang Zhang, Jingjing Wang, Hangcheng Cao, Xianhao Chen, Yuguang Fang",
     "type": "accepted",
@@ -268,7 +254,6 @@
     ]
   },
   {
-    "number": 15,
     "title": "PIB: Prioritized Information Bottleneck Framework for Collaborative Edge Video Analytics",
     "authors": "Zhengru Fang, <strong><u>Senkang \"Forest\" Hu</u></strong>, Yuguang Fang, et al.",
     "type": "accepted",

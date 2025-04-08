@@ -274,6 +274,8 @@ function loadPublications() {
                         tagLink.href = tag.link;
                         tagLink.className = `tag ${tag.class}`;
                         tagLink.textContent = tag.text;
+                        tagLink.target = "_blank";
+                        tagLink.rel = "noopener noreferrer";
                         tagsContainer.appendChild(tagLink);
                     } else {
                         const tagSpan = document.createElement('span');
@@ -350,6 +352,8 @@ function renderNewsItems(newsData, containerId) {
                 const linkElement = document.createElement('a');
                 linkElement.href = link.url;
                 linkElement.textContent = link.text;
+                linkElement.target = "_blank";
+                linkElement.rel = "noopener noreferrer";
                 paragraphElement.appendChild(linkElement);
             });
         }
@@ -362,6 +366,8 @@ function renderNewsItems(newsData, containerId) {
             const linkElement = document.createElement('a');
             linkElement.href = newsItem.link;
             linkElement.textContent = newsItem.linkText;
+            linkElement.target = "_blank";
+            linkElement.rel = "noopener noreferrer";
             paragraphElement.appendChild(linkElement);
         }
         
