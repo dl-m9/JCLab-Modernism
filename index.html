@@ -120,7 +120,7 @@
                     <!-- News items will be dynamically loaded here from news.json -->
                 </div>
                 <div class="view-all-news">
-                    <a href="pages/all-news.html" class="btn btn-primary"><i class="fas fa-list"></i> View All News</a>
+                    <a href="pages/all-news.html" class="btn btn-primary" target="_self"><i class="fas fa-list"></i> View All News</a>
                 </div>
             </div>
         </section>
@@ -301,7 +301,12 @@
             // Make all links open in a new tab
             document.querySelectorAll('a').forEach(link => {
                 // Skip navigation links that are meant for scrolling within the page
-                if (!link.getAttribute('href').startsWith('#')) {
+                // Also skip the "View All News" link
+                const href = link.getAttribute('href');
+                if (href.startsWith('#') || href === 'pages/all-news.html' || link.textContent.trim() === 'View All News') {
+                    // For these specific links, ensure they open in the same tab
+                    link.setAttribute('target', '_self');
+                } else {
                     link.setAttribute('target', '_blank');
                     link.setAttribute('rel', 'noopener noreferrer');
                 }
