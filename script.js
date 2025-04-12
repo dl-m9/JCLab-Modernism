@@ -1,115 +1,166 @@
-document.addEventListener('DOMContentLoaded', function() {
-    // Load profile information
-    loadProfileInfo();
+// 幻灯片功能
+let slideIndex = 1;
+let slideInterval;
 
-    // Publication filters - including "First Author" for publications where user is first author or has equal contribution
-    const filterBtns = document.querySelectorAll('.filter-btn');
-    const publications = document.querySelectorAll('.publication');
+// 显示指定索引的幻灯片
+function showSlides(n) {
+    const slides = document.getElementsByClassName("mySlides");
+    const dots = document.getElementsByClassName("dot");
     
-    // Load publications data from JSON file
+    if (!slides.length || !dots.length) return;
+    
+    // 处理索引边界情况
+    if (n > slides.length) {
+        slideIndex = 1;
+    }
+    if (n < 1) {
+        slideIndex = slides.length;
+    }
+    
+    // 隐藏所有幻灯片
+    for (let i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+    
+    // 移除所有导航点的激活类
+    for (let i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active-dot", "");
+    }
+    
+    // 显示当前幻灯片
+    slides[slideIndex-1].style.display = "block";
+    dots[slideIndex-1].className += " active-dot";
+}
+
+// 切换到下一张或上一张幻灯片
+function plusSlides(n) {
+    showSlides(slideIndex += n);
+}
+
+// 切换到指定幻灯片
+function currentSlide(n) {
+    showSlides(slideIndex = n);
+}
+
+// 自动切换到下一张幻灯片
+function autoSlide() {
+    plusSlides(1);
+}
+
+// 重置自动切换计时器
+function resetAutoSlide() {
+    // 清除现有计时器
+    clearInterval(slideInterval);
+    // 设置新的计时器，每5秒切换一次
+    slideInterval = setInterval(autoSlide, 5000);
+}
+
+// 初始化幻灯片
+function initSlideshow() {
+    showSlides(slideIndex);
+    resetAutoSlide();
+    
+    // 添加鼠标悬停事件
+    const container = document.querySelector(".slideshow-container");
+    if (container) {
+        container.addEventListener("mouseenter", function() {
+            clearInterval(slideInterval);
+        });
+        
+        container.addEventListener("mouseleave", function() {
+            resetAutoSlide();
+        });
+    }
+    
+    // 添加触摸滑动支持
+    let touchStartX = 0;
+    let touchEndX = 0;
+    
+    if (container) {
+        container.addEventListener('touchstart', function(e) {
+            touchStartX = e.changedTouches[0].screenX;
+        }, false);
+        
+        container.addEventListener('touchend', function(e) {
+            touchEndX = e.changedTouches[0].screenX;
+            handleSwipe();
+        }, false);
+    }
+    
+    function handleSwipe() {
+        if (touchEndX < touchStartX) {
+            // 向左滑动 - 下一张
+            plusSlides(1);
+        } else if (touchEndX > touchStartX) {
+            // 向右滑动 - 上一张
+            plusSlides(-1);
+        }
+    }
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+    // Initialize slideshow
+    initSlideshow();
+    
+    // Load profile info
+    loadProfileInfo();
+    
+    // Load publications
     loadPublications();
     
-    filterBtns.forEach(btn => {
-        btn.addEventListener('click', function() {
-            // Remove active class from all buttons
-            filterBtns.forEach(b => b.classList.remove('active'));
+    // Load news items
+    if (document.getElementById('news-container')) {
+        fetch('data/news.json')
+            .then(response => response.json())
+            .then(data => {
+                renderNewsItems(data, 'news-container', 8); // Show the most recent 8 news items
+            })
+            .catch(error => console.error('Error loading news:', error));
+    }
+    
+    // All news page specific
+    if (document.getElementById('all-news-container')) {
+        fetch('../data/news.json')
+            .then(response => response.json())
+            .then(data => {
+                renderNewsItems(data, 'all-news-container', Infinity); // Show ALL news items, no limit
+            })
+            .catch(error => console.error('Error loading all news:', error));
+    }
+    
+    // Navigation active link handling
+    const navLinks = document.querySelectorAll('.nav-links a');
+    const sections = document.querySelectorAll('section[id]');
+
+    // Don't setup scroll spy for external pages
+    if (window.location.pathname.endsWith('index.html') || window.location.pathname.endsWith('/')) {
+        window.addEventListener('scroll', () => {
+            let current = '';
             
-            // Add active class to clicked button
-            this.classList.add('active');
+            // Find the current section
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if (pageYOffset >= sectionTop - 200) {
+                    current = section.getAttribute('id');
+                }
+            });
             
-            // Get filter value
-            const filterValue = this.getAttribute('data-filter');
-            
-            // Filter publications
-            const pubElements = document.querySelectorAll('.publication');
-            pubElements.forEach(pub => {
-                if (filterValue === 'all') {
-                    pub.style.display = 'flex';
-                } else if (pub.classList.contains(filterValue)) {
-                    pub.style.display = 'flex';
-                } else {
-                    pub.style.display = 'none';
+            // Activate the corresponding nav link
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === `#${current}` || 
+                    (current === 'slideshow' && link.getAttribute('href') === '#about')) {
+                    link.classList.add('active');
+                }
+                
+                // Skip external page links (like team.html)
+                if (!link.getAttribute('href').startsWith('#')) {
+                    link.classList.remove('active');
                 }
             });
         });
-    });
-    
-    // Smooth scrolling for navigation links
-    const navLinks = document.querySelectorAll('.nav-links a');
-    
-    navLinks.forEach(link => {
-        link.addEventListener('click', function(e) {
-            // Only apply smooth scrolling to hash links (internal page links)
-            if (this.getAttribute('href').startsWith('#')) {
-                e.preventDefault();
-                
-                const targetId = this.getAttribute('href');
-                const targetSection = document.querySelector(targetId);
-                
-                if (targetSection) {
-                    window.scrollTo({
-                        top: targetSection.offsetTop - 100,
-                        behavior: 'smooth'
-                    });
-                    
-                    // Update active class
-                    navLinks.forEach(l => l.classList.remove('active'));
-                    this.classList.add('active');
-                }
-            }
-        });
-    });
-    
-    // Update active nav link on scroll
-    window.addEventListener('scroll', function() {
-        let current = '';
-        const sections = document.querySelectorAll('section');
-        
-        sections.forEach(section => {
-            const sectionTop = section.offsetTop;
-            const sectionHeight = section.clientHeight;
-            
-            if (pageYOffset >= sectionTop - 200) {
-                current = section.getAttribute('id');
-            }
-        });
-        
-        navLinks.forEach(link => {
-            link.classList.remove('active');
-            if (link.getAttribute('href').substring(1) === current) {
-                link.classList.add('active');
-            }
-        });
-    });
-
-    // Load news data
-    // Determine the correct path for news.json based on current page
-    let newsJsonPath = 'data/news.json';
-    if (window.location.pathname.includes('/pages/')) {
-        // If we're in the pages directory, we need to go up one level
-        newsJsonPath = '../data/news.json';
     }
-    
-    fetch(newsJsonPath)
-        .then(response => response.json())
-        .then(data => {
-            // Check if we're on the homepage
-            const latestNewsSection = document.getElementById('latest-news');
-            if (latestNewsSection) {
-                // On homepage - show limited news (first 8 items)
-                renderNewsItems(data.slice(0, 8), 'news-container');
-            }
-            
-            // Check if we're on the all-news page
-            const allNewsSection = document.getElementById('all-news');
-            if (allNewsSection) {
-                // On all-news page - show all news items
-                renderNewsItems(data, 'all-news-container');
-            }
-        })
-        .catch(error => {
-            console.error('Error loading news data:', error);
-        });
 });
 
 // Function to load profile information
@@ -202,10 +253,14 @@ function loadPublications() {
     fetch(publicationsJsonPath)
         .then(response => response.json())
         .then(publications => {
+            // Limit the number of publications on homepage to 6
+            const isHomepage = !window.location.pathname.includes('/pages/publications.html');
+            const publicationsToShow = isHomepage ? publications.slice(0, 6) : publications;
+            
             // Counter for auto-numbering publications
             let counter = 1;
             
-            publications.forEach(pub => {
+            publicationsToShow.forEach(pub => {
                 const pubElement = document.createElement('div');
                 const classes = ['publication', pub.type];
                 if (pub.isFirstAuthor) classes.push('first-author');
@@ -299,7 +354,7 @@ function loadPublications() {
 }
 
 // Function to render news items
-function renderNewsItems(newsData, containerId) {
+function renderNewsItems(newsData, containerId, limit = 8) {
     const container = document.getElementById(containerId);
     if (!container) return;
     
@@ -307,7 +362,7 @@ function renderNewsItems(newsData, containerId) {
     container.innerHTML = '';
     
     // Add each news item to the container
-    newsData.forEach(newsItem => {
+    newsData.slice(0, limit).forEach(newsItem => {
         const newsElement = document.createElement('div');
         newsElement.className = 'news-item';
         

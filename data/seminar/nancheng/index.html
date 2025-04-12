@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RingSFL: An Adaptive Split Federated Learning Towards Taming Client Heterogeneity</title>
+    <link rel="stylesheet" href="../../../styles.css">
+    <style>
+        .seminar-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+        .seminar-header {
+            margin-bottom: 30px;
+        }
+        .seminar-date {
+            color: #fff;
+            margin-bottom: 10px;
+            background-color: #1565C0;
+            display: inline-block;
+            padding: 5px 12px;
+            border-radius: 4px;
+        }
+        .seminar-speaker-info {
+            background-color: #f8f8f8;
+            border-left: 4px solid #1565C0;
+            padding: 15px;
+            margin-bottom: 20px;
+            border-radius: 0 4px 4px 0;
+        }
+        .seminar-speaker-title {
+            font-weight: bold;
+            font-size: 16px;
+            color: #555;
+            margin-bottom: 5px;
+        }
+        .seminar-speaker-name {
+            font-weight: bold;
+            font-size: 18px;
+            color: #333;
+        }
+        .seminar-section {
+            margin-bottom: 30px;
+        }
+        .seminar-section h2 {
+            color: #1565C0;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+        .seminar-section p {
+            font-size: 16px;
+            line-height: 1.6;
+            color: #333;
+        }
+        .back-link {
+            display: inline-block;
+            margin-top: 30px;
+            color: #1565C0;
+            text-decoration: none;
+        }
+        .back-link:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="seminar-container">
+        <div class="seminar-header">
+            <div class="seminar-date">October 9, 2023</div>
+            <h1>RingSFL: An Adaptive Split Federated Learning Towards Taming Client Heterogeneity</h1>
+            <div class="seminar-speaker-info">
+                <div class="seminar-speaker-title">Speaker:</div>
+                <div class="seminar-speaker-name">Prof. Nan Cheng</div>
+                <div class="seminar-speaker-affiliation">Professor, School of Telecommunications Engineering, Xidian University, Xi'an, China</div>
+            </div>
+        </div>
+
+        <div class="seminar-section">
+            <h2>Abstract</h2>
+            <p>Federated learning (FL) has gained increasing attention due to its ability to collaboratively train while protecting client data privacy. However, in most wireless networks, such as vehicular networks, client heterogeneity exists, as different vehicular users have different computation capabilities. Vanilla FL cannot handle client heterogeneity, leading to a degradation in training efficiency due to stragglers, and is still vulnerable to privacy leakage. To address these issues, we propose RingSFL, a novel distributed learning scheme that integrates FL with a model split mechanism to adapt to client heterogeneity while maintaining data privacy. In RingSFL, all clients form a ring topology. For each client, instead of training the model locally, the model is split and trained among all clients along the ring through a pre-defined direction. By properly setting the propagation lengths of heterogeneous clients, the straggler effect is mitigated, and the training efficiency of the system is significantly enhanced. Additionally, since the local models is blended, it is less likely for an eavesdropper to obtain the complete model and recover the raw data, thus improving data privacy. The experimental results on both simulation and prototype systems show that RingSFL can achieve better convergence performance than benchmark methods on independently identically distributed (IID) and non-IID datasets, while effectively preventing eavesdroppers from recovering training data.</p>
+        </div>
+
+        <div class="seminar-section">
+            <h2>Biography</h2>
+            <p>Nan Cheng received the Ph.D. degree from the Department of Electrical and Computer Engineering, University of Waterloo in 2016, and B.E. degree and the M.S. degree from the Department of Electronics and Information Engineering, Tongji University, Shanghai, China, in 2009 and 2012, respectively. He worked as a Post-doctoral fellow with the Department of Electrical and Computer Engineering, University of Toronto, from 2017 to 2019. He is currently a professor with the State Key Lab. of ISN and with the School of Telecommunications Engineering, Xidian University, Shaanxi, China. He has published over 90 journal papers in IEEE Transactions and other top journals. He serves as an associate editor of IEEE Internet of Things Journal, IEEE Transactions on Vehicular Technology, IEEE Open Journal of the Communications Society, and Peer-to-Peer Networking and Applications, and serves/served as a guest editor for several journals. His current research focuses on B5G/6G, vehicular networks, AI-driven future networks, and space-air-ground integrated networks.</p>
+        </div>
+
+        <a href="../../../index.html#seminar" class="back-link">← Back to all seminars</a>
+    </div>
+</body>
+</html> 

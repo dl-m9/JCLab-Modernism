@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Senkang Forest Hu</title>
+    <title>JC STEM Lab of Smart City</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -25,66 +25,64 @@
     <nav>
         <div class="container">
             <ul class="nav-links">
-                <li><a href="#about" class="active">Biography</a></li>
-                <li><a href="#education">Education</a></li>
+                <li><a href="#about" class="active">About</a></li>
                 <li><a href="#research">Research</a></li>
+                <li><a href="pages/team.html">Team</a></li>
                 <li><a href="#latest-news">News</a></li>
+                <li><a href="#seminar">Seminars</a></li>
                 <li><a href="#publications">Publications</a></li>
-                <li><a href="#honors">Honors</a></li>
-                <li><a href="#services">Services</a></li>
                 <li><a href="#location">Contact</a></li>
             </ul>
         </div>
     </nav>
 
     <main>
-        <section id="about" class="section">
+        <section id="slideshow" class="section">
             <div class="container">
-                <h2 class="section-title">Biography</h2>
-                <div class="about-content">
-                    <p><b>Senkang "Forest" Hu</b> is currently advancing his academic pursuits as a Ph.D. student at the <a href="https://www.cityu.edu.hk/">Department of Computer Science, City University of Hong Kong</a>, under the supervision of <a href="https://www.cs.cityu.edu.hk/~yugufang/">Chair Professor of Internet of Things, Fellow of ACM & IEEE & AAAS, <b>Prof. Yuguang "Michael" Fang</b></a>. Previously, he received his BEng degree from the School of Information and Electronics, <a href="https://www.bit.edu.cn/">Beijing Institute of Technology</a> in 2022.</p><br>
+                <div class="slideshow-container">
+                    <div class="mySlides">
+                        <img src="assets/slides/signage.png" style="width:100%">
+                    </div>
+                    <div class="mySlides">
+                        <img src="assets/slides/group1.png" style="width:100%">
+                    </div>
+                    <div class="mySlides">
+                        <img src="assets/group2.jpg" style="width:100%">
+                    </div>
+                    <div class="mySlides">
+                        <img src="assets/slides/group3.jpg" style="width:100%">
+                    </div>
+                    <div class="mySlides">
+                        <img src="assets/slides/group4.jpg" style="width:100%">
+                    </div>
 
-                    <p>★ Collaboration makes a WIN-WIN situation!! Feel free to reach out via <a href="mailto:senkang.forest@gmail.com">email</a> or <a href="assets/wechat.jpg" target="_blank">WeChat</a>. Let's make something great together! 🦾🦾</p>
+                    <!-- 前后导航按钮 -->
+                    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                </div>
+
+                <!-- 导航点 -->
+                <div class="dots-container">
+                    <span class="dot" onclick="currentSlide(1)"></span>
+                    <span class="dot" onclick="currentSlide(2)"></span>
+                    <span class="dot" onclick="currentSlide(3)"></span>
+                    <span class="dot" onclick="currentSlide(4)"></span>
+                    <span class="dot" onclick="currentSlide(5)"></span>
                 </div>
             </div>
         </section>
 
-        <section id="education" class="section">
+        <section id="about" class="section">
             <div class="container">
-                <h2 class="section-title">Education</h2>
-                <div class="timeline">
-                    <div class="timeline-item">
-                        <div class="timeline-marker"></div>
-                        <div class="timeline-content">
-                            <div class="edu-content-wrapper">
-                                <div class="edu-text">
-                                    <h3>PhD @ City University of Hong Kong (CITYUHK)</h3>
-                                    <p class="timeline-date">Aug. 2023 - Now</p>
-                                    <p>Computer Science</p>
-                                    <p>Supervisor: <a href="https://www.cs.cityu.edu.hk/~yugufang/">Prof. Yuguang "Michael" Fang</a> (Chair Professor of IoT, ACM, IEEE, and AAAS Fellow)</p>
-                                </div>
-                                <div class="school-logo">
-                                    <img src="assets/cityu-logo.jpeg" alt="City University of Hong Kong" class="edu-logo">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="timeline-item">
-                        <div class="timeline-marker"></div>
-                        <div class="timeline-content">
-                            <div class="edu-content-wrapper">
-                                <div class="edu-text">
-                                    <h3>BEng @ Beijing Institute of Technology (BIT)</h3>
-                                    <p class="timeline-date">Sep. 2018 - Jul. 2022</p>
-                                    <p>Electronic Information Engineering</p>
-                                    <p>National Scholarship</p>
-                                </div>
-                                <div class="school-logo">
-                                    <img src="assets/bit-logo.png" alt="Beijing Institute of Technology" class="edu-logo">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                <h2 class="section-title">About</h2>
+                <div class="about-content">
+                    <p>The <b>JC STEM Lab of Smart City</b> was founded by <a href="https://www.cs.cityu.edu.hk/~yugufang/">Prof. FANG Yuguang</a> in 2022 in Hong Kong. Our mission is to leverage vehicles to build a smarter city.</p>
+                    
+                    <p>The lab is led by <a href="https://www.cs.cityu.edu.hk/~yugufang/">Chair Professor of Internet of Things, Fellow of ACM & IEEE & AAAS, <b>Prof. Yuguang "Michael" Fang</b></a>, who joined the Department of Computer Science, City University of Hong Kong as the Chair Professor of Internet of Things in 2022.</p>
+
+                    <p>We focus on cutting-edge research in Internet of Things, Wireless Communications, Vehicle as a Service (VaaS), Smart City technologies, and more. Our goal is to develop innovative solutions that can transform urban environments through connected vehicle technologies.</p>
+                    
+                    <p>★ If you're interested in our research or potential collaboration, feel free to reach out via <a href="mailto:my.Fang@cityu.edu.hk">email</a>. Let's build smarter cities together! 🦾🦾</p>
                 </div>
             </div>
         </section>
@@ -94,21 +92,90 @@
                 <h2 class="section-title">Research Interests</h2>
                 <div class="research-areas">
                     <div class="research-area">
-                        <i class="fas fa-brain"></i>
-                        <h3>Foundation Models</h3>
+                        <i class="fas fa-wifi"></i>
+                        <h3>Internet of Things</h3>
                         <ul class="research-list">
-                            <li><strong>Multi-Agent Systems for Autonomous Driving:</strong> Leveraging LLM/VLM as powerful tools to build multi-agent collaborative decision-making systems for next-generation autonomous driving.</li>
-                            <li><strong>Large Pre-trained Models Task Adaptation:</strong> Adapting pre-trained LMs to specific tasks, such as autonomous driving and collaborative decision-making, better and more efficiently.</li>
+                            <li><strong>IoT Technologies:</strong> Developing advanced IoT frameworks and solutions for smart city applications.</li>
+                            <li><strong>Wireless Communications:</strong> Research on communication protocols and technologies for IoT networks.</li>
                         </ul>
                     </div>
                     <div class="research-area">
-                        <i class="fas fa-car-side"></i>
-                        <h3>Multi-Agent Autonomous Driving</h3>
+                        <i class="fas fa-chart-line"></i>
+                        <h3>Federated Learning</h3>
                         <ul class="research-list">
-                            <li><strong>Multi-Agent Collaborative Perception (CP):</strong> Overcoming limitations of single-agent perception systems like occlusion and sensing range by leveraging information from multiple vehicles.</li>
-                            <li><strong>Autonomous Driving Security:</strong> Designing defense methods crucial for secure CP as it expands the system's attack surface by leveraging information from other vehicles.</li>
+                            <li><strong>Distributed Learning:</strong> Developing privacy-preserving machine learning techniques where models can be trained across devices without sharing data.</li>
                         </ul>
                     </div>
+                    <div class="research-area">
+                        <i class="fas fa-city"></i>
+                        <h3>Smart City</h3>
+                        <ul class="research-list">
+                            <li><strong>Urban Intelligence:</strong> Creating technologies that help cities operate more efficiently through connected data and infrastructure.</li>
+                        </ul>
+                    </div>
+                    <div class="research-area">
+                        <i class="fas fa-signal"></i>
+                        <h3>Wireless Communication</h3>
+                        <ul class="research-list">
+                            <li><strong>Advanced Wireless Protocols:</strong> Researching and developing next-generation wireless communication technologies.</li>
+                        </ul>
+                    </div>
+                    <div class="research-area">
+                        <i class="fas fa-car"></i>
+                        <h3>Vehicle as a Service (VaaS)</h3>
+                        <ul class="research-list">
+                            <li><strong>Connected Vehicles:</strong> Exploring how vehicles can serve as mobile service platforms in smart cities.</li>
+                            <li><strong>Collaborative Perception:</strong> Developing systems where vehicles can share sensor data to enhance perception capabilities.</li>
+                        </ul>
+                    </div>
+                    <div class="research-area">
+                        <i class="fas fa-user-secret"></i>
+                        <h3>Security & Privacy</h3>
+                        <ul class="research-list">
+                            <li><strong>Secure IoT Systems:</strong> Developing protection mechanisms for IoT and connected vehicle systems.</li>
+                            <li><strong>Privacy-Preserving Technologies:</strong> Creating methods to protect user data in connected environments.</li>
+                        </ul>
+                    </div>
+                    <div class="research-area">
+                        <i class="fas fa-heartbeat"></i>
+                        <h3>Health Monitoring</h3>
+                        <ul class="research-list">
+                            <li><strong>IoT-based Health Systems:</strong> Developing technologies for remote health monitoring and assistance.</li>
+                        </ul>
+                    </div>
+                    <div class="research-area">
+                        <i class="fas fa-brain"></i>
+                        <h3>Semantic + AI Communications</h3>
+                        <ul class="research-list">
+                            <li><strong>Intelligent Information Exchange:</strong> Research on leveraging AI for more efficient and contextual communications.</li>
+                        </ul>
+                    </div>
+                    <div class="research-area">
+                        <i class="fas fa-users"></i>
+                        <h3>Collaborative Distributed ML</h3>
+                        <ul class="research-list">
+                            <li><strong>Multi-agent Systems:</strong> Creating frameworks for collaborative machine learning across distributed systems and devices.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="team" class="section">
+            <div class="container">
+                <h2 class="section-title">Our Team</h2>
+                <div class="about-content">
+                    <p>Our lab is led by <a href="https://www.cs.cityu.edu.hk/~yugufang/">Chair Professor of Internet of Things, Fellow of ACM & IEEE & AAAS, <b>Prof. Yuguang "Michael" Fang</b></a> and consists of talented researchers and PhD students working on cutting-edge research in IoT, wireless communications, and smart city technologies.</p>
+                    
+                    <p>Our team includes:</p>
+                    <ul style="margin-left: 20px; margin-bottom: 20px;">
+                        <li>Distinguished faculty members</li>
+                        <li>PhD students and researchers</li>
+                        <li>Former members who have gone on to successful careers</li>
+                    </ul>
+                </div>
+                <div class="view-all-members">
+                    <a href="pages/team.html" class="btn btn-primary"><i class="fas fa-users"></i> Meet Our Team</a>
                 </div>
             </div>
         </section>
@@ -125,6 +192,152 @@
             </div>
         </section>
 
+        <section id="seminar" class="section">
+            <div class="container">
+                <h2 class="section-title">Seminars & Talks</h2>
+                <div class="seminars-list">
+                    <div class="seminar-item">
+                        <div class="seminar-date">
+                            <span class="date">17</span>
+                            <span class="month">Dec</span>
+                            <span class="year">2024</span>
+                        </div>
+                        <div class="seminar-content">
+                            <h3><a href="data/seminar/Dusit/index.html">Toward Scalable Generative AI via Mixture of Experts in Mobile Edge Networks</a></h3>
+                            <p class="seminar-speaker">Speaker:</p>
+                            <p class="speaker-name">Prof. Dusit Niyato (NTU, Singapore)</p>
+                            <p class="seminar-description">This talk explores scalable generative AI through mixture of experts in mobile edge networks, addressing challenges in resource utilization when deployed on local user devices.</p>
+                        </div>
+                        <div class="seminar-image-container">
+                            <a href="data/seminar/Dusit/index.html"><img src="data/seminar/Dusit/featured.jpg" alt="Seminar by Prof. Dusit Niyato"></a>
+                        </div>
+                    </div>
+                    
+                    <div class="seminar-item">
+                        <div class="seminar-date">
+                            <span class="date">13</span>
+                            <span class="month">May</span>
+                            <span class="year">2024</span>
+                        </div>
+                        <div class="seminar-content">
+                            <h3><a href="data/seminar/24-05-13-LiuJianqing/index.html">Quantum Communications, Applications and Challenges</a></h3>
+                            <p class="seminar-speaker">Speaker:</p>
+                            <p class="speaker-name">Prof. Jianqing Liu (NCSU, USA)</p>
+                            <p class="seminar-description">An exploration of quantum communications principles, applications such as quantum key distribution, and the technical challenges in the field.</p>
+                        </div>
+                        <div class="seminar-image-container">
+                            <a href="data/seminar/24-05-13-LiuJianqing/index.html"><img src="data/seminar/24-05-13-LiuJianqing/featured.jpg" alt="Seminar by Prof. Jianqing Liu"></a>
+                        </div>
+                    </div>
+                    
+                    <div class="seminar-item">
+                        <div class="seminar-date">
+                            <span class="date">3</span>
+                            <span class="month">Dec</span>
+                            <span class="year">2023</span>
+                        </div>
+                        <div class="seminar-content">
+                            <h3><a href="data/seminar/davidAtienza/index.html">Accelerator-Centric Edge AI Architectures for Low-Power and Personalized Wearables</a></h3>
+                            <p class="seminar-speaker">Speaker:</p>
+                            <p class="speaker-name">Prof. David Atienza (EPFL, Switzerland)</p>
+                            <p class="seminar-description">A talk on edge AI architectures for wearable systems, focusing on integrating different families of accelerators for energy-efficient computing.</p>
+                        </div>
+                        <div class="seminar-image-container">
+                            <a href="data/seminar/davidAtienza/index.html"><img src="data/seminar/davidAtienza/featured.png" alt="Seminar by Prof. David Atienza"></a>
+                        </div>
+                    </div>
+                    
+                    <div class="seminar-item">
+                        <div class="seminar-date">
+                            <span class="date">9</span>
+                            <span class="month">Oct</span>
+                            <span class="year">2023</span>
+                        </div>
+                        <div class="seminar-content">
+                            <h3><a href="data/seminar/haibozhou/index.html">A Decoupled Radio Access Networks Architecture for 6G</a></h3>
+                            <p class="seminar-speaker">Speaker:</p>
+                            <p class="speaker-name">Prof. Haibo Zhou (NJU, China)</p>
+                            <p class="seminar-description">This talk introduces a fully-decoupled radio access network architecture for 6G that enhances spectrum utilization and improves user experience.</p>
+                        </div>
+                        <div class="seminar-image-container">
+                            <a href="data/seminar/haibozhou/index.html"><img src="data/seminar/haibozhou/featured.jpg" alt="Seminar by Prof. Haibo Zhou"></a>
+                        </div>
+                    </div>
+                    
+                    <div class="seminar-item">
+                        <div class="seminar-date">
+                            <span class="date">9</span>
+                            <span class="month">Oct</span>
+                            <span class="year">2023</span>
+                        </div>
+                        <div class="seminar-content">
+                            <h3><a href="data/seminar/nancheng/index.html">RingSFL: An Adaptive Split Federated Learning Towards Taming Client Heterogeneity</a></h3>
+                            <p class="seminar-speaker">Speaker:</p>
+                            <p class="speaker-name">Prof. Nan Cheng (Xidian, China)</p>
+                            <p class="seminar-description">A presentation on a novel distributed learning scheme that integrates federated learning with a model split mechanism to adapt to client heterogeneity.</p>
+                        </div>
+                        <div class="seminar-image-container">
+                            <a href="data/seminar/nancheng/index.html"><img src="data/seminar/nancheng/featured.jpg" alt="Seminar by Prof. Nan Cheng"></a>
+                        </div>
+                    </div>
+                    
+                    <div class="seminar-item">
+                        <div class="seminar-date">
+                            <span class="date">7</span>
+                            <span class="month">Oct</span>
+                            <span class="year">2023</span>
+                        </div>
+                        <div class="seminar-content">
+                            <h3><a href="data/seminar/weihuazhuang/index.html">Stochastic Cumulative DNN Inference for Intelligent IoT Applications</a></h3>
+                            <p class="seminar-speaker">Speaker:</p>
+                            <p class="speaker-name">Prof. Weihua Zhuang (Waterloo, Canada)</p>
+                            <p class="seminar-description">A discussion on when to offload DNN inference computation from IoT devices to the edge and how to incorporate multiple inference results to improve accuracy.</p>
+                        </div>
+                        <div class="seminar-image-container">
+                            <a href="data/seminar/weihuazhuang/index.html"><img src="data/seminar/weihuazhuang/featured.jpg" alt="Seminar by Prof. Weihua Zhuang"></a>
+                        </div>
+                    </div>
+                    
+                    <div class="seminar-item">
+                        <div class="seminar-date">
+                            <span class="date">3</span>
+                            <span class="month">May</span>
+                            <span class="year">2023</span>
+                        </div>
+                        <div class="seminar-content">
+                            <h3><a href="data/seminar/PhoneLin/index.html">Data-Driven Anomaly Detection & Prediction for IoT</a></h3>
+                            <p class="seminar-speaker">Speaker:</p>
+                            <p class="speaker-name">Prof. Phone Lin (NTU, Taiwan)</p>
+                            <p class="seminar-description">This talk illustrates technologies and solutions for anomaly detection/prediction in IoT systems, along with prototypes and applications.</p>
+                        </div>
+                        <div class="seminar-image-container">
+                            <a href="data/seminar/PhoneLin/index.html"><img src="data/seminar/PhoneLin/featured.jpg" alt="Seminar by Prof. Phone Lin"></a>
+                        </div>
+                    </div>
+                    
+                    <div class="seminar-item">
+                        <div class="seminar-date">
+                            <span class="date">3</span>
+                            <span class="month">May</span>
+                            <span class="year">2023</span>
+                        </div>
+                        <div class="seminar-content">
+                            <h3><a href="data/seminar/chih-wei-huang/index.html">Enhancing Resource Management and Remote 3D Rendering for Future Wireless Networks</a></h3>
+                            <p class="seminar-speaker">Speaker:</p>
+                            <p class="speaker-name">Prof. Chih-Wei Huang (NCU, Taiwan)</p>
+                            <p class="seminar-description">This talk examines recent advancements in wireless networks for supporting complex applications like MIMO systems and mixed reality experiences.</p>
+                        </div>
+                        <div class="seminar-image-container">
+                            <a href="data/seminar/chih-wei-huang/index.html"><img src="data/seminar/chih-wei-huang/featured.jpg" alt="Seminar by Prof. Chih-Wei Huang"></a>
+                        </div>
+                    </div>
+                </div>
+                <!-- <div class="view-all-seminars">
+                    <a href="#" class="btn btn-primary"><i class="fas fa-microphone"></i> View All Seminars</a>
+                </div> -->
+            </div>
+        </section>
+
         <section id="publications" class="section">
             <div class="container">
                 <h2 class="section-title">Publications</h2>
@@ -138,119 +351,8 @@
                 <div class="publications-list">
                     <!-- Publications items will be dynamically loaded here from publications.json -->
                 </div>
-            </div>
-        </section>
-
-        <section id="honors" class="section">
-            <div class="container">
-                <h2 class="section-title">Honors & Awards</h2>
-                <div class="honors-list">
-                    <div class="honor-item">
-                        <div class="honor-year"><span class="year-highlight">2024</span></div>
-                        <div class="honor-content">
-                            <h3>IEEE ComSoc Student Travel Grant</h3>
-                            <p>IEEE Communications Society</p>
-                        </div>
-                    </div>
-                    <div class="honor-item">
-                        <div class="honor-year"><span class="year-highlight">2023</span></div>
-                        <div class="honor-content">
-                            <h3>Institutional Research Tuition Grant</h3>
-                            <p>City University of Hong Kong</p>
-                            <p>HK$170,000 to cover part of tuition fees during PhD.</p>
-                        </div>
-                    </div>
-                    <div class="honor-item">
-                        <div class="honor-year"><span class="year-highlight">2023</span></div>
-                        <div class="honor-content">
-                            <h3>InnoHK Award Funding</h3>
-                            <p>The Government of the Hong Kong Special Administrative Region</p>
-                            <p>Around HK$900,000 to support research and PhD career.</p>
-                        </div>
-                    </div>
-                    <div class="honor-item">
-                        <div class="honor-year"><span class="year-highlight">2021</span></div>
-                        <div class="honor-content">
-                            <h3>National Scholarship</h3>
-                            <p>Ministry of Education of the People's Republic of China</p>
-                            <p>The highest honor for Chinese university students.</p>
-                        </div>
-                    </div>
-                    <div class="honor-item">
-                        <div class="honor-year"><span class="year-highlight">2020</span></div>
-                        <div class="honor-content">
-                            <h3>CASC Scholarship, Top 1%</h3>
-                            <p>The China Aerospace Science and Technology Corporation</p>
-                        </div>
-                    </div>
-                    <div class="honor-item">
-                        <div class="honor-year"><span class="year-highlight">2020</span></div>
-                        <div class="honor-content">
-                            <h3>Example of Scientific Research Innovation, Top 1%</h3>
-                            <p>Beijing Institute of Technology</p>
-                        </div>
-                    </div>
-                    <div class="honor-item">
-                        <div class="honor-year"><span class="year-highlight">2018-2021</span></div>
-                        <div class="honor-content">
-                            <h3>First Class Academic Scholarship, 4 times</h3>
-                            <p>Beijing Institute of Technology</p>
-                        </div>
-                    </div>
-                    <div class="honor-item">
-                        <div class="honor-year"><span class="year-highlight">2018-2021</span></div>
-                        <div class="honor-content">
-                            <h3>Excellent Student of Beijing Institute of Technology, 3 times</h3>
-                            <p>Beijing Institute of Technology</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="services" class="section">
-            <div class="container">
-                <h2 class="section-title">Services</h2>
-                <div class="services-content">
-                    <div class="service-category">
-                        <h3>Conference Technical Program Committee & Reviewer</h3>
-                        <ul class="service-list">
-                            <li>ACM MM'25</li>
-                            <li>ICML'25</li>
-                            <li>ICLR'25</li>
-                            <li>AAAI'25</li>
-                            <li>CSCW'25</li>
-                            <li>ICRA'25</li>
-                            <li>ICCC'24</li>
-                            <li>IROS'24, 25</li>
-                        </ul>
-                    </div>
-                    
-                    <div class="service-category">
-                        <h3>Journal Reviewer</h3>
-                        <ul class="service-list">
-                            <li>ACM Computing Surveys</li>
-                            <li>IEEE TMC</li>
-                            <li>IEEE/ACM ToN</li>
-                            <li>IEEE TITS</li>
-                            <li>IET Information Security</li>
-                            <li>IEEE TNSM</li>
-                            <li>ACM TAAS</li>
-                            <li>Information Fusion</li>
-                            <li>Pattern Recognition</li>
-                            <li>IEEE RA-L</li>
-                            <li>Proceedings of the IEEE</li>
-                        </ul>
-                    </div>
-                    
-                    <div class="service-category">
-                        <h3>Teaching Assistant</h3>
-                        <ul class="service-list">
-                            <li>Cloud Computing, 2025 Spring</li>
-                            <li>Computer Networks, 2024 Fall</li>
-                            <li>Cloud Computing: Theory and Practice, 2024 Spring</li>
-                        </ul>
-                    </div>
+                <div class="view-all-news text-center mt-4">
+                    <a href="pages/publications.html" class="btn btn-primary" target="_self"><i class="fas fa-book"></i> View All Publications</a>
                 </div>
             </div>
         </section>
@@ -258,39 +360,44 @@
         <section id="location" class="section">
             <div class="container">
                 <h2 class="section-title">Contact</h2>
-                <div class="location-content">
-                    <div class="address-container">
-                        <div class="address-info">
-                            <h3>Office Address</h3>
-                            <p><i class="fas fa-map-marker-alt"></i> 83 Tat Chee Avenue Kowloon, Hong Kong</p>
+                <div class="contact-info">
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <h3>Email</h3>
+                            <p><a href="mailto:my.Fang@cityu.edu.hk">my.Fang@cityu.edu.hk</a></p>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <h3>Location</h3>
+                            <p>83 Tat Chee Ave, Kowloon Tong, Hong Kong</p>
+                            <p>City University of Hong Kong</p>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-globe"></i>
+                            <h3>Websites</h3>
+                            <p><a href="https://www.cs.cityu.edu.hk/~yugufang/" target="_blank">Prof. Fang's Homepage</a></p>
+                            <p><a href="https://winet.cs.cityu.edu.hk/" target="_blank">Old Lab Website</a></p>
                         </div>
                     </div>
                     <div class="map-container">
-                        <iframe 
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3691.1712626494353!2d114.17056927597595!3d22.33722397926719!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x340406bd13bf7053%3A0x6f5bb9e0e1fb0e52!2s83%20Tat%20Chee%20Ave%2C%20Kowloon%20Tong%2C%20Hong%20Kong!5e0!3m2!1sen!2s!4v1716977566159!5m2!1sen!2s"
-                            width="100%" 
-                            height="400" 
-                            style="border:0;" 
-                            allowfullscreen="" 
-                            loading="lazy" 
-                            referrerpolicy="no-referrer-when-downgrade">
-                        </iframe>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3690.8299903032237!2d114.17060671538794!3d22.33702048530892!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x340406afe8d0499d%3A0x1ad5f886553cef1e!2sCity%20University%20of%20Hong%20Kong!5e0!3m2!1sen!2sus!4v1649242800000!5m2!1sen!2sus" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                     </div>
                 </div>
             </div>
-            <br><br><br><br>
-                <div style="width: 15%; height: auto; margin: auto;">
-                    <script type="text/javascript" id="clstr_globe" src="//clustrmaps.com/globe.js?d=qLWVVAAvtN_5u37gNS4Dm-rflExCdP123yF9uf4KZnk"></script>
-                </div>
         </section>
     </main>
 
     <footer>
         <div class="container">
-            <p>&copy; <span id="current-year"></span> Senkang Forest Hu. All rights reserved.</p>
+            <p>&copy; <span id="copyright-year"></span> JC STEM Lab of Smart City. All rights reserved.</p>
         </div>
     </footer>
 
+    <script>
+        // Set copyright year
+        document.getElementById('copyright-year').textContent = new Date().getFullYear();
+    </script>
     <script src="script.js"></script>
     <script>
         // Update copyright year
@@ -341,3 +448,4 @@
     </script>
 </body>
 </html> 
+

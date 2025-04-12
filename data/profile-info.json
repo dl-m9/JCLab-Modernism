@@ -1,10 +1,10 @@
 {
-  "name": "SENKANG \"FOREST\" HU 🍀",
-  "subtitle": "PhD@CS, CITYUHK &nbsp;&nbsp;  BEng@EE, BIT<br><a href=\"https://jcstemlab.netlify.app/\">JC STEM Lab of Smart City</a><br><a href=\"https://winet.cityu.edu.hk/\">Wireless Intelligence and Networked Things Laboratory (WINET)</a>",
+  "name": "JC STEM Lab of Smart City",
+  "subtitle": "City University of Hong Kong<br>We are dedicated to leverage vehicles to build a smarter city.<br>Led by <a href=\"https://www.cs.cityu.edu.hk/~yugufang/\">Prof. Yuguang \"Michael\" Fang</a> (Chair Professor of IoT, ACM & IEEE & AAAS Fellow)",
   "socialLinks": [
     {
       "type": "email",
-      "url": "mailto:senkang.forest@gmail.com",
+      "url": "mailto:my.Fang@cityu.edu.hk",
       "icon": "<i class=\"fas fa-envelope\"></i>"
     },
     {
@@ -15,34 +15,28 @@
     },
     {
       "type": "googleScholar",
-      "url": "https://scholar.google.com/citations?hl=en&user=rtPVwT8AAAAJ",
+      "url": "https://scholar.google.com/citations?user=pqO0bw0AAAAJ&hl=en",
       "icon": "<i class=\"fas fa-graduation-cap\"></i>",
       "target": "_blank"
     },
     {
-      "type": "linkedin",
-      "url": "https://www.linkedin.com/in/senkang-hu-3123681b5/",
-      "icon": "<i class=\"fab fa-linkedin\"></i>",
+      "type": "location",
+      "url": "#location",
+      "icon": "<i class=\"fas fa-map-marker-alt\"></i>",
+      "target": "_self"
+    },
+    {
+      "type": "website",
+      "url": "https://www.cs.cityu.edu.hk/~yugufang/",
+      "icon": "<i class=\"fas fa-globe\"></i>",
       "target": "_blank"
     },
     {
-      "type": "github",
-      "url": "https://github.com/dl-m9",
-      "icon": "<i class=\"fab fa-github\"></i>",
-      "target": "_blank"
-    },
-    {
-      "type": "dblp",
-      "url": "https://dblp.org/pid/358/4477",
-      "icon": "<img src=\"assets/dblp.svg\" alt=\"DBLP\" class=\"icon-svg\">",
-      "target": "_blank"
-    },
-    {
-      "type": "researchgate",
-      "url": "https://www.researchgate.net/profile/Senkang-Hu?ev=hdr_xprf&_sg=RudTlDaZrI-AyeiJ3fg5vDRTScMNiZSqci0c4CBvR8grICMQO9xjMhw9hl5gfCqJl_fkZ61i-pRUkz73RKrQnajN",
-      "icon": "<i class=\"fab fa-researchgate\"></i>",
+      "type": "oldwebsite",
+      "url": "https://winet.cs.cityu.edu.hk/",
+      "icon": "<i class=\"fas fa-history\"></i>",
       "target": "_blank"
     }
   ],
-  "profileImage": "assets/profile.jpg"
+  "profileImage": "assets/group2.jpg"
 } 

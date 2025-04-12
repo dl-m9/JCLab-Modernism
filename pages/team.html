@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Team - JC STEM Lab of Smart City</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        .team-member h4 a {
+            color: #1565C0;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .team-member h4 a:hover {
+            color: #0d47a1;
+            text-decoration: underline;
+        }
+        
+        /* 修改头像容器为1:1 */
+        .team-member {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .team-member img {
+            width: 100%;
+            aspect-ratio: 1/1;
+            object-fit: cover;
+            height: auto; /* 覆盖原始的固定高度 */
+        }
+        
+        /* 修改social icon样式 */
+        .member-links {
+            display: flex;
+            gap: 10px;
+            margin-top: 10px;
+            padding: 0 1rem 1rem;
+        }
+        
+        .member-links a {
+            padding: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            transition: all 0.3s ease;
+            background-color: rgba(0, 102, 204, 0.05);
+            width: 42px;
+            height: 42px;
+        }
+        
+        .member-links i {
+            color: #1565C0;
+            font-size: 1.8rem;
+        }
+        
+        .member-links a:hover {
+            background-color: rgba(0, 102, 204, 0.15);
+            transform: translateY(-3px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        
+        /* 修改间距样式 */
+        .major-section {
+            margin-top: 80px;  /* 增加顶部间距 */
+            margin-bottom: 40px;  /* 增加底部间距 */
+        }
+        
+        .major-section-title {
+            color: #0d47a1;
+            font-size: 2.2rem;  /* 增加标题字体大小 */
+            border-bottom: 3px solid #1565C0;
+            padding-bottom: 15px;  /* 增加标题底部内边距 */
+            margin-bottom: 40px;  /* 增加标题底部外边距 */
+        }
+        
+        .section-title {
+            font-size: 2.2rem;  /* 增加字体大小 */
+            margin-bottom: 40px;  /* 增加底部间距 */
+        }
+        
+        .team-container {
+            margin-bottom: 60px;  /* 增加底部间距 */
+        }
+        
+        .team-category {
+            margin-bottom: 50px;  /* 增加底部间距 */
+        }
+        
+        .team-category h3 {
+            font-size: 1.6rem;  /* 增加字体大小 */
+            margin-bottom: 30px;  /* 增加底部间距 */
+            padding-bottom: 10px;
+            border-bottom: 2px solid #e0e0e0;  /* 修改底部边框颜色 */
+        }
+        
+        .team-members {
+            gap: 2.5rem;  /* 增加成员卡片之间的间距 */
+        }
+        
+        .empty-category-note {
+            color: #666;
+            font-style: italic;
+            padding: 15px;
+            text-align: center;
+        }
+
+        /* 加载动画 */
+        .loading-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 300px;
+            flex-direction: column;
+        }
+
+        .loading-spinner {
+            border: 5px solid #f3f3f3;
+            border-top: 5px solid #1565C0;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            animation: spin 1s linear infinite;
+            margin-bottom: 20px;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="profile-info">
+                    <!-- Profile info will be loaded from JSON -->
+                </div>
+                <div class="profile-image">
+                    <img src="../assets/group2.jpg" alt="JC STEM Lab" id="profile-img">
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <nav>
+        <div class="container">
+            <ul class="nav-links">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="#" class="active">Team</a></li>
+                <li><a href="../pages/publications.html">Publications</a></li>
+                <li><a href="../index.html#research">Research</a></li>
+                <li><a href="../index.html#seminar">Seminars</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <!-- 加载动画 -->
+        <div class="loading-container">
+            <div class="loading-spinner"></div>
+            <p>Loading team information...</p>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; <span id="copyright-year"></span> JC STEM Lab of Smart City. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- 加载脚本 -->
+    <script>
+        // 加载网站头部信息
+        fetch('../data/profile-info.json')
+            .then(response => response.json())
+            .then(data => {
+                const profileInfo = document.querySelector('.profile-info');
+                
+                // 创建并设置名称
+                const name = document.createElement('h1');
+                name.innerHTML = data.name;
+                profileInfo.appendChild(name);
+                
+                // 创建并设置副标题
+                const subtitle = document.createElement('p');
+                subtitle.className = 'subtitle';
+                subtitle.innerHTML = data.subtitle;
+                profileInfo.appendChild(subtitle);
+                
+                // 创建联系信息容器
+                const contactInfo = document.createElement('div');
+                contactInfo.className = 'contact-info';
+                
+                // 添加社交链接
+                data.socialLinks.forEach(link => {
+                    const a = document.createElement('a');
+                    a.href = link.url;
+                    a.innerHTML = link.icon;
+                    if (link.target) {
+                        a.target = link.target;
+                    }
+                    contactInfo.appendChild(a);
+                });
+                
+                profileInfo.appendChild(contactInfo);
+            })
+            .catch(error => console.error('Error loading profile info:', error));
+    </script>
+    <!-- 加载团队成员数据 -->
+    <script src="../js/team-loader.js"></script>
+</body>
+</html> 
