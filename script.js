@@ -20,6 +20,8 @@ function showSlides(n) {
     // 隐藏所有幻灯片
     for (let i = 0; i < slides.length; i++) {
         slides[i].style.display = "none";
+        // Reset animation by removing and re-adding the active class
+        slides[i].classList.remove("active");
     }
     
     // 移除所有导航点的激活类
@@ -29,6 +31,11 @@ function showSlides(n) {
     
     // 显示当前幻灯片
     slides[slideIndex-1].style.display = "block";
+    // Add active class after a small delay to trigger animations
+    setTimeout(() => {
+        slides[slideIndex-1].classList.add("active");
+    }, 10);
+    
     dots[slideIndex-1].className += " active-dot";
 }
 

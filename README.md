@@ -358,7 +358,7 @@ To change the color scheme, edit the CSS variables in the `styles.css` file:
 
 ```css
 :root {
-    --primary-color: #0066cc; /* Main accent color */
+    --primary-color: #C21743; /* Main accent color */
     --secondary-color: #f8f9fa; /* Background color for sections */
     --text-color: #333; /* Main text color */
     --light-text: #757575; /* Secondary text color */

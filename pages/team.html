@@ -9,13 +9,13 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
         .team-member h4 a {
-            color: #1565C0;
+            color: var(--primary-color);
             text-decoration: none;
             transition: color 0.3s;
         }
         
         .team-member h4 a:hover {
-            color: #0d47a1;
+            color: #a32d3e;
             text-decoration: underline;
         }
         
@@ -23,6 +23,18 @@
         .team-member {
             display: flex;
             flex-direction: column;
+            background-color: #fff;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 1px solid rgba(189, 56, 75, 0.05);
+        }
+        
+        .team-member:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(189, 56, 75, 0.15);
+            border-color: rgba(189, 56, 75, 0.2);
         }
         
         .team-member img {
@@ -47,18 +59,18 @@
             justify-content: center;
             border-radius: 50%;
             transition: all 0.3s ease;
-            background-color: rgba(0, 102, 204, 0.05);
+            background-color: rgba(189, 56, 75, 0.1);
             width: 42px;
             height: 42px;
         }
         
         .member-links i {
-            color: #1565C0;
-            font-size: 1.8rem;
+            color: var(--primary-color);
+            font-size: 1.5rem;
         }
         
         .member-links a:hover {
-            background-color: rgba(0, 102, 204, 0.15);
+            background-color: rgba(189, 56, 75, 0.2);
             transform: translateY(-3px);
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
@@ -70,9 +82,9 @@
         }
         
         .major-section-title {
-            color: #0d47a1;
+            color: var(--primary-color);
             font-size: 2.2rem;  /* 增加标题字体大小 */
-            border-bottom: 3px solid #1565C0;
+            border-bottom: 3px solid var(--primary-color);
             padding-bottom: 15px;  /* 增加标题底部内边距 */
             margin-bottom: 40px;  /* 增加标题底部外边距 */
         }
@@ -97,6 +109,14 @@
             border-bottom: 2px solid #e0e0e0;  /* 修改底部边框颜色 */
         }
         
+        .team-category h3 {
+            font-size: 1.6rem;
+            margin-bottom: 30px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid rgba(189, 56, 75, 0.2);
+            color: var(--primary-color);
+        }
+        
         .team-members {
             gap: 2.5rem;  /* 增加成员卡片之间的间距 */
         }
@@ -119,7 +139,7 @@
 
         .loading-spinner {
             border: 5px solid #f3f3f3;
-            border-top: 5px solid #1565C0;
+            border-top: 5px solid var(--primary-color);
             border-radius: 50%;
             width: 50px;
             height: 50px;
@@ -130,6 +150,26 @@
         @keyframes spin {
             0% { transform: rotate(0deg); }
             100% { transform: rotate(360deg); }
+        }
+
+        /* Override Prof. Fang's role highlight color */
+        b[style*="color:#1565C0"] {
+            color: var(--primary-color) !important;
+        }
+        
+        .back-to-home .btn-primary {
+            background-color: var(--primary-color);
+            border-color: var(--primary-color);
+            color: white;
+            padding: 0.75rem 1.5rem;
+            transition: all 0.3s ease;
+        }
+        
+        .back-to-home .btn-primary:hover {
+            background-color: #a32d3e;
+            border-color: #a32d3e;
+            transform: translateY(-3px);
+            box-shadow: 0 4px 8px rgba(189, 56, 75, 0.2);
         }
     </style>
 </head>

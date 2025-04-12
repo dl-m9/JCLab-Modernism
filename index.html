@@ -9,18 +9,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <div class="container">
-            <div class="header-content">
-                <div class="profile-info">
-                    <!-- Profile info will be loaded from JSON -->
-                </div>
-                <div class="profile-image">
-                    <img src="assets/profile.jpg" id="profile-img" alt="Senkang Forest Hu">
-                </div>
-            </div>
-        </div>
-    </header>
+   
 
     <nav>
         <div class="container">
@@ -37,23 +26,29 @@
     </nav>
 
     <main>
-        <section id="slideshow" class="section">
+        <section id="slideshow" class="section full-width-section">
             <div class="container">
                 <div class="slideshow-container">
-                    <div class="mySlides">
-                        <img src="assets/slides/signage.png" style="width:100%">
-                    </div>
+                    
                     <div class="mySlides">
                         <img src="assets/slides/group1.png" style="width:100%">
+                        <div class="slide-title">First Meeting</div>
+                        <div class="slide-subtitle">Our First Onsite Meeting at CityUHK @2023.9.9</div>
                     </div>
                     <div class="mySlides">
-                        <img src="assets/group2.jpg" style="width:100%">
+                        <img src="assets/slides/group2.jpg" style="width:100%">
+                        <div class="slide-title">Team Building</div>
+                        <div class="slide-subtitle">2023 Thanksgiving Dinner @2023.11.23</div>
                     </div>
                     <div class="mySlides">
                         <img src="assets/slides/group3.jpg" style="width:100%">
+                        <div class="slide-title">Close to Nature</div>
+                        <div class="slide-subtitle">Hiking between the Mountains and the Sea of Hong Kong @2024.3.9</div>
                     </div>
                     <div class="mySlides">
                         <img src="assets/slides/group4.jpg" style="width:100%">
+                        <div class="slide-title">Team Banquet</div>
+                        <div class="slide-subtitle">2024 Thanksgiving Dinner @2024.11.29</div>
                     </div>
 
                     <!-- 前后导航按钮 -->
@@ -67,10 +62,21 @@
                     <span class="dot" onclick="currentSlide(2)"></span>
                     <span class="dot" onclick="currentSlide(3)"></span>
                     <span class="dot" onclick="currentSlide(4)"></span>
-                    <span class="dot" onclick="currentSlide(5)"></span>
                 </div>
             </div>
         </section>
+        <header>
+            <div class="container">
+                <div class="header-content">
+                    <div class="profile-info">
+                        <!-- Profile info will be loaded from JSON -->
+                    </div>
+                    <!-- <div class="profile-image">
+                        <img src="assets/profile.jpg" id="profile-img" alt="Senkang Forest Hu">
+                    </div> -->
+                </div>
+            </div>
+        </header>
 
         <section id="about" class="section">
             <div class="container">
@@ -360,28 +366,42 @@
         <section id="location" class="section">
             <div class="container">
                 <h2 class="section-title">Contact</h2>
-                <div class="contact-info">
-                    <div class="contact-details">
-                        <div class="contact-item">
-                            <i class="fas fa-envelope"></i>
-                            <h3>Email</h3>
-                            <p><a href="mailto:my.Fang@cityu.edu.hk">my.Fang@cityu.edu.hk</a></p>
+                <div class="contact-grid">
+                    <div class="contact-card">
+                        <div class="contact-icons">
+                            <div class="contact-icon-circle">
+                                <i class="fas fa-envelope"></i>
+                            </div>
                         </div>
-                        <div class="contact-item">
-                            <i class="fas fa-map-marker-alt"></i>
-                            <h3>Location</h3>
-                            <p>83 Tat Chee Ave, Kowloon Tong, Hong Kong</p>
-                            <p>City University of Hong Kong</p>
+                        <div class="contact-text">
+                            <p><i class="fas fa-envelope" style="color: var(--primary-color); margin-right: 8px;"></i><a href="mailto:my.Fang@cityu.edu.hk">my.Fang@cityu.edu.hk</a></p>
                         </div>
-                        <div class="contact-item">
-                            <i class="fas fa-globe"></i>
-                            <h3>Websites</h3>
-                            <p><a href="https://www.cs.cityu.edu.hk/~yugufang/" target="_blank">Prof. Fang's Homepage</a></p>
-                            <p><a href="https://winet.cs.cityu.edu.hk/" target="_blank">Old Lab Website</a></p>
+                    </div>
+                    <div class="contact-card">
+                        <div class="contact-icons">
+                            <div class="contact-icon-circle">
+                                <i class="fas fa-globe"></i>
+                            </div>
+                        </div>
+                        <div class="contact-text">
+                            <p><i class="fas fa-user-tie" style="color: var(--primary-color); margin-right: 8px;"></i><a href="https://www.cs.cityu.edu.hk/~yugufang/" target="_blank">Prof. Fang's Homepage</a></p>
+                            <p><i class="fas fa-history" style="color: var(--primary-color); margin-right: 8px;"></i><a href="https://winet.cs.cityu.edu.hk/" target="_blank">Old Lab Homepage</a></p>
+                        </div>
+                    </div>
+                    <div class="contact-card">
+                        <div class="contact-icons">
+                            <div class="contact-icon-circle">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                        </div>
+                        <div class="contact-text">
+                            <p><i class="fas fa-map-pin" style="color: var(--primary-color); margin-right: 8px;"></i>83 Tat Chee Ave, Kowloon Tong</p>
+                            <p><i class="fas fa-university" style="color: var(--primary-color); margin-right: 8px;"></i>City University of Hong Kong</p>
+                            <p><i class="fas fa-flag" style="color: var(--primary-color); margin-right: 8px;"></i>Hong Kong SAR, China</p>
                         </div>
                     </div>
                     <div class="map-container">
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3690.8299903032237!2d114.17060671538794!3d22.33702048530892!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x340406afe8d0499d%3A0x1ad5f886553cef1e!2sCity%20University%20of%20Hong%20Kong!5e0!3m2!1sen!2sus!4v1649242800000!5m2!1sen!2sus" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3690.8299903032237!2d114.17060671538794!3d22.33702048530892!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x340406afe8d0499d%3A0x1ad5f886553cef1e!2sCity%20University%20of%20Hong%20Kong!5e0!3m2!1sen!2sus!4v1649242800000!5m2!1sen!2sus" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                     </div>
                 </div>
             </div>

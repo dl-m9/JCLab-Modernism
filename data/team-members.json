@@ -11,7 +11,7 @@
               "title": "Prof. FANG, Yuguang Michael",
               "role": [
                 {
-                  "text": "<span style='color: #0066cc;'>Lab Director</span>",
+                  "text": "<span style='color: var(--primary-color);'>Lab Director</span>",
                   "highlighted": true
                 },
                 {

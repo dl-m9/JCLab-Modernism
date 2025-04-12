@@ -1,7 +1,7 @@
 /* Base Styles */
 :root {
-    --primary-color: #0066cc;
-    --secondary-color: #f8f9fa;
+    --primary-color: #BD384B;
+    --secondary-color: #faf8f9;
     --text-color: #333;
     --light-text: #757575;
     --border-color: #e0e0e0;
@@ -56,6 +56,14 @@ header {
     flex: 2;
 }
 
+.profile-info h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    margin-top: 3rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+}
+
 .profile-image {
     flex: 1;
     text-align: right;
@@ -102,13 +110,6 @@ header {
     opacity: 0;
 }
 
-h1 {
-    font-size: 2.5rem;
-    margin-bottom: 0.5rem;
-    font-weight: 700;
-    letter-spacing: -0.02em;
-}
-
 .subtitle {
     font-size: 1.25rem;
     color: var(--light-text);
@@ -117,8 +118,9 @@ h1 {
 
 .contact-info {
     display: flex;
-    flex-wrap: nowrap;
-    gap: 0.8rem;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin-top: 2rem;
 }
 
 .contact-info p {
@@ -140,13 +142,13 @@ h1 {
     justify-content: center;
     border-radius: 50%;
     transition: all 0.3s ease;
-    background-color: rgba(0, 102, 204, 0.05);
+    background-color: rgba(189, 56, 75, 0.1);
     width: 42px;
     height: 42px;
 }
 
 .contact-info a:hover {
-    background-color: rgba(0, 102, 204, 0.15);
+    background-color: rgba(189, 56, 75, 0.2);
     transform: translateY(-3px);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
@@ -480,6 +482,28 @@ nav {
 .section {
     padding: var(--section-spacing) 0;
     border-bottom: 1px solid var(--border-color);
+}
+
+/* Full width section style */
+.full-width-section {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 0;
+}
+
+.full-width-section .container {
+    width: 100%;
+    max-width: 100%;
+    padding: 0;
+    margin: 0;
+    position: relative;
+}
+
+/* Remove top padding from the header when it follows the slideshow */
+#slideshow + header {
+    padding-top: 0;
 }
 
 .section-title {
@@ -1884,13 +1908,6 @@ footer {
 }
 
 /* Contact Section */
-.contact-info {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 2rem;
-    margin-top: 2rem;
-}
-
 .contact-details {
     flex: 1;
     min-width: 300px;
@@ -1936,22 +1953,63 @@ footer {
 }
 
 .map-container {
-    flex: 2;
-    min-width: 300px;
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    grid-column: span 3;
+    height: 400px;
+}
+
+@media (max-width: 992px) {
+    .contact-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .map-container {
+        grid-column: span 2;
+    }
+}
+
+@media (max-width: 768px) {
+    .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    
+    .map-container {
+        grid-column: span 1;
+        height: 350px;
+    }
+    
+    .contact-card {
+        padding: 1.25rem;
+    }
+}
+
+.contact-icon-circle {
+    background-color: rgba(189, 56, 75, 0.1);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 0.5rem;
+}
+
+.contact-icon-circle i {
+    color: var(--primary-color);
+    font-size: 1.8rem;
 }
 
 /* Slideshow Styles */
 .slideshow-container {
     max-width: 100%;
     position: relative;
-    margin: auto;
-    height: 600px;
+    margin: 0;
+    padding-top: 40%; /* Adjusted for better aspect ratio (5:2) */
+    height: 0;
     overflow: hidden;
-    border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    box-shadow: none;
+    border-radius: 0;
+    transition: padding-top 0.3s ease;
 }
 
 .mySlides {
@@ -1961,6 +2019,8 @@ footer {
     position: absolute;
     top: 0;
     left: 0;
+    right: 0;
+    bottom: 0;
     animation-name: fade;
     animation-duration: 1.5s;
 }
@@ -1974,6 +2034,11 @@ footer {
     height: 100%;
     object-fit: cover;
     object-position: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
 }
 
 @keyframes fade {
@@ -1981,6 +2046,7 @@ footer {
     to {opacity: 1}
 }
 
+/* Navigation controls */
 .prev, .next {
     cursor: pointer;
     position: absolute;
@@ -1995,12 +2061,16 @@ footer {
     border-radius: 0 3px 3px 0;
     user-select: none;
     background-color: rgba(0,0,0,0.3);
-    z-index: 2;
+    z-index: 4;
 }
 
 .next {
     right: 0;
     border-radius: 3px 0 0 3px;
+}
+
+.prev {
+    left: 0;
 }
 
 .prev:hover, .next:hover {
@@ -2009,7 +2079,11 @@ footer {
 
 .dots-container {
     text-align: center;
-    margin-top: 20px;
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    right: 0;
+    z-index: 4;
 }
 
 .dot {
@@ -2027,21 +2101,82 @@ footer {
     background-color: #717171;
 }
 
+/* Slide title overlay styles */
+.slide-title {
+    position: absolute;
+    bottom: 20%;
+    left: 10%;
+    background-color: rgba(189, 56, 75, 0.8);
+    color: white;
+    padding: 15px 25px;
+    font-size: 2rem;
+    font-weight: 700;
+    border-radius: 4px;
+    z-index: 3;
+    max-width: 80%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transform: translateY(0);
+    transition: transform 0.5s ease, background-color 0.3s ease;
+}
+
+.slide-subtitle {
+    position: absolute;
+    bottom: 10%;
+    left: 10%;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 10px 25px;
+    font-size: 1.2rem;
+    border-radius: 4px;
+    z-index: 3;
+    max-width: 70%;
+    transform: translateY(0);
+    transition: transform 0.5s ease 0.1s;
+}
+
+.mySlides:not(.active) .slide-title,
+.mySlides:not(.active) .slide-subtitle {
+    transform: translateY(100px);
+}
+
 @media screen and (max-width: 1200px) {
-    .slideshow-container {
-        height: 500px;
+    .slide-title {
+        font-size: 1.8rem;
+        padding: 12px 20px;
+    }
+    
+    .slide-subtitle {
+        font-size: 1.1rem;
+        padding: 8px 20px;
+    }
+    
+    .dots-container {
+        bottom: 15px;
     }
 }
 
 @media screen and (max-width: 992px) {
-    .slideshow-container {
-        height: 400px;
+    .dots-container {
+        bottom: 10px;
     }
 }
 
 @media screen and (max-width: 768px) {
     .slideshow-container {
-        height: 300px;
+        /* Make it slightly taller on mobile */
+        padding-top: 50%;
+    }
+    
+    .slide-title {
+        font-size: 1.4rem;
+        padding: 10px 15px;
+        bottom: 25%;
+    }
+    
+    .slide-subtitle {
+        font-size: 1rem;
+        padding: 6px 15px;
+        bottom: 15%;
     }
     
     .prev, .next {
@@ -2053,11 +2188,25 @@ footer {
         height: 12px;
         width: 12px;
     }
+    
+    .dots-container {
+        bottom: 10px;
+    }
 }
 
 @media screen and (max-width: 480px) {
-    .slideshow-container {
-        height: 250px;
+    .slide-title {
+        font-size: 1.2rem;
+        padding: 8px 12px;
+        left: 5%;
+        max-width: 90%;
+    }
+    
+    .slide-subtitle {
+        font-size: 0.9rem;
+        padding: 5px 12px;
+        left: 5%;
+        max-width: 90%;
     }
     
     .prev, .next {
@@ -2070,34 +2219,137 @@ footer {
         width: 10px;
         margin: 0 1px;
     }
+    
+    .dots-container {
+        bottom: 5px;
+    }
 }
 
-.seminar-thumbnail {
-    margin-top: 15px;
-    overflow: hidden;
-    border-radius: 5px;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-    max-width: 300px;
+/* Contact Section - New Optimized Styles */
+.contact-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    margin-top: 2rem;
 }
 
-.seminar-thumbnail img {
-    width: 100%;
-    height: auto;
+.contact-card {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 1.5rem;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
     transition: transform 0.3s ease;
-    display: block;
 }
 
-.seminar-thumbnail img:hover {
-    transform: scale(1.05);
+.contact-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
 }
 
-.seminar-content h3 a {
-    color: inherit;
+.contact-icons {
+    margin-bottom: 1rem;
+}
+
+.contact-text {
+    width: 100%;
+    text-align: left;
+}
+
+.contact-text p {
+    display: flex;
+    align-items: center;
+}
+
+.contact-icon, i.contact-icon {
+    color: var(--primary-color);
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background-color: rgba(189, 56, 75, 0.1);
+    transition: all 0.3s ease;
+}
+
+a.contact-icon:hover, i.contact-icon:hover {
+    background-color: var(--primary-color);
+    color: white;
+    transform: scale(1.1);
+}
+
+.contact-text h3 {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    color: #333;
+    text-align: center;
+}
+
+.contact-text p {
+    font-size: 0.95rem;
+    color: #666;
+    margin-bottom: 0.5rem;
+}
+
+.contact-text a {
+    color: var(--primary-color);
     text-decoration: none;
+    transition: color 0.3s ease;
 }
 
-.seminar-content h3 a:hover {
-    color: #1565C0;
+.contact-text a:hover {
     text-decoration: underline;
+}
+
+.map-container {
+    grid-column: span 3;
+    height: 400px;
+}
+
+@media (max-width: 992px) {
+    .contact-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .map-container {
+        grid-column: span 2;
+    }
+}
+
+@media (max-width: 768px) {
+    .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    
+    .map-container {
+        grid-column: span 1;
+        height: 350px;
+    }
+    
+    .contact-card {
+        padding: 1.25rem;
+    }
+}
+
+.contact-icon-circle {
+    background-color: rgba(189, 56, 75, 0.1);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 0.5rem;
+}
+
+.contact-icon-circle i {
+    color: var(--primary-color);
+    font-size: 1.8rem;
 }
 
