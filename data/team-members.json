@@ -1159,6 +1159,12 @@
                   "url": "http://www.zhengrufang.com/index.html",
                   "icon": "fas fa-globe",
                   "title": "Homepage"
+                },
+                {
+                  "type": "github",
+                  "url": "https://github.com/fangzr",
+                  "icon": "fab fa-github",
+                  "title": "GitHub"
                 }
               ],
               "interests": [
