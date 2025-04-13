@@ -251,113 +251,144 @@ function loadPublications() {
         publicationsJsonPath = '../data/publications.json';
     }
 
-    const publicationsList = document.querySelector('.publications-list');
-    if (!publicationsList) return;
+    // Check if we're on the homepage or publications page
+    const isHomepage = !window.location.pathname.includes('/pages/publications.html');
     
-    // Clear existing publications
-    publicationsList.innerHTML = '';
+    // Get publication containers
+    const publications2025Container = document.getElementById('publications-2025');
+    const publications2024Container = document.getElementById('publications-2024');
+    const publicationsList = document.querySelector('.publications-list'); // For the publications page
+    
+    // Clear existing publications if they exist
+    if (publications2025Container) publications2025Container.innerHTML = '';
+    if (publications2024Container) publications2024Container.innerHTML = '';
+    if (publicationsList) publicationsList.innerHTML = '';
     
     fetch(publicationsJsonPath)
         .then(response => response.json())
         .then(publications => {
-            // Limit the number of publications on homepage to 6
-            const isHomepage = !window.location.pathname.includes('/pages/publications.html');
-            const publicationsToShow = isHomepage ? publications.slice(0, 6) : publications;
+            // If on publications page, handle like before
+            if (!isHomepage) {
+                renderPublications(publications, publicationsList);
+                return;
+            }
             
-            // Counter for auto-numbering publications
-            let counter = 1;
+            // On homepage, group publications by year
+            const pubs2025 = publications.filter(pub => pub.year === "2025");
+            const pubs2024 = publications.filter(pub => pub.year === "2024");
             
-            publicationsToShow.forEach(pub => {
-                const pubElement = document.createElement('div');
-                const classes = ['publication', pub.type];
-                if (pub.isFirstAuthor) classes.push('first-author');
-                pubElement.className = classes.join(' ');
-                
-                // Create venue/type label for left side
-                const venueElement = document.createElement('div');
-                venueElement.className = 'pub-venue-label';
-                
-                // Determine what text to show in the left column
-                let venueText = '';
-                if (pub.type === 'preprint') {
-                    venueText = 'Preprint';
-                } else if (pub.venue) {
-                    // Extract short venue name from the venue string or tags
-                    const venueTag = pub.tags.find(tag => tag.class === 'venue-tag');
-                    venueText = venueTag ? venueTag.text : pub.venue.split(',')[0].split(' ').pop();
-                }
-                
-                // Create publication number - display in ascending order (1-15)
-                const numberElement = document.createElement('span');
-                numberElement.className = 'pub-number';
-                numberElement.textContent = counter++;
-                
-                venueElement.appendChild(numberElement);
-                
-                // Add venue text below the number
-                const venueTextElement = document.createElement('span');
-                venueTextElement.className = 'venue-text';
-                venueTextElement.textContent = venueText;
-                venueElement.appendChild(venueTextElement);
-                
-                // Create publication content container
-                const contentElement = document.createElement('div');
-                contentElement.className = 'pub-content';
-                
-                // Add title
-                const titleElement = document.createElement('h3');
-                titleElement.textContent = pub.title;
-                contentElement.appendChild(titleElement);
-                
-                // Add authors
-                const authorsElement = document.createElement('p');
-                authorsElement.className = 'authors';
-                authorsElement.innerHTML = pub.authors;
-                contentElement.appendChild(authorsElement);
-                
-                // Add full venue if it exists (for accepted papers)
-                if (pub.venue) {
-                    const fullVenueElement = document.createElement('p');
-                    fullVenueElement.className = 'venue';
-                    fullVenueElement.textContent = pub.venue;
-                    contentElement.appendChild(fullVenueElement);
-                }
-                
-                // Add tags
-                const tagsContainer = document.createElement('div');
-                tagsContainer.className = 'pub-tags';
-                
-                pub.tags.forEach(tag => {
-                    // Skip venue tag as we're now showing it on the left
-                    if (tag.class === 'venue-tag') return;
-                    
-                    if (tag.link) {
-                        const tagLink = document.createElement('a');
-                        tagLink.href = tag.link;
-                        tagLink.className = `tag ${tag.class}`;
-                        tagLink.textContent = tag.text;
-                        tagLink.target = "_blank";
-                        tagLink.rel = "noopener noreferrer";
-                        tagsContainer.appendChild(tagLink);
-                    } else {
-                        const tagSpan = document.createElement('span');
-                        tagSpan.className = `tag ${tag.class}`;
-                        tagSpan.textContent = tag.text;
-                        tagsContainer.appendChild(tagSpan);
-                    }
-                });
-                
-                contentElement.appendChild(tagsContainer);
-                
-                // Combine elements and add to publications list
-                pubElement.appendChild(venueElement);
-                pubElement.appendChild(contentElement);
-                publicationsList.appendChild(pubElement);
-            });
+            // Limit number of papers per year for homepage
+            const pubs2025Limited = pubs2025.slice(0, 3);
+            const pubs2024Limited = pubs2024.slice(0, 3);
+            
+            // Render publications for each year
+            if (publications2025Container) {
+                renderPublications(pubs2025Limited, publications2025Container);
+            }
+            
+            if (publications2024Container) {
+                renderPublications(pubs2024Limited, publications2024Container);
+            }
         })
         .catch(error => {
             console.error('Error loading publications data:', error);
         });
+}
+
+// Helper function to render publications to a specific container
+function renderPublications(publications, container) {
+    if (!container) return;
+    
+    // Counter for auto-numbering publications
+    let counter = 1;
+    
+    publications.forEach(pub => {
+        const pubElement = document.createElement('div');
+        const classes = ['publication', pub.type];
+        if (pub.isFirstAuthor) classes.push('first-author');
+        pubElement.className = classes.join(' ');
+        
+        // Create venue/type label for left side
+        const venueElement = document.createElement('div');
+        venueElement.className = 'pub-venue-label';
+        
+        // Determine what text to show in the left column
+        let venueText = '';
+        if (pub.type === 'preprint') {
+            venueText = 'Preprint';
+        } else if (pub.venue) {
+            // Extract short venue name from the venue string or tags
+            const venueTag = pub.tags.find(tag => tag.class === 'venue-tag');
+            venueText = venueTag ? venueTag.text : pub.venue.split(',')[0].split(' ').pop();
+        }
+        
+        // Create publication number
+        const numberElement = document.createElement('span');
+        numberElement.className = 'pub-number';
+        numberElement.textContent = counter++;
+        
+        venueElement.appendChild(numberElement);
+        
+        // Add venue text below the number
+        const venueTextElement = document.createElement('span');
+        venueTextElement.className = 'venue-text';
+        venueTextElement.textContent = venueText;
+        venueElement.appendChild(venueTextElement);
+        
+        // Create publication content container
+        const contentElement = document.createElement('div');
+        contentElement.className = 'pub-content';
+        
+        // Add title
+        const titleElement = document.createElement('h3');
+        titleElement.textContent = pub.title;
+        contentElement.appendChild(titleElement);
+        
+        // Add authors
+        const authorsElement = document.createElement('p');
+        authorsElement.className = 'authors';
+        authorsElement.innerHTML = pub.authors;
+        contentElement.appendChild(authorsElement);
+        
+        // Add full venue if it exists (for accepted papers)
+        if (pub.venue) {
+            const fullVenueElement = document.createElement('p');
+            fullVenueElement.className = 'venue';
+            fullVenueElement.textContent = pub.venue;
+            contentElement.appendChild(fullVenueElement);
+        }
+        
+        // Add tags
+        const tagsContainer = document.createElement('div');
+        tagsContainer.className = 'pub-tags';
+        
+        pub.tags.forEach(tag => {
+            // Skip venue tag as we're now showing it on the left
+            if (tag.class === 'venue-tag') return;
+            
+            if (tag.link) {
+                const tagLink = document.createElement('a');
+                tagLink.href = tag.link;
+                tagLink.className = `tag ${tag.class}`;
+                tagLink.textContent = tag.text;
+                tagLink.target = "_blank";
+                tagLink.rel = "noopener noreferrer";
+                tagsContainer.appendChild(tagLink);
+            } else {
+                const tagSpan = document.createElement('span');
+                tagSpan.className = `tag ${tag.class}`;
+                tagSpan.textContent = tag.text;
+                tagsContainer.appendChild(tagSpan);
+            }
+        });
+        
+        contentElement.appendChild(tagsContainer);
+        
+        // Combine elements and add to publications list
+        pubElement.appendChild(venueElement);
+        pubElement.appendChild(contentElement);
+        container.appendChild(pubElement);
+    });
 }
 
 // Function to render news items

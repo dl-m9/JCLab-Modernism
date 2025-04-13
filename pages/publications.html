@@ -17,8 +17,8 @@
             margin-top: 40px;
             margin-bottom: 20px;
             font-weight: 700;
-            color: #1565C0;
-            border-bottom: 2px solid #eee;
+            color: var(--primary-color);
+            border-bottom: 2px solid var(--background-color);
             padding-bottom: 10px;
         }
     </style>
@@ -51,22 +51,11 @@
     <main>
         <section class="publications-container">
             <h1 class="section-title">Publications</h1>
-            <p class="section-description"><sup>#</sup>equal contribution, *corresponding author.</p>
-            <div class="publication-filter">
-                <button class="filter-btn active" data-filter="all">All</button>
-                <button class="filter-btn" data-filter="2025">2025</button>
-                <button class="filter-btn" data-filter="2024">2024</button>
-                <button class="filter-btn" data-filter="first-author">First Author</button>
-            </div>
+            <p> Check Prof. Fang's <a href="https://scholars.cityu.edu.hk/en/persons/yuguang-fang(b2d78936-ab0a-4186-9f64-0f468013de23)/publications.html" target="_blank">CityU Scholars</a> to obtain the full list of publications.</p>
             
-            <div id="year-2025" class="year-divider">2025</div>
-            <div class="publications-list" data-year="2025">
-                <!-- 2025 publications will be loaded here -->
-            </div>
-            
-            <div id="year-2024" class="year-divider">2024</div>
-            <div class="publications-list" data-year="2024">
-                <!-- 2024 publications will be loaded here -->
+            <!-- Publications will be loaded dynamically by year -->
+            <div id="publications-by-year">
+                <!-- Year sections will be created dynamically based on the data -->
             </div>
         </section>
     </main>
@@ -101,28 +90,8 @@
                     const pubsByYear = {};
                     
                     publications.forEach(pub => {
-                        // Extract year from venue
-                        let year = null;
-                        
-                        if (pub.venue) {
-                            // Try to extract year from the venue string
-                            const yearMatch = pub.venue.match(/(202\d)/); // Matches years 2020-2029
-                            if (yearMatch) {
-                                year = yearMatch[1];
-                            }
-                        }
-                        
-                        // If no year in venue, check tags
-                        if (!year) {
-                            const venueTag = pub.tags.find(tag => tag.class === 'venue-tag');
-                            if (venueTag) {
-                                const tagYearMatch = venueTag.text.match(/'(\d{2})/);
-                                if (tagYearMatch) {
-                                    const shortYear = tagYearMatch[1];
-                                    year = `20${shortYear}`;
-                                }
-                            }
-                        }
+                        // Use the year field directly from the publication data
+                        let year = pub.year;
                         
                         // Default to 2024 if no year found
                         year = year || "2024";
@@ -134,35 +103,28 @@
                         pubsByYear[year].push(pub);
                     });
                     
+                    // Get the container for all publications
+                    const publicationsByYearContainer = document.getElementById('publications-by-year');
+                    
                     // Render publications by year
                     Object.keys(pubsByYear).sort().reverse().forEach(year => {
-                        const yearContainer = document.querySelector(`.publications-list[data-year="${year}"]`);
+                        // Create year divider heading
+                        const yearDivider = document.createElement('h3');
+                        yearDivider.id = `year-${year}`;
+                        yearDivider.className = 'year-divider';
+                        yearDivider.textContent = `Accepted Papers in ${year}`;
                         
-                        // If container doesn't exist, create it
-                        if (!yearContainer) {
-                            const yearDivider = document.createElement('div');
-                            yearDivider.id = `year-${year}`;
-                            yearDivider.className = 'year-divider';
-                            yearDivider.textContent = year;
-                            
-                            const yearList = document.createElement('div');
-                            yearList.className = 'publications-list';
-                            yearList.dataset.year = year;
-                            
-                            // Append after the last year section
-                            const lastSection = document.querySelector('.publications-list:last-of-type');
-                            if (lastSection) {
-                                lastSection.after(yearDivider);
-                                yearDivider.after(yearList);
-                            } else {
-                                document.querySelector('.publications-container').appendChild(yearDivider);
-                                document.querySelector('.publications-container').appendChild(yearList);
-                            }
-                            
-                            renderPublications(pubsByYear[year], yearList);
-                        } else {
-                            renderPublications(pubsByYear[year], yearContainer);
-                        }
+                        // Create publications list container for this year
+                        const yearList = document.createElement('div');
+                        yearList.className = 'publications-list';
+                        yearList.dataset.year = year;
+                        
+                        // Add to main container
+                        publicationsByYearContainer.appendChild(yearDivider);
+                        publicationsByYearContainer.appendChild(yearList);
+                        
+                        // Render publications for this year
+                        renderPublications(pubsByYear[year], yearList);
                     });
                 })
                 .catch(error => {
@@ -179,7 +141,7 @@
                 const classes = ['publication', pub.type];
                 if (pub.isFirstAuthor) classes.push('first-author');
                 pubElement.className = classes.join(' ');
-                pubElement.dataset.year = extractYear(pub);
+                pubElement.dataset.year = pub.year || "2024"; // Use year field directly, default to 2024
                 
                 // Create venue/type label for left side
                 const venueElement = document.createElement('div');
@@ -265,21 +227,8 @@
         }
         
         function extractYear(pub) {
-            // Try to extract year from the venue string
-            if (pub.venue) {
-                const yearMatch = pub.venue.match(/(202\d)/);
-                if (yearMatch) return yearMatch[1];
-            }
-            
-            // Try to extract year from venue tag
-            const venueTag = pub.tags.find(tag => tag.class === 'venue-tag');
-            if (venueTag) {
-                const tagYearMatch = venueTag.text.match(/'(\d{2})/);
-                if (tagYearMatch) return `20${tagYearMatch[1]}`;
-            }
-            
-            // Default to 2024 if no year found
-            return "2024";
+            // Use the year field directly from the publication data
+            return pub.year || "2024"; // Default to 2024 if no year found
         }
         
         function setupFilters() {

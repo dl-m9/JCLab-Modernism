@@ -2,9 +2,8 @@
   {
     "title": "Decoder Gradient Shield: Provable and High-Fidelity Prevention of Gradient-Based Box-Free Watermark Removal",
     "authors": "Haonan An, Guang Hua, Zhengru Fang, Guowen Xu, Susanto Rahardja, and Yuguang Fang",
-    "type": "accepted",
-    "isFirstAuthor": false,
     "venue": "Conference on Computer Vision and Pattern Recognition (CVPR), 2025",
+    "year": "2025",
     "tags": [
       {
         "text": "CVPR'25",
@@ -20,8 +19,7 @@
   {
     "title": "Direct-CP: Directed Collaborative Perception for Connected and Autonomous Vehicles via Proactive Attention",
     "authors": "Yihang Tao, Senkang Hu, Zhengru Fang, Yuguang Fang",
-    "type": "accepted",
-    "isFirstAuthor": false,
+    "year": "2025",
     "venue": "The 2025 IEEE International Conference on Robotics & Automation, 19-23 May, Atlanta, USA",
     "tags": [
       {
@@ -38,8 +36,7 @@
   {
     "title": "Native WiFi Backscatter",
     "authors": "Longzhi Yuan, Wei Gong, Yuguang Fang",
-    "type": "accepted",
-    "isFirstAuthor": false,
+    "year": "2024",
     "venue": "IEEE/ACM Transactions on Networking",
     "tags": [
       {
@@ -56,8 +53,7 @@
   {
     "title": "CP-Guard: Malicious Agent Detection and Defense in Collaborative Bird's Eye View Perception",
     "authors": "Senkang Hu<sup>#</sup>, Yihang Tao<sup>#</sup>, Guowen Xu, Yiqin Deng, Xianhao Chen, Yuguang Fang, Sam Kwong",
-    "type": "accepted",
-    "isFirstAuthor": false,
+    "year": "2024",
     "venue": "The 39th Annual AAAI Conference on Artificial Intelligence, Philadelphia, Pennsylvania, USA, February 2025",
     "tags": [
       {
@@ -74,8 +70,7 @@
   {
     "title": "Toward Full-scene Domain Generalization in Multi-agent Collaborative Bird's Eye View Segmentation for Connected and Autonomous Driving",
     "authors": "Senkang Hu, Zhengru Fang, Yiqin Deng, Xianhao Chen, Yuguang Fang, and Sam Kwong",
-    "type": "accepted",
-    "isFirstAuthor": false,
+    "year": "2024",
     "venue": "IEEE Transactions on Intelligent Transportation Systems",
     "tags": [
       {
@@ -92,8 +87,7 @@
   {
     "title": "Prioritized Information Bottleneck Theoretic Framework with Distributed Online Learning for Edge Video Analytics",
     "authors": "Zhengru Fang, Senkang Hu, Jingjing Wang, Yiqin Deng, Xianhao Chen, Yuguang Fang",
-    "type": "accepted",
-    "isFirstAuthor": false,
+    "year": "2024",
     "venue": "IEEE/ACM Transactions on Networking",
     "tags": [
       {
@@ -115,8 +109,7 @@
   {
     "title": "PIB: Prioritized Information Bottleneck Framework for Collaborative Edge Video Analytics",
     "authors": "Zhengru Fang, Senkang Hu, Liyan Yang, Yiqin Deng, Xianhao Chen, Yuguang Fang",
-    "type": "accepted",
-    "isFirstAuthor": false,
+    "year": "2024",
     "venue": "IEEE Global Communications Conference, Cape Town, South Africa, December 2024",
     "tags": [
       {
@@ -138,8 +131,7 @@
   {
     "title": "Adaptive Communications in Collaborative Perception with Domain Alignment for Autonomous Driving",
     "authors": "Senkang Hu, Zhengru Fang, Haonan An, Guowen Xu, Yuan Zhou, Xianhao Chen, Yuguang Fang",
-    "type": "accepted",
-    "isFirstAuthor": false,
+    "year": "2024",
     "venue": "IEEE Global Communications Conference, Cape Town, South Africa, December 2024",
     "tags": [
       {
@@ -156,8 +148,7 @@
   {
     "title": "AoIT-Empowered Associated Network Slicing: Resource Orchestration for Joint Monitoring",
     "authors": "Xiaojing Wen, Cailian Chen, Xinping Guan, Cheng Ren, Yehan Ma, Yuguang Fang",
-    "type": "accepted",
-    "isFirstAuthor": false,
+    "year": "2024",
     "venue": "IEEE Transactions on Wireless Communications",
     "tags": [
       {
@@ -174,8 +165,7 @@
   {
     "title": "Decentralized Multi-Client Functional Encryption for Inner Product with Applications to Federated Learning",
     "authors": "Xinyuan Qian, Hongwei Li, Meng Hao, Guowen Xu, Haoyong Wang, Yuguang Fang",
-    "type": "accepted",
-    "isFirstAuthor": false,
+    "year": "2024",
     "venue": "IEEE Transactions on Dependable and Secure Computing",
     "tags": [
       {
@@ -192,8 +182,7 @@
   {
     "title": "UAV-Assisted MEC with an Expandable Computing Resource Pool: Rethinking the UAV Deployment",
     "authors": "Yiqin Deng, Haixia Zhang, Xianhao Chen, Yuguang Fang",
-    "type": "accepted",
-    "isFirstAuthor": false,
+    "year": "2024",
     "venue": "IEEE Wireless Communications Magazine",
     "tags": [
       {
@@ -210,8 +199,7 @@
   {
     "title": "Resources on the Move for Smart City: A Disruptive Perspective on the Grand Convergence of Sensing, Communications, Computing, Storage, and Intelligence",
     "authors": "Yuguang Fang, Yiqin Deng, Xianhao Chen",
-    "type": "accepted",
-    "isFirstAuthor": false,
+    "year": "2024",
     "venue": "IEEE Communications Magazine",
     "tags": [
       {
@@ -228,8 +216,7 @@
   {
     "title": "PACP: Priority-Aware Collaborative Perception for Connected and Autonomous Vehicles",
     "authors": "Zhengru Fang, Senkang Hu, Haonan An, Yuang Zhang, Jingjing Wang, Hangcheng Cao, Xianhao Chen, Yuguang Fang",
-    "type": "accepted",
-    "isFirstAuthor": false,
+    "year": "2024",
     "venue": "IEEE Transactions on Mobile Computing",
     "tags": [
       {
@@ -246,8 +233,7 @@
   {
     "title": "UAV-assisted Multi-access Edge Computing with Altitude-dependent Computing Power",
     "authors": "Yiqin Deng, Haixia Zhang, Xianhao Chen, Yuguang Fang",
-    "type": "accepted",
-    "isFirstAuthor": false,
+    "year": "2024",
     "venue": "IEEE Transactions on Wireless Communications",
     "tags": [
       {
@@ -264,8 +250,7 @@
   {
     "title": "Vehicle as a Service (VaaS): Leverage Vehicles to Build Service Networks and Capabilities for Smart Cities",
     "authors": "Xianhao Chen, Yiqin Deng, Haichuan Ding, Guanqiao Qu, Haixia Zhang, Pan Li, Yuguang Fang",
-    "type": "accepted",
-    "isFirstAuthor": false,
+    "year": "2024",
     "venue": "IEEE Communications Surveys & Tutorials",
     "tags": [
       {
@@ -282,8 +267,7 @@
   {
     "title": "Privacy-Preserving Data Evaluation via Functional Encryption, Revisited",
     "authors": "Xinyuan Qian, Hongwei Li, Guowen Xu, Haoyong Wang, Tianwei Zhang, Xianhao Chen, Yuguang Fang",
-    "type": "accepted",
-    "isFirstAuthor": false,
+    "year": "2024",
     "venue": "2024 IEEE Conference on Computer Communications",
     "tags": [
       {
@@ -300,8 +284,7 @@
   {
     "title": "SmartCooper: Vehicular Collaborative Perception with Adaptive Fusion and Judger Mechanism",
     "authors": "Yuang Zhang, Haonan An, Zhengru Fang, Guowen Xu, Yuan Zhou, Xianhao Chen, Yuguang Fang",
-    "type": "accepted",
-    "isFirstAuthor": false,
+    "year": "2024",
     "venue": "2024 IEEE International Conference on Robotics and Automation",
     "tags": [
       {

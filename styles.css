@@ -7,6 +7,7 @@
     --border-color: #e0e0e0;
     --section-spacing: 5rem;
     --timeline-color: #f0f0f0;
+    --background-color: rgba(189, 56, 75, 0.1);
 }
 
 * {
@@ -569,7 +570,7 @@ nav {
 }
 
 .date-highlight, .year-highlight {
-    background-color: rgba(0, 102, 204, 0.1);
+    background-color: rgba(189, 56, 75, 0.1);
     padding: 2px 8px;
     border-radius: 4px;
     display: inline-block;
@@ -593,7 +594,7 @@ nav {
 }
 
 .news-content a {
-    color: #0066cc;
+    color: var(--primary-color);
     text-decoration: none;
     font-weight: 600;
     margin-left: 5px;
@@ -842,7 +843,7 @@ nav {
     align-items: center;
     justify-content: center;
     width: 150px;
-    background-color: rgba(0, 102, 204, 0.1);
+    background-color: var(--background-color);
     color: var(--primary-color);
     text-align: center;
     padding: 1rem 0.5rem;
@@ -949,20 +950,20 @@ nav {
 
 /* Light blue color for venue tags (accepted papers) */
 .venue-tag {
-    background-color: #e1f5fe;
-    color: #0288d1;
+    background-color: var(--background-color);
+    color: var(--primary-color);
 }
 
 /* Light purple color for highlight tags, rating tags, and code/blog tags */
 .highlight-tag, .code-tag, .blog-tag {
-    background-color: #e8eaf6;
-    color: #3f51b5;
+    background-color: var(--background-color);
+    color: var(--primary-color);
     text-decoration: none;
     transition: all 0.3s ease;
 }
 
 .code-tag:hover, .blog-tag:hover {
-    background-color: #3f51b5;
+    background-color: var(--primary-color);
     color: white;
 }
 
@@ -973,7 +974,7 @@ nav {
 }
 
 .status {
-    background-color: #e6f0ff;
+    background-color: var(--background-color);
     color: var(--primary-color);
     padding: 0.2rem 0.5rem;
     border-radius: 4px;
@@ -1509,7 +1510,7 @@ footer {
 /* Ensure date-highlight and year-highlight have the same styling */
 .date-highlight, .year-highlight {
     display: inline-block;
-    background-color: #e1f5fe;
+    background-color: var(--background-color);
     padding: 5px 10px;
     border-radius: 4px;
     font-size: 0.9rem;
@@ -2351,5 +2352,19 @@ a.contact-icon:hover, i.contact-icon:hover {
 .contact-icon-circle i {
     color: var(--primary-color);
     font-size: 1.8rem;
+}
+
+.year-divider {
+    margin-top: 40px;
+    margin-bottom: 20px;
+    font-weight: 700;
+    color: var(--primary-color);
+    border-bottom: 2px solid #eee;
+    padding-bottom: 10px;
+    font-size: 1.5rem;
+}
+
+.publications-list {
+    margin-bottom: 30px;
 }
 
