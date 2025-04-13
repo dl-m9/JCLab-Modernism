@@ -13,6 +13,11 @@
         "text": "PDF",
         "class": "code-tag",
         "link": "https://arxiv.org/abs/2502.20924"
+      },
+      {
+        "text": "Code",
+        "class": "code-tag",
+        "link": "https://github.com/haonanAN309/CVPR-2025-Official-Implementation-Decoder-Gradient-Shield"
       }
     ]
   },
