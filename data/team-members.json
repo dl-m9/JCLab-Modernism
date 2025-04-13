@@ -1018,6 +1018,66 @@
               "last_name": "aac"
             },
             {
+              "id": "pd24-yiqindeng",
+              "title": "Dr. DENG, Yiqin",
+              "role": [
+                {
+                  "text": "Postdoctor @ CityUHK",
+                  "highlighted": true
+                },
+                {
+                  "text": "Postdoctor @ Shandong University",
+                  "highlighted": false
+                },
+                {
+                  "text": "PhD & MSc @ Central South University",
+                  "highlighted": false
+                }
+              ],
+              "avatar": "data/people/PD24_YiqinDeng/avatar.jpeg",
+              "socialLinks": [
+                {
+                  "type": "envelope",
+                  "url": "mailto:yiqin.deng@email.sdu.edu.cn",
+                  "icon": "fas fa-envelope",
+                  "title": "Email"
+                },
+                {
+                  "type": "google-scholar",
+                  "url": "https://scholar.google.com/citations?user=EdRi_MEAAAAJ&hl=zh-CN",
+                  "icon": "fas fa-graduation-cap",
+                  "title": "Google Scholar"
+                },
+                {
+                  "type": "house-user",
+                  "url": "http://www.icon.sdu.edu.cn/info/1055/1733.htm",
+                  "icon": "fas fa-globe",
+                  "title": "Homepage"
+                }
+              ],
+              "interests": [
+                "Edge/Fog computing",
+                "Internet of Vehicles",
+                "Resource Management"
+              ],
+              "biography": "\n\n\n\n\n\nYiqin Deng is currently a Postdoctoral Research at City University of Hong Kong. Previously, she was a Postdoctoral Research at Shandong University, Jinan, China. She received her M.S. degree in software engineering and PhD degree in computer science and technology from Central South University, Changsha, China, in 2017 and 2022, respectively. She was a visiting researcher at the University of Florida, Gainesville, from 2019 to 2021. Her research interests include edge/fog computing, the Internet of Vehicles, and resource management.",
+              "education": [
+                {
+                  "degree": "PhD in Computer Science and Technology",
+                  "institution": "Central South University",
+                  "year": "2017 - 2022"
+                },
+                {
+                  "degree": "MSc in Software Engineering",
+                  "institution": "Central South University",
+                  "year": "2014 - 2017"
+                }
+              ],
+              "detailPage": "data/people/PD24_YiqinDeng/index.html",
+              "last_name": "abt"
+            },
+            
+            {
               "id": "pd24-liuzhaofeng",
               "title": "Dr. LIU, Zhaofeng",
               "role": [
@@ -2102,15 +2162,7 @@
                   "highlighted": true
                 },
                 {
-                  "text": "Department of Electrical and Computer Engineering",
-                  "highlighted": false
-                },
-                {
-                  "text": "Idaho State University",
-                  "highlighted": false
-                },
-                {
-                  "text": "USA (Supervised by Shuo Wang and Yuguang Fang)",
+                  "text": "Department of Electrical and Computer Engineering, Idaho State University, USA (Supervised by Shuo Wang and Yuguang Fang)",
                   "highlighted": false
                 }
               ],
@@ -2164,15 +2216,7 @@
                   "highlighted": true
                 },
                 {
-                  "text": "Department of Electrical and Computer Engineering",
-                  "highlighted": false
-                },
-                {
-                  "text": "Michigan Technological University",
-                  "highlighted": false
-                },
-                {
-                  "text": "USA (Supervised by Shuo Wang and Yuguang Fang)",
+                  "text": "Department of Electrical and Computer Engineering, Michigan Technological University, USA (Supervised by Shuo Wang and Yuguang Fang)",
                   "highlighted": false
                 }
               ],
@@ -2232,19 +2276,7 @@
                   "highlighted": true
                 },
                 {
-                  "text": "Department of Electrical and Electronic Engineering",
-                  "highlighted": false
-                },
-                {
-                  "text": "The University of Hong Kong",
-                  "highlighted": false
-                },
-                {
-                  "text": "Hong Kong",
-                  "highlighted": false
-                },
-                {
-                  "text": "China",
+                  "text": "Department of Electrical and Electronic Engineering, The University of Hong Kong",
                   "highlighted": false
                 }
               ],
@@ -2300,15 +2332,7 @@
                   "highlighted": true
                 },
                 {
-                  "text": "Department of Electrical and Computer Engineering",
-                  "highlighted": false
-                },
-                {
-                  "text": "Michigan Technological University",
-                  "highlighted": false
-                },
-                {
-                  "text": "USA",
+                  "text": "Department of Electrical and Computer Engineering, Michigan Technological University",
                   "highlighted": false
                 }
               ],
@@ -2376,19 +2400,7 @@
                   "highlighted": true
                 },
                 {
-                  "text": "Department of IoT",
-                  "highlighted": false
-                },
-                {
-                  "text": "Nanjing University of Information Science and Technology",
-                  "highlighted": false
-                },
-                {
-                  "text": "Nanjing",
-                  "highlighted": false
-                },
-                {
-                  "text": "China",
+                  "text": "Department of IoT, Nanjing University of Information Science and Technology",
                   "highlighted": false
                 }
               ],
@@ -2424,19 +2436,11 @@
               "title": "Dr. DING, Haichuan",
               "role": [
                 {
-                  "text": "Professor School of Cyberspace Science and Technology",
+                  "text": "Professor",
                   "highlighted": true
                 },
                 {
-                  "text": "Beijing Institute of Technology",
-                  "highlighted": false
-                },
-                {
-                  "text": "Beijing",
-                  "highlighted": false
-                },
-                {
-                  "text": "China",
+                  "text": "School of Cyberspace Science and Technology, Beijing Institute of Technology",
                   "highlighted": false
                 }
               ],
@@ -2488,15 +2492,11 @@
               "title": "Dr. LIU, Jianqing",
               "role": [
                 {
-                  "text": "Assistant Professor Department of Computer Science",
+                  "text": "Associate Professor",
                   "highlighted": true
                 },
                 {
-                  "text": "North Carolina State University",
-                  "highlighted": false
-                },
-                {
-                  "text": "USA",
+                  "text": "Department of Computer Science, North Carolina State University",
                   "highlighted": false
                 }
               ],
@@ -2557,15 +2557,7 @@
                   "highlighted": true
                 },
                 {
-                  "text": "Department of Electrical and Computer Engineering",
-                  "highlighted": false
-                },
-                {
-                  "text": "The University of Texas at San Antonio",
-                  "highlighted": false
-                },
-                {
-                  "text": "USA",
+                  "text": "Department of Electrical and Computer Engineering, The University of Texas at San Antonio",
                   "highlighted": false
                 }
               ],
@@ -2626,15 +2618,7 @@
                   "highlighted": true
                 },
                 {
-                  "text": "Department of Computer Science",
-                  "highlighted": false
-                },
-                {
-                  "text": "San Francisco State University",
-                  "highlighted": false
-                },
-                {
-                  "text": "USA",
+                  "text": "Department of Computer Science, San Francisco State University",
                   "highlighted": false
                 }
               ],
@@ -2689,15 +2673,7 @@
                   "highlighted": true
                 },
                 {
-                  "text": "Tencent",
-                  "highlighted": false
-                },
-                {
-                  "text": "Shenzhen",
-                  "highlighted": false
-                },
-                {
-                  "text": "China",
+                  "text": "Tencent, Shenzhen, China",
                   "highlighted": false
                 }
               ],
@@ -2758,15 +2734,7 @@
                   "highlighted": true
                 },
                 {
-                  "text": "Department of Electrical and Computer Engineering",
-                  "highlighted": false
-                },
-                {
-                  "text": "Clemson University",
-                  "highlighted": false
-                },
-                {
-                  "text": "USA",
+                  "text": "Department of Electrical and Computer Engineering, Clemson University",
                   "highlighted": false
                 }
               ],
@@ -2829,15 +2797,11 @@
               "title": "Dr. GUO, Yuanxiong",
               "role": [
                 {
-                  "text": "Associate Professor Department of Information Systems and Cyber Security",
+                  "text": "Associate Professor",
                   "highlighted": true
                 },
                 {
-                  "text": "The University of Texas at San Antonio",
-                  "highlighted": false
-                },
-                {
-                  "text": "USA",
+                  "text": "Department of Information Systems and Cyber Security, The University of Texas at San Antonio",
                   "highlighted": false
                 }
               ],
@@ -2908,8 +2872,12 @@
               "title": "Dr. LIN, Huang",
               "role": [
                 {
-                  "text": "Founder Faceless Project and Mercury's Wings",
+                  "text": "Founder",
                   "highlighted": true
+                },
+                {
+                  "text": "Faceless Project and Mercury's Wings",
+                  "highlighted": false
                 }
               ],
               "avatar": "data/people/Huanglin/avatar.jpg",
@@ -2963,11 +2931,11 @@
               "title": "Dr. NIA, Morteza Shahriari",
               "role": [
                 {
-                  "text": "FounderPluralytics AI",
+                  "text": "Founder",
                   "highlighted": true
                 },
                 {
-                  "text": "USA(Changed Research Field)",
+                  "text": "Pluralytics AI, USA(Changed Research Field)",
                   "highlighted": false
                 }
               ],
@@ -3010,16 +2978,9 @@
                   "text": "Associate Professor",
                   "highlighted": true
                 },
+                
                 {
-                  "text": "Electrical and Computer Engineering",
-                  "highlighted": false
-                },
-                {
-                  "text": "University of Houston",
-                  "highlighted": false
-                },
-                {
-                  "text": "USA",
+                  "text": "Department of Electrical and Computer Engineering, University of Houston",
                   "highlighted": false
                 }
               ],
@@ -3076,11 +3037,11 @@
               "title": "Dr. HUANG, Rongsheng",
               "role": [
                 {
-                  "text": "Software EngineerAmazon Web Services (AWS)",
+                  "text": "Software Engineer",
                   "highlighted": true
                 },
                 {
-                  "text": "USA",
+                  "text": "Amazon Web Services (AWS), USA",
                   "highlighted": false
                 }
               ],
@@ -3144,16 +3105,9 @@
                   "text": "Associate Professor",
                   "highlighted": true
                 },
+              
                 {
-                  "text": "School of Cyber Science and Technology",
-                  "highlighted": false
-                },
-                {
-                  "text": "University of Science and Technology of China",
-                  "highlighted": false
-                },
-                {
-                  "text": "China",
+                  "text": "School of Cyber Science and Technology, University of Science and Technology of China",
                   "highlighted": false
                 }
               ],
@@ -3208,15 +3162,7 @@
                   "highlighted": true
                 },
                 {
-                  "text": "Applied Machine Learning",
-                  "highlighted": false
-                },
-                {
-                  "text": "ML Intelligence Apple",
-                  "highlighted": false
-                },
-                {
-                  "text": "USA",
+                  "text": "Applied Machine Learning, ML Intelligence Apple, USA",
                   "highlighted": false
                 }
               ],
@@ -3266,19 +3212,11 @@
               "title": "Dr. SUN, Jinyuan",
               "role": [
                 {
-                  "text": "Professor Department of Electrical Engineering and Computer Science",
+                  "text": "Professor",
                   "highlighted": true
                 },
                 {
-                  "text": "The University of Tennessee",
-                  "highlighted": false
-                },
-                {
-                  "text": "Knoxville",
-                  "highlighted": false
-                },
-                {
-                  "text": "USA",
+                  "text": "Department of Electrical Engineering and Computer Science, University of Tennessee",
                   "highlighted": false
                 }
               ],
@@ -3340,11 +3278,11 @@
               "title": "Dr. CHEN, Feng",
               "role": [
                 {
-                  "text": "VP Analytics DeveloperMorgan Stanley",
+                  "text": "VP Analytics Developer",
                   "highlighted": true
                 },
                 {
-                  "text": "USA",
+                  "text": "Morgan Stanley, USA",
                   "highlighted": false
                 }
               ],
@@ -3387,15 +3325,7 @@
                   "highlighted": true
                 },
                 {
-                  "text": "Case School of Engineering",
-                  "highlighted": false
-                },
-                {
-                  "text": "Case Western Reserve University",
-                  "highlighted": false
-                },
-                {
-                  "text": "USA",
+                  "text": "Case School of Engineering, Case Western Reserve University",
                   "highlighted": false
                 }
               ],
@@ -3451,15 +3381,7 @@
                   "highlighted": true
                 },
                 {
-                  "text": "School of Electronics and Communication Engineering",
-                  "highlighted": false
-                },
-                {
-                  "text": "Sun Yat-sen University",
-                  "highlighted": false
-                },
-                {
-                  "text": "China",
+                  "text": "School of Electronics and Communication Engineering, Sun Yat-sen University",
                   "highlighted": false
                 }
               ],
@@ -3521,11 +3443,7 @@
                   "highlighted": true
                 },
                 {
-                  "text": "Microsoft",
-                  "highlighted": false
-                },
-                {
-                  "text": "USA",
+                  "text": "Microsoft, USA",
                   "highlighted": false
                 }
               ],
@@ -3586,15 +3504,7 @@
                   "highlighted": true
                 },
                 {
-                  "text": "Elderly Carefree Technology",
-                  "highlighted": false
-                },
-                {
-                  "text": "USA",
-                  "highlighted": false
-                },
-                {
-                  "text": "(Supervised by Yuguang Fang and Dapeng Wu)",
+                  "text": "Elderly Carefree Technology, USA (Supervised by Yuguang Fang and Dapeng Wu)",
                   "highlighted": false
                 }
               ],
@@ -3653,11 +3563,7 @@
                   "highlighted": true
                 },
                 {
-                  "text": "Fortinet",
-                  "highlighted": false
-                },
-                {
-                  "text": "USA",
+                  "text": "Fortinet, USA",
                   "highlighted": false
                 }
               ],
@@ -3715,11 +3621,11 @@
               "title": "Dr. ZHAI, Hongqiang",
               "role": [
                 {
-                  "text": "Managing Director Two Sigma Investments",
+                  "text": "Managing Director",
                   "highlighted": true
                 },
                 {
-                  "text": "USA",
+                  "text": " Two Sigma Investments, USA",
                   "highlighted": false
                 }
               ],
@@ -3780,19 +3686,7 @@
                   "highlighted": true
                 },
                 {
-                  "text": "School of Electrical",
-                  "highlighted": false
-                },
-                {
-                  "text": "Computer and Energy Engineering",
-                  "highlighted": false
-                },
-                {
-                  "text": "Arizona State University",
-                  "highlighted": false
-                },
-                {
-                  "text": "USA",
+                  "text": "School of Electrical, Computer and Energy Engineering, Arizona State University",
                   "highlighted": false
                 }
               ],
@@ -3945,11 +3839,7 @@
                   "highlighted": true
                 },
                 {
-                  "text": "Keysight Technologies",
-                  "highlighted": false
-                },
-                {
-                  "text": "USA",
+                  "text": "Keysight Technologies, USA",
                   "highlighted": false
                 }
               ],
@@ -3997,15 +3887,7 @@
                   "highlighted": true
                 },
                 {
-                  "text": "Department of Computer & Information Communication Engineering",
-                  "highlighted": false
-                },
-                {
-                  "text": "Hongik University",
-                  "highlighted": false
-                },
-                {
-                  "text": "Korea",
+                  "text": "Department of Computer & Information Communication Engineering, Hongik University, Korea",
                   "highlighted": false
                 }
               ],
@@ -4066,15 +3948,7 @@
                   "highlighted": true
                 },
                 {
-                  "text": "Department of Computer Science",
-                  "highlighted": false
-                },
-                {
-                  "text": "Virginia Tech",
-                  "highlighted": false
-                },
-                {
-                  "text": "USA",
+                  "text": "Department of Computer Science, Virginia Tech, USA",
                   "highlighted": false
                 }
               ],
@@ -4139,11 +4013,7 @@
                   "highlighted": true
                 },
                 {
-                  "text": "Lenovo Corporate R&D",
-                  "highlighted": false
-                },
-                {
-                  "text": "China",
+                  "text": "Lenovo Corporate R&D, China",
                   "highlighted": false
                 }
               ],
@@ -4192,11 +4062,7 @@
                   "highlighted": true
                 },
                 {
-                  "text": "Konkuk University",
-                  "highlighted": false
-                },
-                {
-                  "text": "Korea (Supervised by Yuguang Fang and Haniph Latchman)",
+                  "text": "Konkuk University, Korea (Supervised by Yuguang Fang and Haniph Latchman)",
                   "highlighted": false
                 }
               ],
@@ -4248,11 +4114,7 @@
                   "highlighted": true
                 },
                 {
-                  "text": "Harris Corporation",
-                  "highlighted": false
-                },
-                {
-                  "text": "USA",
+                  "text": "Harris Corporation, USA",
                   "highlighted": false
                 }
               ],
@@ -4279,11 +4141,7 @@
                   "highlighted": true
                 },
                 {
-                  "text": "Applied Materials",
-                  "highlighted": false
-                },
-                {
-                  "text": "USA",
+                  "text": "Applied Materials, USA",
                   "highlighted": false
                 }
               ],
@@ -4328,11 +4186,7 @@
                   "highlighted": true
                 },
                 {
-                  "text": "University of Florida",
-                  "highlighted": false
-                },
-                {
-                  "text": "USA",
+                  "text": "University of Florida, USA",
                   "highlighted": false
                 }
               ],
@@ -4388,15 +4242,7 @@
                   "highlighted": true
                 },
                 {
-                  "text": "School of Physics and Electronic-Electrical Engineering",
-                  "highlighted": false
-                },
-                {
-                  "text": "Ningxia University",
-                  "highlighted": false
-                },
-                {
-                  "text": "China",
+                  "text": "School of Physics and Electronic-Electrical Engineering, Ningxia University, China",
                   "highlighted": false
                 }
               ],
@@ -4428,11 +4274,7 @@
                   "highlighted": true
                 },
                 {
-                  "text": "Information Science and Technology College",
-                  "highlighted": false
-                },
-                {
-                  "text": "Dalian Maritime University",
+                  "text": "Information Science and Technology College, Dalian Maritime University, China",
                   "highlighted": false
                 }
               ],
@@ -4492,15 +4334,7 @@
                   "highlighted": true
                 },
                 {
-                  "text": "School of Cyber Science and Technology and Department of Electronic Engineering and Information Science",
-                  "highlighted": false
-                },
-                {
-                  "text": "University of Science and Technology of China",
-                  "highlighted": false
-                },
-                {
-                  "text": "China",
+                  "text": "School of Cyber Science and Technology and Department of Electronic Engineering and Information Science, University of Science and Technology of China, China",
                   "highlighted": false
                 }
               ],
@@ -4595,11 +4429,7 @@
                   "highlighted": true
                 },
                 {
-                  "text": "Kumoh National Institute of Technology",
-                  "highlighted": false
-                },
-                {
-                  "text": "Korea",
+                  "text": "Kumoh National Institute of Technology, Korea",
                   "highlighted": false
                 }
               ],
@@ -4641,15 +4471,7 @@
                   "highlighted": true
                 },
                 {
-                  "text": "Department of Information and Communication Engineering",
-                  "highlighted": false
-                },
-                {
-                  "text": "Yeungnam University",
-                  "highlighted": false
-                },
-                {
-                  "text": "Korea",
+                  "text": "Department of Information and Communication Engineering, Yeungnam University, Korea",
                   "highlighted": false
                 }
               ],
@@ -4714,19 +4536,7 @@
                   "highlighted": true
                 },
                 {
-                  "text": "School of Computer Science and Technology",
-                  "highlighted": false
-                },
-                {
-                  "text": "Wuhan Univeristy of Technology",
-                  "highlighted": false
-                },
-                {
-                  "text": "Wuhan",
-                  "highlighted": false
-                },
-                {
-                  "text": "China",
+                  "text": "School of Computer Science and Technology, Wuhan University of Technology, China",
                   "highlighted": false
                 }
               ],
@@ -4779,19 +4589,7 @@
                   "highlighted": true
                 },
                 {
-                  "text": "Marine Electrical Engineering College",
-                  "highlighted": false
-                },
-                {
-                  "text": "Dalian Maritime University",
-                  "highlighted": false
-                },
-                {
-                  "text": "Dalian",
-                  "highlighted": false
-                },
-                {
-                  "text": "China",
+                  "text": "Marine Electrical Engineering College, Dalian Maritime University, China",
                   "highlighted": false
                 }
               ],
@@ -4825,19 +4623,7 @@
                   "highlighted": true
                 },
                 {
-                  "text": "Information Science and Technology College",
-                  "highlighted": false
-                },
-                {
-                  "text": "Dalian Maritime University",
-                  "highlighted": false
-                },
-                {
-                  "text": "Dalian",
-                  "highlighted": false
-                },
-                {
-                  "text": "China",
+                  "text": "Information Science and Technology College, Dalian Maritime University, China",
                   "highlighted": false
                 }
               ],
@@ -4886,19 +4672,7 @@
                   "highlighted": true
                 },
                 {
-                  "text": "School of Computer Science and Cyber Engineering",
-                  "highlighted": false
-                },
-                {
-                  "text": "Guangzhou University",
-                  "highlighted": false
-                },
-                {
-                  "text": "Guangdong",
-                  "highlighted": false
-                },
-                {
-                  "text": "China",
+                  "text": "School of Computer Science and Cyber Engineering, Guangzhou University, China",
                   "highlighted": false
                 }
               ],
@@ -4954,15 +4728,7 @@
                   "highlighted": true
                 },
                 {
-                  "text": "Computer School",
-                  "highlighted": false
-                },
-                {
-                  "text": "Beijing Information Science & Technology University",
-                  "highlighted": false
-                },
-                {
-                  "text": "China",
+                  "text": "Computer School, Beijing Information Science & Technology University, China",
                   "highlighted": false
                 }
               ],
@@ -5006,15 +4772,11 @@
               "title": "Dr. DENG, Xiaoheng",
               "role": [
                 {
-                  "text": "Professor School of Information Science and Engineering",
+                  "text": "Professor",
                   "highlighted": true
                 },
                 {
-                  "text": "Central South University",
-                  "highlighted": false
-                },
-                {
-                  "text": "China",
+                  "text": "School of Information Science and Engineering, Central South University, China",
                   "highlighted": false
                 }
               ],
@@ -5066,15 +4828,7 @@
                   "highlighted": true
                 },
                 {
-                  "text": "School of Modern Posts",
-                  "highlighted": false
-                },
-                {
-                  "text": "Nanjing University of Posts and Telecommunications",
-                  "highlighted": false
-                },
-                {
-                  "text": "China",
+                  "text": "School of Modern Posts, Nanjing University of Posts and Telecommunications, China",
                   "highlighted": false
                 }
               ],
@@ -5123,19 +4877,7 @@
                   "highlighted": true
                 },
                 {
-                  "text": "College of Engineering",
-                  "highlighted": false
-                },
-                {
-                  "text": "University of Massachusetts",
-                  "highlighted": false
-                },
-                {
-                  "text": "Amhurst",
-                  "highlighted": false
-                },
-                {
-                  "text": "MA",
+                  "text": "Department of Electrical and Computer Engineering, University of Massachusetts, USA",
                   "highlighted": false
                 }
               ],
@@ -5193,23 +4935,7 @@
                   "highlighted": true
                 },
                 {
-                  "text": "Department of Communication Engineering",
-                  "highlighted": false
-                },
-                {
-                  "text": "Xiamen University",
-                  "highlighted": false
-                },
-                {
-                  "text": "Xiamen",
-                  "highlighted": false
-                },
-                {
-                  "text": "Fujian",
-                  "highlighted": false
-                },
-                {
-                  "text": "China",
+                  "text": "Department of Communication Engineering, Xiamen University, China",
                   "highlighted": false
                 }
               ],
@@ -5262,23 +4988,11 @@
               "title": "Dr. ZHANG, Haixia",
               "role": [
                 {
-                  "text": "Professor School of Information Science and Engineering",
+                  "text": "Professor",
                   "highlighted": true
                 },
                 {
-                  "text": "Shandong University",
-                  "highlighted": false
-                },
-                {
-                  "text": "Jinan",
-                  "highlighted": false
-                },
-                {
-                  "text": "Shandong",
-                  "highlighted": false
-                },
-                {
-                  "text": "China",
+                  "text": "School of Information Science and Engineering, Shandong University, China",
                   "highlighted": false
                 }
               ],
@@ -5345,23 +5059,7 @@
                   "highlighted": true
                 },
                 {
-                  "text": "School of Information Science and Technology",
-                  "highlighted": false
-                },
-                {
-                  "text": "University of Science and Technology of China",
-                  "highlighted": false
-                },
-                {
-                  "text": "Hefei",
-                  "highlighted": false
-                },
-                {
-                  "text": "Anhui",
-                  "highlighted": false
-                },
-                {
-                  "text": "China",
+                  "text": "School of Information Science and Technology, University of Science and Technology of China, China",
                   "highlighted": false
                 }
               ],
@@ -5415,19 +5113,7 @@
                   "highlighted": true
                 },
                 {
-                  "text": "College of Information Science and Engineering",
-                  "highlighted": false
-                },
-                {
-                  "text": "China University of Petroleum",
-                  "highlighted": false
-                },
-                {
-                  "text": "Beijing",
-                  "highlighted": false
-                },
-                {
-                  "text": "China",
+                  "text": "College of Information Science and Engineering, China University of Petroleum, China",
                   "highlighted": false
                 }
               ],
@@ -5480,19 +5166,7 @@
                   "highlighted": true
                 },
                 {
-                  "text": "College of Computer Science and Technology",
-                  "highlighted": false
-                },
-                {
-                  "text": "National University of Defence Technology",
-                  "highlighted": false
-                },
-                {
-                  "text": "Changsha",
-                  "highlighted": false
-                },
-                {
-                  "text": "China",
+                  "text": "College of Computer Science and Technology, National University of Defence Technology, China",
                   "highlighted": false
                 }
               ],
@@ -5541,19 +5215,7 @@
                   "highlighted": true
                 },
                 {
-                  "text": "Faculty of Information Technology",
-                  "highlighted": false
-                },
-                {
-                  "text": "Beijing University of Technology",
-                  "highlighted": false
-                },
-                {
-                  "text": "Beijing",
-                  "highlighted": false
-                },
-                {
-                  "text": "China",
+                  "text": "Faculty of Information Technology, Beijing University of Technology, China",
                   "highlighted": false
                 }
               ],
@@ -5615,21 +5277,9 @@
                   "highlighted": true
                 },
                 {
-                  "text": "Institute of Intelligent Information Processing",
+                  "text": "Institute of Intelligent Information Processing, Guangdong University of Technology, China",
                   "highlighted": false
-                },
-                {
-                  "text": "Guangdong University of Technology",
-                  "highlighted": false
-                },
-                {
-                  "text": "Guangzhou",
-                  "highlighted": false
-                },
-                {
-                  "text": "China",
-                  "highlighted": false
-                }
+                  }
               ],
               "avatar": "data/people/Yi Liu/avatar.jpg",
               "socialLinks": [
@@ -5684,19 +5334,11 @@
               "title": "Dr. ZHANG, Jingliang",
               "role": [
                 {
-                  "text": "Associate Professor Haide College",
+                  "text": "Associate Professor",
                   "highlighted": true
                 },
                 {
-                  "text": "Ocean University of China",
-                  "highlighted": false
-                },
-                {
-                  "text": "Qingdao",
-                  "highlighted": false
-                },
-                {
-                  "text": "China",
+                  "text": "Haide College, Ocean University of China, China",
                   "highlighted": false
                 }
               ],
@@ -5749,19 +5391,7 @@
                   "highlighted": true
                 },
                 {
-                  "text": "School of Mathematics and Statistics",
-                  "highlighted": false
-                },
-                {
-                  "text": "Shaanxi Normal University",
-                  "highlighted": false
-                },
-                {
-                  "text": "Xi'an",
-                  "highlighted": false
-                },
-                {
-                  "text": "China",
+                  "text": "School of Mathematics and Statistics, Shaanxi Normal University, China",
                   "highlighted": false
                 }
               ],
@@ -5808,11 +5438,7 @@
                   "highlighted": true
                 },
                 {
-                  "text": "Beijing Information Science & Technology University",
-                  "highlighted": false
-                },
-                {
-                  "text": "China",
+                  "text": "Beijing Information Science & Technology University, China",
                   "highlighted": false
                 }
               ],
@@ -5840,11 +5466,7 @@
                   "highlighted": true
                 },
                 {
-                  "text": "Hanzhou Dianzi University",
-                  "highlighted": false
-                },
-                {
-                  "text": "China",
+                  "text": "Hangzhou Dianzi University, China",
                   "highlighted": false
                 }
               ],
@@ -5893,11 +5515,7 @@
                   "highlighted": true
                 },
                 {
-                  "text": "Shanghai University of Finance and Economics",
-                  "highlighted": false
-                },
-                {
-                  "text": "China",
+                  "text": "Shanghai University of Finance and Economics, China",
                   "highlighted": false
                 }
               ],
@@ -5941,11 +5559,7 @@
                   "highlighted": true
                 },
                 {
-                  "text": "Konkuk University",
-                  "highlighted": false
-                },
-                {
-                  "text": "Korea",
+                  "text": "Konkuk University, Korea",
                   "highlighted": false
                 }
               ],
@@ -5973,15 +5587,7 @@
                   "highlighted": true
                 },
                 {
-                  "text": "Department of Computer & Information Communication Engineering",
-                  "highlighted": false
-                },
-                {
-                  "text": "Hongik University",
-                  "highlighted": false
-                },
-                {
-                  "text": "KOREA",
+                  "text": "Department of Computer & Information Communication Engineering, Hongik University, Korea",
                   "highlighted": false
                 }
               ],
@@ -6038,15 +5644,7 @@
                   "highlighted": true
                 },
                 {
-                  "text": "Japan Patent Office",
-                  "highlighted": false
-                },
-                {
-                  "text": "Tokyo",
-                  "highlighted": false
-                },
-                {
-                  "text": "Japan",
+                  "text": "Japan Patent Office, Japan",
                   "highlighted": false
                 }
               ],
@@ -6091,15 +5689,7 @@
                   "highlighted": true
                 },
                 {
-                  "text": "Department of Automation",
-                  "highlighted": false
-                },
-                {
-                  "text": "University of Science and Technology of China",
-                  "highlighted": false
-                },
-                {
-                  "text": "China",
+                  "text": "Department of Automation, University of Science and Technology of China, China",
                   "highlighted": false
                 }
               ],
@@ -6148,21 +5738,9 @@
                   "highlighted": true
                 },
                 {
-                  "text": "Department of Information and Communication Engineering",
+                  "text": "Department of Information and Communication Engineering, Yeungnam University, Korea",
                   "highlighted": false
-                },
-                {
-                  "text": "College of Mechanical and IT Engineering",
-                  "highlighted": false
-                },
-                {
-                  "text": "Yeungnam University",
-                  "highlighted": false
-                },
-                {
-                  "text": "Korean",
-                  "highlighted": false
-                }
+                } 
               ],
               "avatar": "data/people/Sungwon Kim/avatar.jpg",
               "socialLinks": [
@@ -6220,17 +5798,9 @@
                   "highlighted": true
                 },
                 {
-                  "text": "School of Cyber Science and Technology",
+                  "text": "School of Cyber Science and Technology, Beihang University, China",
                   "highlighted": false
-                },
-                {
-                  "text": "Beihang University",
-                  "highlighted": false
-                },
-                {
-                  "text": "China",
-                  "highlighted": false
-                }
+                } 
               ],
               "avatar": "data/people/Jianwei Liu/avatar.jpg",
               "socialLinks": [
@@ -6275,17 +5845,9 @@
                   "highlighted": true
                 },
                 {
-                  "text": "Institute of Software",
+                  "text": "Institute of Software, Chinese Academy of Sciences, China",
                   "highlighted": false
-                },
-                {
-                  "text": "Chinese Academy of Sciences",
-                  "highlighted": false
-                },
-                {
-                  "text": "China",
-                  "highlighted": false
-                }
+                } 
               ],
               "avatar": "data/people/Zhiqiang Shi/avatar.jpg",
               "socialLinks": [
@@ -6337,13 +5899,9 @@
                   "highlighted": true
                 },
                 {
-                  "text": "Ajou University",
+                  "text": "Ajou University, Korea",
                   "highlighted": false
-                },
-                {
-                  "text": "Korea",
-                  "highlighted": false
-                }
+                } 
               ],
               "avatar": "data/people/Wonsik Yoon/avatar.jpg",
               "socialLinks": [
@@ -6377,11 +5935,7 @@
                   "highlighted": true
                 },
                 {
-                  "text": "Hoseo University",
-                  "highlighted": false
-                },
-                {
-                  "text": "Korea",
+                  "text": "Hoseo University, Korea",
                   "highlighted": false
                 }
               ],
@@ -6443,13 +5997,9 @@
                   "highlighted": true
                 },
                 {
-                  "text": "Ajou University",
+                  "text": "Ajou University, Korea",
                   "highlighted": false
-                },
-                {
-                  "text": "Korea",
-                  "highlighted": false
-                }
+                } 
               ],
               "avatar": "data/people/Jae Sung Lim/avatar.jpg",
               "socialLinks": [
@@ -6483,17 +6033,9 @@
                   "highlighted": true
                 },
                 {
-                  "text": "School of Information Science and Technology",
+                  "text": "School of Information Science and Technology, Aichi Prefectural University, Japan",
                   "highlighted": false
-                },
-                {
-                  "text": "Aichi Prefectural University",
-                  "highlighted": false
-                },
-                {
-                  "text": "Japan",
-                  "highlighted": false
-                }
+                } 
               ],
               "avatar": "data/people/Xuejun Tian/avatar.jpg",
               "socialLinks": [
@@ -6533,15 +6075,7 @@
                   "highlighted": true
                 },
                 {
-                  "text": "State Key Laboratory of Networking and Switching Technology",
-                  "highlighted": false
-                },
-                {
-                  "text": "Beijing University of Posts and Telecommunications",
-                  "highlighted": false
-                },
-                {
-                  "text": "China",
+                  "text": "State Key Laboratory of Networking and Switching Technology, Beijing University of Posts and Telecommunications, China",
                   "highlighted": false
                 }
               ],
@@ -6584,15 +6118,7 @@
                   "highlighted": true
                 },
                 {
-                  "text": "College of Computer Science and Technology",
-                  "highlighted": false
-                },
-                {
-                  "text": "China University of Petroleum",
-                  "highlighted": false
-                },
-                {
-                  "text": "China",
+                  "text": "College of Computer Science and Technology, China University of Petroleum, China",
                   "highlighted": false
                 }
               ],
@@ -6637,8 +6163,16 @@
               "title": "Dr. DENG, Yiqin",
               "role": [
                 {
-                  "text": "Postdoctor @ CityU",
+                  "text": "Postdoctor @ CityUHK",
                   "highlighted": true
+                },
+                {
+                  "text": "Postdoctor @ Shandong University",
+                  "highlighted": false
+                },
+                {
+                  "text": "PhD & MSc @ Central South University",
+                  "highlighted": false
                 }
               ],
               "avatar": "data/people/PD24_YiqinDeng/avatar.jpeg",
@@ -6692,15 +6226,7 @@
                   "highlighted": true
                 },
                 {
-                  "text": "School of Cyber Science and Technology",
-                  "highlighted": false
-                },
-                {
-                  "text": "University of Science and Technology of China",
-                  "highlighted": false
-                },
-                {
-                  "text": "China",
+                  "text": "School of Cyber Science and Technology, University of Science and Technology of China, China",
                   "highlighted": false
                 }
               ],
@@ -6748,17 +6274,9 @@
                   "highlighted": true
                 },
                 {
-                  "text": "School of Computer and Information Technology",
+                  "text": "School of Computer and Information Technology, Beijing Jiaotong University, China",
                   "highlighted": false
-                },
-                {
-                  "text": "Beijing Jiaotong University",
-                  "highlighted": false
-                },
-                {
-                  "text": "China",
-                  "highlighted": false
-                }
+                } 
               ],
               "avatar": "data/people/Yang Lu/avatar.jpeg",
               "socialLinks": [
@@ -6810,17 +6328,9 @@
                   "highlighted": true
                 },
                 {
-                  "text": "Department of Computer Science and Information Engineering",
+                  "text": "Department of Computer Science and Information Engineering, National Cheng Kung University, Taiwan",
                   "highlighted": false
-                },
-                {
-                  "text": "National Cheng Kung University",
-                  "highlighted": false
-                },
-                {
-                  "text": "Taiwan",
-                  "highlighted": false
-                }
+                } 
               ],
               "avatar": "data/people/Hui-Ling Chang/avatar.jpeg",
               "socialLinks": [
@@ -6860,17 +6370,9 @@
                   "highlighted": true
                 },
                 {
-                  "text": "Department of Electronic Engineering",
+                  "text": "Department of Electronic Engineering, Tsinghua University, China",
                   "highlighted": false
-                },
-                {
-                  "text": "Tsinghua University",
-                  "highlighted": false
-                },
-                {
-                  "text": "China",
-                  "highlighted": false
-                }
+                }   
               ],
               "avatar": "data/people/Di Han/avatar.jpeg",
               "socialLinks": [
@@ -6915,17 +6417,9 @@
                   "highlighted": true
                 },
                 {
-                  "text": "Key Laboratory of Information Coding & Transmission",
+                  "text": "Key Laboratory of Information Coding & Transmission, Southwest Jiaotong University, China",
                   "highlighted": false
-                },
-                {
-                  "text": "Southwest Jiaotong University",
-                  "highlighted": false
-                },
-                {
-                  "text": "China",
-                  "highlighted": false
-                }
+                } 
               ],
               "avatar": "data/people/Li Yan/avatar.jpeg",
               "socialLinks": [
@@ -6968,17 +6462,9 @@
                   "highlighted": true
                 },
                 {
-                  "text": "School of Information Science and Technology",
+                  "text": "School of Information Science and Technology, University of Science and Technology of China, China",
                   "highlighted": false
-                },
-                {
-                  "text": "University of Science and Technology of China",
-                  "highlighted": false
-                },
-                {
-                  "text": "China",
-                  "highlighted": false
-                }
+                } 
               ],
               "avatar": "data/people/Bing Feng/avatar.jpeg",
               "socialLinks": [
@@ -7018,17 +6504,9 @@
                   "highlighted": true
                 },
                 {
-                  "text": "School of Information Science and Technology",
+                  "text": "School of Information Science and Technology, Southwest Jiaotong University, China",
                   "highlighted": false
-                },
-                {
-                  "text": "Southwest Jiaotong University",
-                  "highlighted": false
-                },
-                {
-                  "text": "China",
-                  "highlighted": false
-                }
+                } 
               ],
               "avatar": "data/people/Hao Song/avatar.jpeg",
               "socialLinks": [
@@ -7071,17 +6549,9 @@
                   "highlighted": true
                 },
                 {
-                  "text": "Key Laboratory of Electromagnetic Space Information",
+                  "text": "Key Laboratory of Electromagnetic Space Information, University of Science and Technology of China, China",
                   "highlighted": false
-                },
-                {
-                  "text": "University of Science and Technology of China",
-                  "highlighted": false
-                },
-                {
-                  "text": "China",
-                  "highlighted": false
-                }
+                } 
               ],
               "avatar": "data/people/Tianyu Zhao/avatar.jpeg",
               "socialLinks": [
@@ -7109,17 +6579,9 @@
                   "highlighted": true
                 },
                 {
-                  "text": "School of Information and Communication Engineering",
+                  "text": "School of Information and Communication Engineering, Dalian University of Technology, China",
                   "highlighted": false
-                },
-                {
-                  "text": "Dalian University of Technology",
-                  "highlighted": false
-                },
-                {
-                  "text": "China",
-                  "highlighted": false
-                }
+                } 
               ],
               "avatar": "data/people/Xuanheng Li/avatar.jpeg",
               "socialLinks": [
@@ -7167,17 +6629,9 @@
                   "highlighted": true
                 },
                 {
-                  "text": "Graduate School of Science and Technology",
+                  "text": "Graduate School of Science and Technology, Keio University, Japan",
                   "highlighted": false
-                },
-                {
-                  "text": "Keio University",
-                  "highlighted": false
-                },
-                {
-                  "text": "Japan",
-                  "highlighted": false
-                }
+                } 
               ],
               "avatar": "data/people/Zhuang He/avatar.jpeg",
               "socialLinks": [
@@ -7222,17 +6676,9 @@
                   "highlighted": true
                 },
                 {
-                  "text": "Department of Automation",
+                  "text": "Department of Automation, University of Science and Technology of China, China",
                   "highlighted": false
-                },
-                {
-                  "text": "University of Science and Technology of China",
-                  "highlighted": false
-                },
-                {
-                  "text": "China",
-                  "highlighted": false
-                }
+                } 
               ],
               "avatar": "data/people/Peng Si/avatar.jpeg",
               "socialLinks": [
@@ -7260,17 +6706,9 @@
                   "highlighted": true
                 },
                 {
-                  "text": "Department of Information Science",
+                  "text": "Department of Information Science, China University of Mining and Technology, China",
                   "highlighted": false
-                },
-                {
-                  "text": "China University of Mining and Technology",
-                  "highlighted": false
-                },
-                {
-                  "text": "China",
-                  "highlighted": false
-                }
+                } 
               ],
               "avatar": "data/people/Shunrong Jiang/avatar.jpeg",
               "socialLinks": [
@@ -7311,13 +6749,9 @@
                   "highlighted": true
                 },
                 {
-                  "text": "Huawei Shanghai Research Institute Shanghai",
+                  "text": "Huawei Shanghai Research Institute, Shanghai, China",
                   "highlighted": false
-                },
-                {
-                  "text": "China",
-                  "highlighted": false
-                }
+                } 
               ],
               "avatar": "data/people/Jinlin Peng/avatar.jpg",
               "socialLinks": [
@@ -7353,13 +6787,9 @@
               "title": "Dr. DU, Bai",
               "role": [
                 {
-                  "text": "Huawei",
+                  "text": "Huawei, China",
                   "highlighted": true
-                },
-                {
-                  "text": "China",
-                  "highlighted": false
-                }
+                } 
               ],
               "avatar": "data/people/Bai Du/avatar.jpg",
               "socialLinks": [
@@ -7387,17 +6817,9 @@
                   "highlighted": true
                 },
                 {
-                  "text": "Xidian University Guangzhou Institute of Technology",
+                  "text": "Xidian University Guangzhou Institute of Technology, Guangzhou, China",
                   "highlighted": false
-                },
-                {
-                  "text": "Guangzhou",
-                  "highlighted": false
-                },
-                {
-                  "text": "China",
-                  "highlighted": false
-                }
+                } 
               ],
               "avatar": "data/people/Hongning Li/avatar.jpg",
               "socialLinks": [
@@ -7494,21 +6916,9 @@
                   "highlighted": true
                 },
                 {
-                  "text": "College of Computer",
+                  "text": "College of Computer, National University of Defense Technology, Changsha, China",
                   "highlighted": false
-                },
-                {
-                  "text": "National University of Defense Technology",
-                  "highlighted": false
-                },
-                {
-                  "text": "Changsha",
-                  "highlighted": false
-                },
-                {
-                  "text": "China",
-                  "highlighted": false
-                }
+                } 
               ],
               "avatar": "data/people/Biao Han/avatar.jpg",
               "socialLinks": [
@@ -7555,21 +6965,9 @@
                   "highlighted": true
                 },
                 {
-                  "text": "Key Laboratory of Information Coding and Transmission",
+                  "text": "Key Laboratory of Information Coding and Transmission, Southwest Jiaotong University, Chengdu, China",
                   "highlighted": false
-                },
-                {
-                  "text": "Southwest Jiaotong University",
-                  "highlighted": false
-                },
-                {
-                  "text": "Chengdu",
-                  "highlighted": false
-                },
-                {
-                  "text": "China",
-                  "highlighted": false
-                }
+                } 
               ],
               "avatar": "data/people/Yan Long/avatar.jpg",
               "socialLinks": [
@@ -7618,21 +7016,9 @@
                   "highlighted": true
                 },
                 {
-                  "text": "Department of Electrical Engineering",
+                  "text": "Department of Electrical Engineering, Southwest Jiaotong University, Chengdu, China",
                   "highlighted": false
-                },
-                {
-                  "text": "Southwest Jiaotong University",
-                  "highlighted": false
-                },
-                {
-                  "text": "Chengdu",
-                  "highlighted": false
-                },
-                {
-                  "text": "China",
-                  "highlighted": false
-                }
+                } 
               ],
               "avatar": "data/people/Yue Zhao/avatar.jpg",
               "socialLinks": [
@@ -7680,21 +7066,9 @@
                   "highlighted": true
                 },
                 {
-                  "text": "Department of Communication",
+                  "text": "Department of Communication, China Academy of Space Technology, Xi'an, China",
                   "highlighted": false
-                },
-                {
-                  "text": "China Academy of Space Technology",
-                  "highlighted": false
-                },
-                {
-                  "text": "Xi'an",
-                  "highlighted": false
-                },
-                {
-                  "text": "China",
-                  "highlighted": false
-                }
+                } 
               ],
               "avatar": "data/people/Leifang Hui/avatar.jpg",
               "socialLinks": [
@@ -7746,21 +7120,9 @@
                   "highlighted": true
                 },
                 {
-                  "text": "School of Information Science and Technology",
+                  "text": "School of Information Science and Technology, Northwest University, Xi'an, China",
                   "highlighted": false
-                },
-                {
-                  "text": "Northwest University",
-                  "highlighted": false
-                },
-                {
-                  "text": "Xi’an",
-                  "highlighted": false
-                },
-                {
-                  "text": "China",
-                  "highlighted": false
-                }
+                } 
               ],
               "avatar": "data/people/Xiaoyan Yin/avatar.jpg",
               "socialLinks": [
@@ -7818,21 +7180,9 @@
                   "highlighted": true
                 },
                 {
-                  "text": "Department of Information Engineering",
+                  "text": "Department of Information Engineering, Polytechnic University of Marche, Ancona, Italy",
                   "highlighted": false
-                },
-                {
-                  "text": "Polytechnic University of Marche",
-                  "highlighted": false
-                },
-                {
-                  "text": "Ancona",
-                  "highlighted": false
-                },
-                {
-                  "text": "Italy",
-                  "highlighted": false
-                }
+                } 
               ],
               "avatar": "data/people/Roberto Riggio/avatar.jpg",
               "socialLinks": [
@@ -7904,21 +7254,9 @@
                   "highlighted": true
                 },
                 {
-                  "text": "Thales Group",
+                  "text": "Thales Group, France",
                   "highlighted": false
-                },
-                {
-                  "text": "ThereSIS",
-                  "highlighted": false
-                },
-                {
-                  "text": "Cannes",
-                  "highlighted": false
-                },
-                {
-                  "text": "France",
-                  "highlighted": false
-                }
+                } 
               ],
               "avatar": "data/people/Nicola Scalabrino/avatar.jpg",
               "socialLinks": [
@@ -7982,17 +7320,9 @@
                   "highlighted": true
                 },
                 {
-                  "text": "Xidian University Guangzhou Institute of Technology",
+                  "text": "Xidian University Guangzhou Institute of Technology, Guangzhou, China",
                   "highlighted": false
-                },
-                {
-                  "text": "Guangzhou",
-                  "highlighted": false
-                },
-                {
-                  "text": "China",
-                  "highlighted": false
-                }
+                } 
               ],
               "avatar": "data/people/Qiang Shen/avatar.jpg",
               "socialLinks": [
