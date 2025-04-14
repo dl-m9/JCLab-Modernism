@@ -1,5 +1,22 @@
 [
   {
+    "title": "Collaborative Perception for Autonomous Driving: Challenges, Possible Solutions and Opportunities",
+    "authors": "Senkang Hu, Zhengru Fang, Yiqin Deng, Xianhao Chen, Yuguang Fang",
+    "venue": "IEEE Wireless Communications Magazine",
+    "year": "2025",
+    "tags": [
+      {
+        "text": "WCM",
+        "class": "venue-tag"
+      },
+      {
+        "text": "PDF",
+        "class": "code-tag",
+        "link": "https://arxiv.org/abs/2401.01544"
+      }
+    ]
+  },
+  {
     "title": "Decoder Gradient Shield: Provable and High-Fidelity Prevention of Gradient-Based Box-Free Watermark Removal",
     "authors": "Haonan An, Guang Hua, Zhengru Fang, Guowen Xu, Susanto Rahardja, and Yuguang Fang",
     "venue": "Conference on Computer Vision and Pattern Recognition (CVPR), 2025",
@@ -57,7 +74,7 @@
   },
   {
     "title": "CP-Guard: Malicious Agent Detection and Defense in Collaborative Bird's Eye View Perception",
-    "authors": "Senkang Hu<sup>#</sup>, Yihang Tao<sup>#</sup>, Guowen Xu, Yiqin Deng, Xianhao Chen, Yuguang Fang, Sam Kwong",
+    "authors": "Senkang Hu<sup>*</sup>, Yihang Tao<sup>*</sup>, Guowen Xu, Yiqin Deng, Xianhao Chen, Yuguang Fang, Sam Kwong",
     "year": "2024",
     "venue": "The 39th Annual AAAI Conference on Artificial Intelligence, Philadelphia, Pennsylvania, USA, February 2025",
     "tags": [
