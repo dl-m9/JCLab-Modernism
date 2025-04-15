@@ -16,7 +16,7 @@
             <ul class="nav-links">
                 <li><a href="#about" class="active">About</a></li>
                 <li><a href="#research">Research</a></li>
-                <li><a href="pages/team.html">Team</a></li>
+                <li><a href="#team">Team</a></li>
                 <li><a href="#latest-news">News</a></li>
                 <li><a href="#seminar">Seminars</a></li>
                 <li><a href="#publications">Publications</a></li>
@@ -449,6 +449,33 @@
     <script>
         // Update copyright year
         document.getElementById('current-year').textContent = new Date().getFullYear();
+        
+        // 增强平滑滚动效果
+        document.querySelectorAll('nav a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                if (targetElement) {
+                    // 计算导航栏高度，以便滚动到正确位置
+                    const navHeight = document.querySelector('nav').offsetHeight;
+                    
+                    // 获取目标元素的位置
+                    const targetPosition = targetElement.getBoundingClientRect().top + window.scrollY;
+                    
+                    // 滚动到目标位置，减去导航栏高度和小偏移量来优化显示
+                    window.scrollTo({
+                        top: targetPosition - navHeight - 20,
+                        behavior: 'smooth'
+                    });
+                    
+                    // 更新URL中的锚点(可选)
+                    history.pushState(null, null, targetId);
+                }
+            });
+        });
         
         // Mobile navigation horizontal scroll handling
         document.addEventListener('DOMContentLoaded', function() {

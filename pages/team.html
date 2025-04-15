@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Our Team - JC STEM Lab of Smart City</title>
+    <title>WINET | Our Team</title>
     <link rel="stylesheet" href="../styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -76,48 +76,36 @@
         }
         
         /* 修改间距样式 */
-        .major-section {
-            margin-top: 80px;  /* 增加顶部间距 */
-            margin-bottom: 40px;  /* 增加底部间距 */
-        }
-        
-        .major-section-title {
-            color: var(--primary-color);
-            font-size: 2.2rem;  /* 增加标题字体大小 */
-            border-bottom: 3px solid var(--primary-color);
-            padding-bottom: 15px;  /* 增加标题底部内边距 */
-            margin-bottom: 40px;  /* 增加标题底部外边距 */
-        }
         
         .section-title {
-            font-size: 2.2rem;  /* 增加字体大小 */
-            margin-bottom: 40px;  /* 增加底部间距 */
+            font-size: 2rem;
+            margin-bottom: 0rem;
+            position: relative;
+            display: inline-block;
         }
+        
         
         .team-container {
             margin-bottom: 60px;  /* 增加底部间距 */
         }
         
         .team-category {
-            margin-bottom: 50px;  /* 增加底部间距 */
+            margin-bottom: 20px;  /* 增加底部间距 */
         }
         
-        .team-category h3 {
-            font-size: 1.6rem;  /* 增加字体大小 */
-            margin-bottom: 30px;  /* 增加底部间距 */
-            padding-bottom: 10px;
-            border-bottom: 2px solid #e0e0e0;  /* 修改底部边框颜色 */
-        }
         
         .team-category h3 {
             font-size: 1.6rem;
             margin-bottom: 30px;
+            margin-top: 60px;
             padding-bottom: 10px;
-            border-bottom: 2px solid rgba(189, 56, 75, 0.2);
+            border-bottom: 2px solid var(--background-color);
             color: var(--primary-color);
         }
         
         .team-members {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
             gap: 2.5rem;  /* 增加成员卡片之间的间距 */
         }
         
@@ -176,9 +164,6 @@
             <ul class="nav-links">
                 <li><a href="../index.html">Home</a></li>
                 <li><a href="#" class="active">Team</a></li>
-                <li><a href="../pages/publications.html">Publications</a></li>
-                <li><a href="../index.html#research">Research</a></li>
-                <li><a href="../index.html#seminar">Seminars</a></li>
             </ul>
         </div>
     </nav>

@@ -20,7 +20,7 @@ function loadTeamMembers() {
     fetch('../data/team-members.json')
         .then(response => {
             if (!response.ok) {
-                throw new Error('无法加载团队成员数据: ' + response.statusText);
+                throw new Error('Unable to load team members data: ' + response.statusText);
             }
             return response.json();
         })
@@ -28,12 +28,12 @@ function loadTeamMembers() {
             renderTeamStructure(data);
         })
         .catch(error => {
-            console.error('加载团队成员数据时出错:', error);
+            console.error('Error loading team members data:', error);
             document.querySelector('main').innerHTML = `
                 <div class="container text-center" style="padding: 50px 20px;">
-                    <h2>加载数据时出错</h2>
+                    <h2>Error loading team members data</h2>
                     <p>${error.message}</p>
-                    <a href="../index.html" class="btn btn-primary">返回首页</a>
+                    <a href="../index.html" class="btn btn-primary">Back to Homepage</a>
                 </div>
             `;
         });
@@ -57,16 +57,9 @@ function renderTeamStructure(data) {
     // 遍历主要类别
     data.categories.forEach(category => {
         // 如果是主要类别，不添加分隔标题
-        if (category.name === "Meet Our Team") {
+        
             containerElement.innerHTML += `<h2 class="section-title">${category.name}</h2>`;
-        } else {
-            // 为前成员类别添加分隔样式
-            containerElement.innerHTML += `
-                <div class="major-section">
-                    <h2 class="major-section-title">${category.name}</h2>
-                </div>
-            `;
-        }
+        
         
         // 创建团队容器
         const teamContainer = document.createElement('div');
