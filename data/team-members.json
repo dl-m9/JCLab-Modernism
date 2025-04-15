@@ -1880,54 +1880,7 @@
         {
           "name": "Visiting Students",
           "members": [
-            {
-              "id": "visitor23-qianxinyuan",
-              "title": "Mr. QIAN, Xinyuan",
-              "role": [
-                {
-                  "text": "Visiting Student @ CityU",
-                  "highlighted": true
-                },
-                {
-                  "text": "PhD Student @ UESTC",
-                  "highlighted": false
-                }
-              ],
-              "avatar": "data/people/Visitor23_QianXinyuan/avatar.jpg",
-              "socialLinks": [
-                {
-                  "type": "envelope",
-                  "url": "mailto:xinyuanqian@outlook.com",
-                  "icon": "fas fa-envelope",
-                  "title": "Email"
-                }
-              ],
-              "interests": [
-                "Lattice-Based Cryptography",
-                "Functional Encryption",
-                "Privacy Preserving Machine Learning"
-              ],
-              "biography": "\n\nXinyuan Qian received B.Eng. degree in security engineering in People's Public Security University of China in 2018 and M.Eng. degree in computer technology in University of Chinese Academy of Sciences in 2021. He is currenting pursuing the Ph.D. degree in School of Computer Science and Engineering, University of Electronic Science and Technology of China. His research interests include IBE, ABE, FE, FHE, applied cryptography, and privacy-preserving machine learning. Since August 2023, he has been visiting Professor Fang at City University of Hong Kong. His current research focuses on Lattice-Based Cryptography, Functional Encryption, and Privacy Preserving Machine Learning.",
-              "education": [
-                {
-                  "degree": "Visiting PhD student in Computer Science",
-                  "institution": "City University of Hong Kong",
-                  "year": "Now"
-                },
-                {
-                  "degree": "MEng in Computer Science",
-                  "institution": "University of Chinese Academy of Sciences",
-                  "year": "2018 - 2021"
-                },
-                {
-                  "degree": "BSc in Security Engineering",
-                  "institution": "People’s Public Security University of China",
-                  "year": "2014 - 2018"
-                }
-              ],
-              "detailPage": "data/people/Visitor23_QianXinyuan/index.html",
-              "last_name": "Qian"
-            },
+
             {
               "id": "visitor24-liuyaxuan",
               "title": "Ms. LIU, Yaxuan",
@@ -1990,11 +1943,11 @@
               "title": "Dr. XU, Guowen",
               "role": [
                 {
-                  "text": "Professor (海外优青)",
+                  "text": "Professor (海外优青) @ UESTC",
                   "highlighted": true
                 },
                 {
-                  "text": "School of Computer Science and Engineering, University of Electronic Science and Technology of China",
+                  "text": "Postdoc @ CityUHK (2023.5 - 2024.8) ",
                   "highlighted": false
                 }
               ],
@@ -2045,15 +1998,120 @@
           "name": "Former Visiting Students",
           "members": [
             {
-              "id": "visitor23-wenxiaojing",
-              "title": "Ms. WEN, Xiaojing",
+              "id": "visitor23-qianxinyuan",
+              "title": "Mr. QIAN, Xinyuan",
               "role": [
                 {
-                  "text": "Visiting Student @ CityU",
+                  "text": "PhD Student @ UESTC",
                   "highlighted": true
                 },
                 {
-                  "text": "PhD Student @ SJTU",
+                  "text": "Visiting Student @ CityUHK (2023.8 - 2025.4)",
+                  "highlighted": false
+                }
+                
+              ],
+              "avatar": "data/people/Visitor23_QianXinyuan/avatar.jpg",
+              "socialLinks": [
+                {
+                  "type": "envelope",
+                  "url": "mailto:xinyuanqian@outlook.com",
+                  "icon": "fas fa-envelope",
+                  "title": "Email"
+                }
+              ],
+              "interests": [
+                "Lattice-Based Cryptography",
+                "Functional Encryption",
+                "Privacy Preserving Machine Learning"
+              ],
+              "biography": "\n\nXinyuan Qian received B.Eng. degree in security engineering in People's Public Security University of China in 2018 and M.Eng. degree in computer technology in University of Chinese Academy of Sciences in 2021. He is currenting pursuing the Ph.D. degree in School of Computer Science and Engineering, University of Electronic Science and Technology of China. His research interests include IBE, ABE, FE, FHE, applied cryptography, and privacy-preserving machine learning. Since August 2023, he has been visiting Professor Fang at City University of Hong Kong. His current research focuses on Lattice-Based Cryptography, Functional Encryption, and Privacy Preserving Machine Learning.",
+              "education": [
+                {
+                  "degree": "Visiting PhD student in Computer Science",
+                  "institution": "City University of Hong Kong",
+                  "year": "2023.8 - 2025.4"
+                },
+                {
+                  "degree": "PhD in Computer Science",
+                  "institution": "University of Electronic Science and Technology of China",
+                  "year": "2021 - Now"
+                },
+                {
+                  "degree": "MEng in Computer Science",
+                  "institution": "University of Chinese Academy of Sciences",
+                  "year": "2018 - 2021"
+                },
+                {
+                  "degree": "BSc in Security Engineering",
+                  "institution": "People’s Public Security University of China",
+                  "year": "2014 - 2018"
+                }
+              ],
+              "detailPage": "data/people/Visitor23_QianXinyuan/index.html",
+              "last_name": "Qian"
+            },
+
+            {
+              "id": "visitor23-jiyun",
+              "title": "Ms. JI, Yun",
+              "role": [
+                
+                {
+                  "text": "PhD student @ THU",
+                  "highlighted": true
+                },
+                {
+                  "text": "Visiting Student @ CityUHK (2023.10 - 2024.10)",
+                  "highlighted": false
+                }
+              ],
+              "avatar": "data/people/Visitor23_JiYun/avatar.jpg",
+              "socialLinks": [
+                {
+                  "type": "envelope",
+                  "url": "mailto:ji-y20@mails.tsinghua.edu.cn",
+                  "icon": "fas fa-envelope",
+                  "title": "Email"
+                }
+              ],
+              "interests": [
+                "Federated Learning",
+                "Mobile/Edge Computing",
+                "Wireless Communication",
+                "Internet of Things"
+              ],
+              "biography": "\n\nYun Ji received the B.S. degree in Communication Engineering from Lanzhou University, Lanzhou, China, in 2020. She is currently pursuing the Ph.D.degree with the Tsinghua Shenzhen International Graduate School, Tsinghua University, Shenzhen, China. Her research interests include federated learning and wireless communication.",
+              "education": [
+                {
+                  "degree": "Visiting PhD Student in Computer Science",
+                  "institution": "City University of Hong Kong",
+                  "year": "2023.10 - 2024.10"
+                },
+                {
+                  "degree": "PhD in Electronic Science and Technology",
+                  "institution": "Tsinghua University",
+                  "year": "2020-Now"
+                },
+                {
+                  "degree": "BSc in Communication Engineering",
+                  "institution": "Lanzhou University",
+                  "year": "2016-2020"
+                }
+              ],
+              "detailPage": "data/people/Visitor23_JiYun/index.html",
+              "last_name": "wen2"
+            },
+            {
+              "id": "visitor23-wenxiaojing",
+              "title": "Dr. WEN, Xiaojing",
+              "role": [
+                {
+                  "text": "Assistant Researcher @ SJTU",
+                  "highlighted": true
+                },
+                {
+                  "text": "Visiting Student @ CityUHK (2023.3 - 2024.3)",
                   "highlighted": false
                 }
               ],
@@ -2093,55 +2151,6 @@
               ],
               "detailPage": "data/people/Visitor23_WenXiaojing/index.html",
               "last_name": "Wen"
-            },
-            {
-              "id": "visitor23-jiyun",
-              "title": "Ms. JI, Yun",
-              "role": [
-                {
-                  "text": "Visiting Student @ CityU",
-                  "highlighted": true
-                },
-                {
-                  "text": "PhD student @ THU",
-                  "highlighted": false
-                }
-              ],
-              "avatar": "data/people/Visitor23_JiYun/avatar.jpg",
-              "socialLinks": [
-                {
-                  "type": "envelope",
-                  "url": "mailto:ji-y20@mails.tsinghua.edu.cn",
-                  "icon": "fas fa-envelope",
-                  "title": "Email"
-                }
-              ],
-              "interests": [
-                "Federated Learning",
-                "Mobile/Edge Computing",
-                "Wireless Communication",
-                "Internet of Things"
-              ],
-              "biography": "\n\nYun Ji received the B.S. degree in Communication Engineering from Lanzhou University, Lanzhou, China, in 2020. She is currently pursuing the Ph.D.degree with the Tsinghua Shenzhen International Graduate School, Tsinghua University, Shenzhen, China. Her research interests include federated learning and wireless communication.",
-              "education": [
-                {
-                  "degree": "Visiting PhD Student in Computer Science",
-                  "institution": "City University of Hong Kong",
-                  "year": "2023.10 - 2024.10"
-                },
-                {
-                  "degree": "PhD in Electronic Science and Technology",
-                  "institution": "Tsinghua University",
-                  "year": "2020-Now"
-                },
-                {
-                  "degree": "BSc in Communication Engineering",
-                  "institution": "Lanzhou University",
-                  "year": "2016-2020"
-                }
-              ],
-              "detailPage": "data/people/Visitor23_JiYun/index.html",
-              "last_name": "wen2"
             }
           ]
         }
