@@ -122,7 +122,8 @@ function createMemberCard(member) {
     
     // 姓名和链接
     const nameElement = document.createElement('h4');
-    nameElement.innerHTML = `<a href="../data/people/profile.html?id=${member.id}">${member.title}</a>`;
+    const processedTitle = processChinese(member.title);
+    nameElement.innerHTML = `<a href="../data/people/profile.html?id=${member.id}">${processedTitle}</a>`;
     memberCard.appendChild(nameElement);
     
     // 角色信息
@@ -133,18 +134,20 @@ function createMemberCard(member) {
             // 判断是否为Prof. Fang的第一个角色项
             const isProfFangLabDirector = member.id === 'prof-fang' && index === 0;
             
+            const processedRoleText = processChinese(roleItem.text);
+            
             if (roleItem.highlighted) {
                 // 高亮项始终加粗
                 if (isProfFangLabDirector) {
                     // 仅Prof. Fang的第一个角色项保持蓝色高亮
-                    roleElement.innerHTML = `<b style="color:#1565C0;">${roleItem.text}</b>`;
+                    roleElement.innerHTML = `<b style="color:#1565C0;">${processedRoleText}</b>`;
                 } else {
                     // 其他成员的高亮项加粗但无特殊颜色
-                    roleElement.innerHTML = `<b>${roleItem.text}</b>`;
+                    roleElement.innerHTML = `<b>${processedRoleText}</b>`;
                 }
             } else {
                 // 非高亮项不加粗
-                roleElement.innerHTML = roleItem.text;
+                roleElement.innerHTML = processedRoleText;
             }
             
             memberCard.appendChild(roleElement);
@@ -223,4 +226,27 @@ function handleNavScrolling() {
             }
         }
     }
+}
+
+/**
+ * 检测文本中是否包含中文
+ * @param {string} text - 要检查的文本
+ * @returns {boolean} 是否包含中文
+ */
+function containsChinese(text) {
+    if (!text) return false;
+    const pattern = /[\u4e00-\u9fa5]+/; // 匹配中文字符
+    return pattern.test(text);
+}
+
+/**
+ * 处理文本，将中文部分用span包裹
+ * @param {string} text - 要处理的文本
+ * @returns {string} 处理后的HTML
+ */
+function processChinese(text) {
+    if (!text || !containsChinese(text)) return text;
+    
+    // 使用正则表达式匹配连续的中文字符
+    return text.replace(/([\u4e00-\u9fa5]+)/g, '<span class="chinese-text">$1</span>');
 } 

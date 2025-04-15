@@ -85,12 +85,18 @@ function renderMemberProfile(member) {
     // 更新导航菜单
     document.getElementById('member-nav-name').textContent = member.title.split(',')[0];
     
+    // 处理标题，检测是否包含中文
+    let titleDisplay = member.title;
+    if (containsChinese(member.title)) {
+        titleDisplay = `<span class="chinese-text">${member.title}</span>`;
+    }
+    
     // 创建档案内容
     let html = `
         <div class="profile-header">
             <img src="../../${member.avatar}" alt="${member.title}" class="profile-avatar">
             <div class="profile-info">
-                <h1>${member.title}</h1>
+                <h1>${processChinese(member.title)}</h1>
                 <div class="profile-role">
                     ${renderRoles(member.role)}
                 </div>
@@ -105,7 +111,13 @@ function renderMemberProfile(member) {
             <div class="profile-section">
                 <h2>Research Interests</h2>
                 <div class="interests-list">
-                    ${member.interests.map(interest => `<span class="interest-tag">${interest}</span>`).join('')}
+                    ${member.interests.map(interest => {
+                        if (containsChinese(interest)) {
+                            return `<span class="interest-tag chinese-text">${interest}</span>`;
+                        } else {
+                            return `<span class="interest-tag">${interest}</span>`;
+                        }
+                    }).join('')}
                 </div>
             </div>
         `;
@@ -151,12 +163,14 @@ function renderRoles(roles) {
     let html = '';
     
     roles.forEach((role, index) => {
+        const processedText = processChinese(role.text);
+        
         if (role.highlighted) {
             // 突出显示的角色（如实验室主任）使用蓝色
-            html += `<p><b style="color:#1565C0;">${role.text}</b></p>`;
+            html += `<p><b style="color:#1565C0;">${processedText}</b></p>`;
         } else {
             // 其他角色使用正常加粗
-            html += `<p><b>${role.text}</b></p>`;
+            html += `<p><b>${processedText}</b></p>`;
         }
     });
     
@@ -194,16 +208,56 @@ function renderEducation(education) {
     let html = '';
     
     education.forEach(edu => {
+        // 检测学位、学校名称是否包含中文
+        let degreeDisplay = edu.degree;
+        let institutionDisplay = edu.institution;
+        let yearDisplay = edu.year;
+        
+        if (containsChinese(edu.degree)) {
+            degreeDisplay = `<span class="chinese-text">${edu.degree}</span>`;
+        }
+        
+        if (containsChinese(edu.institution)) {
+            institutionDisplay = `<span class="chinese-text">${edu.institution}</span>`;
+        }
+        
+        if (containsChinese(edu.year)) {
+            yearDisplay = `<span class="chinese-text">${edu.year}</span>`;
+        }
+        
         html += `
             <div class="education-item">
-                <h3>${edu.degree}</h3>
-                <p>${edu.institution}</p>
-                <p>${edu.year}</p>
+                <h3>${degreeDisplay}</h3>
+                <p>${institutionDisplay}</p>
+                <p>${yearDisplay}</p>
             </div>
         `;
     });
     
     return html;
+}
+
+/**
+ * 检测文本中是否包含中文
+ * @param {string} text - 要检查的文本
+ * @returns {boolean} 是否包含中文
+ */
+function containsChinese(text) {
+    if (!text) return false;
+    const pattern = /[\u4e00-\u9fa5]+/; // 匹配中文字符
+    return pattern.test(text);
+}
+
+/**
+ * 处理文本，将中文部分用span包裹
+ * @param {string} text - 要处理的文本
+ * @returns {string} 处理后的HTML
+ */
+function processChinese(text) {
+    if (!text || !containsChinese(text)) return text;
+    
+    // 使用正则表达式匹配连续的中文字符
+    return text.replace(/([\u4e00-\u9fa5]+)/g, '<span class="chinese-text">$1</span>');
 }
 
 /**
@@ -216,7 +270,7 @@ function formatBiography(biography) {
     
     // 处理段落
     let html = biography.split(/\n\n|\n/).filter(p => p.trim().length > 0)
-        .map(p => `<p>${p.trim()}</p>`)
+        .map(p => `<p>${processChinese(p.trim())}</p>`)
         .join('\n');
     
     // 处理Markdown链接格式: [text](url)

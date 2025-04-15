@@ -11,6 +11,10 @@
     --shadow-color: rgba(0, 0, 0, 0.1);
 }
 
+.chinese-text {
+    font-family: "楷体", KaiTi, "华文楷体", "STKaiti", serif;
+}
+
 html {
     scroll-behavior: smooth; /* 添加平滑滚动效果 */
 }
