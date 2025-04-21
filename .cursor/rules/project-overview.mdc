@@ -1,0 +1,62 @@
+---
+description: 
+globs: 
+alwaysApply: true
+---
+# WINET Lab Website Project Overview
+
+This is the official website for the Wireless Intelligence and Networked Things Laboratory (WINET) at City University of Hong Kong.
+
+## Project Structure
+- [index.html](mdc:index.html): Main entry point of the website
+- [styles.css](mdc:styles.css): Global styles for the website
+- [script.js](mdc:script.js): Main JavaScript functionality
+- [package.json](mdc:package.json): Project dependencies
+
+## Complete File Structure
+```
+JC-Lab-Modernism.io/
+├── .cursor/                    # Cursor IDE configuration
+│   └── rules/                  # Project rules and guidelines
+├── assets/                     # Static assets
+│   └── slides/                 # Presentation slides
+├── data/                       # Project data
+│   ├── people/                 # Team member information
+│   │   ├── Faculty_*/         # Faculty member directories
+│   │   ├── PhD*/              # PhD student directories
+│   │   ├── PD_*/              # Postdoc directories
+│   │   ├── Visitor*/          # Visiting scholar directories
+│   │   └── Former*/           # Former member directories
+│   └── seminar/               # Seminar materials
+│       └── YY-MM-DD-*/        # Date-based seminar directories
+├── docs/                       # Documentation files
+├── js/                        # JavaScript modules
+├── pages/                     # Additional website pages
+├── tools/                     # Utility scripts
+├── index.html                 # Main entry point
+├── styles.css                 # Global styles
+├── script.js                  # Main JavaScript
+├── package.json               # Dependencies
+├── package-lock.json          # Dependency lock file
+└── README.md                  # Project documentation
+```
+
+## Key Directories
+- `/assets`: Contains static assets including presentation slides
+- `/data`: Contains structured data about team members and seminars
+- `/pages`: Additional website pages
+- `/js`: JavaScript modules
+- `/tools`: Utility scripts and tools
+- `/docs`: Documentation files
+
+## Data Organization
+The `/data` directory contains two main sections:
+1. `/data/people`: Individual directories for each team member
+2. `/data/seminar`: Seminar materials organized by date and presenter
+
+## Development Guidelines
+- Use semantic HTML for better accessibility
+- Follow the existing CSS class naming conventions
+- Keep JavaScript modular and organized
+- Update team member data in their respective directories under `/data/people`
+- Maintain seminar information under `/data/seminar` with proper date prefixes

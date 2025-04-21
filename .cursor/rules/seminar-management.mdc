@@ -1,0 +1,33 @@
+---
+description: 
+globs: 
+alwaysApply: true
+---
+# Seminar Data Management Guidelines
+
+## Directory Structure
+Seminar data is stored in the `/data/seminar` directory, organized by date and presenter.
+
+## Naming Convention
+- Use the format: `YY-MM-DD-PresenterName`
+- Example: `24-05-13-LiuJianqing`
+
+## Required Content
+Each seminar directory should contain:
+1. Presentation materials (slides, documents)
+2. Abstract or summary
+3. Speaker information
+4. Date and time details
+5. Any additional resources or references
+
+## Organization Guidelines
+- Keep all seminar materials in their respective dated directories
+- Maintain a consistent structure across all seminar entries
+- Include both internal and external speaker presentations
+- Archive older seminars while maintaining accessibility
+
+## Best Practices
+- Update the seminar section promptly after each presentation
+- Ensure all materials are properly dated and attributed
+- Maintain a consistent format for all seminar documentation
+- Include any relevant links or references to related research

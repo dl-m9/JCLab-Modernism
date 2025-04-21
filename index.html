@@ -373,26 +373,40 @@
         <section id="publications" class="section">
             <div class="container">
                 <h2 class="section-title">Publications</h2>
-                <p> Check Prof. Fang's <a href="https://scholars.cityu.edu.hk/en/persons/yuguang-fang(b2d78936-ab0a-4186-9f64-0f468013de23)/publications.html" target="_blank">CityU Scholars</a> to obtain the full list of publications.</p>
-                <h3 class="year-divider">Accepted Papers in 2025</h3>
-                <div class="publications-list" id="publications-2025">
-                    <!-- 2025 Publications will be loaded here -->
-                </div>
-                
-                <h3 class="year-divider">Accepted Papers in 2024</h3>
-                <div class="publications-list" id="publications-2024">
-                    <!-- 2024 Publications will be loaded here -->
+                <p>Check Prof. Fang's <a href="https://scholars.cityu.edu.hk/en/persons/yuguang-fang(b2d78936-ab0a-4186-9f64-0f468013de23)/publications.html" target="_blank">CityU Scholars</a> to obtain the full list of publications.</p>
+                <div id="publications-container">
+                    <!-- Publications will be dynamically loaded here by year -->
                 </div>
                 
                 <div class="view-all-news text-center mt-4">
                     <a href="pages/publications.html" class="btn btn-primary" target="_self"><i class="fas fa-book"></i> View All Publications</a>
                 </div>
             </div>
-            <br><br><br><br>
-                <div style="width: 15%; height: auto; margin: auto;">
-                    <script type="text/javascript" id="clstr_globe" src="//clustrmaps.com/globe.js?d=5ARm8_nN_s8xJvlRADyN_VZA0ugAYp45tSMSw9xW0Uc"></script>
-                </div>
         </section>
+
+        <script>
+            // Create year containers dynamically when publications are loaded
+            document.addEventListener('DOMContentLoaded', function() {
+                fetch('data/publications.json')
+                    .then(response => response.json())
+                    .then(publications => {
+                        // Get unique years from publications
+                        const years = [...new Set(publications.map(pub => pub.year))].sort((a, b) => b - a);
+                        
+                        // Create containers for each year
+                        const container = document.getElementById('publications-container');
+                        years.forEach(year => {
+                            const yearSection = document.createElement('div');
+                            yearSection.innerHTML = `
+                                <h3 class="year-divider">Accepted Papers in ${year}</h3>
+                                <div class="publications-list" id="publications-${year}"></div>
+                            `;
+                            container.appendChild(yearSection);
+                        });
+                    })
+                    .catch(error => console.error('Error:', error));
+            });
+        </script>
 
         <!-- <section id="location" class="section">
             <div class="container">

@@ -1,0 +1,35 @@
+---
+description: 
+globs: 
+alwaysApply: true
+---
+# Team Data Management Guidelines
+
+## Directory Structure
+Team member data is organized in the `/data/people` directory with the following categories:
+- Faculty members (prefix: `Faculty_`)
+- PhD students (prefix: `PhD`)
+- Postdoctoral researchers (prefix: `PD_`)
+- Visitors (prefix: `Visitor`)
+- Former members (prefix: `Former`)
+
+## Adding New Team Members
+1. Create a new directory under `/data/people` with the appropriate prefix
+2. Follow the naming convention: `[Category]_[Name]` (e.g., `PhD24_LiuLijie`)
+3. Include required files in the member's directory:
+   - Profile information
+   - Publications
+   - Research interests
+   - Profile photo
+
+## Updating Member Information
+- Keep member information up-to-date in their respective directories
+- Follow the year-based prefixing system (e.g., PhD23_, PhD24_)
+- Maintain consistent formatting across all member profiles
+- When a member's status changes, move their directory to the appropriate category
+
+## Data Format Standards
+- Use consistent file naming across all member directories
+- Maintain uniform data structure for all member profiles
+- Follow the established categorization system for different types of members
+- Keep historical data organized in the appropriate Former_ categories

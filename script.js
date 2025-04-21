@@ -254,41 +254,46 @@ function loadPublications() {
     // Check if we're on the homepage or publications page
     const isHomepage = !window.location.pathname.includes('/pages/publications.html');
     
-    // Get publication containers
-    const publications2025Container = document.getElementById('publications-2025');
-    const publications2024Container = document.getElementById('publications-2024');
-    const publicationsList = document.querySelector('.publications-list'); // For the publications page
-    
-    // Clear existing publications if they exist
-    if (publications2025Container) publications2025Container.innerHTML = '';
-    if (publications2024Container) publications2024Container.innerHTML = '';
-    if (publicationsList) publicationsList.innerHTML = '';
-    
     fetch(publicationsJsonPath)
         .then(response => response.json())
         .then(publications => {
             // If on publications page, handle like before
             if (!isHomepage) {
-                renderPublications(publications, publicationsList);
+                const publicationsList = document.querySelector('.publications-list');
+                if (publicationsList) {
+                    renderPublications(publications, publicationsList);
+                }
                 return;
             }
             
-            // On homepage, group publications by year
-            const pubs2025 = publications.filter(pub => pub.year === "2025");
-            const pubs2024 = publications.filter(pub => pub.year === "2024");
-            
-            // Limit number of papers per year for homepage
-            const pubs2025Limited = pubs2025.slice(0, 3);
-            const pubs2024Limited = pubs2024.slice(0, 3);
-            
+            // Sort publications by year in descending order
+            publications.sort((a, b) => {
+                return parseInt(b.year) - parseInt(a.year);
+            });
+
+            // Get the 8 most recent publications
+            const recentPublications = publications.slice(0, 8);
+
+            // Group the recent publications by year
+            const pubsByYear = {};
+            recentPublications.forEach(pub => {
+                if (!pubsByYear[pub.year]) {
+                    pubsByYear[pub.year] = [];
+                }
+                pubsByYear[pub.year].push(pub);
+            });
+
+            // Get years in descending order
+            const years = Object.keys(pubsByYear).sort((a, b) => b - a);
+
             // Render publications for each year
-            if (publications2025Container) {
-                renderPublications(pubs2025Limited, publications2025Container);
-            }
-            
-            if (publications2024Container) {
-                renderPublications(pubs2024Limited, publications2024Container);
-            }
+            years.forEach(year => {
+                const yearContainer = document.getElementById(`publications-${year}`);
+                if (yearContainer) {
+                    yearContainer.innerHTML = ''; // Clear existing content
+                    renderPublications(pubsByYear[year], yearContainer);
+                }
+            });
         })
         .catch(error => {
             console.error('Error loading publications data:', error);
