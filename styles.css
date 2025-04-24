@@ -179,10 +179,31 @@ nav {
     width: 100%;
 }
 
+nav .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-logo {
+    display: flex;
+    align-items: center;
+    height: 50px;
+}
+
+.nav-logo img {
+    height: 100%;
+    width: auto;
+}
+
 .nav-links {
     display: flex;
     list-style: none;
-    height: 60px;
+    margin: 0;
+    padding: 0;
+    overflow-x: auto;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE and Edge */
 }
 
 .nav-links li {
@@ -191,8 +212,8 @@ nav {
 
 .nav-links a {
     display: inline-block;
-    height: 60px;
-    line-height: 60px;
+    height: 70px;
+    line-height: 70px;
     font-weight: 500;
     position: relative;
 }
@@ -242,7 +263,7 @@ nav {
     }
     
     body {
-        padding-top: 60px;
+        padding-top: 70px; /* 更新以适应更高的导航栏 */
     }
     
     .nav-links {
@@ -266,6 +287,10 @@ nav {
     nav .container {
         padding: 0;
         position: relative;
+    }
+    
+    .nav-logo {
+        height: 40px; /* 手机上稍微减小logo大小 */
     }
     
     .nav-links li {
@@ -483,8 +508,22 @@ nav {
         grid-column: span 1;
     }
     
-    nav .container {
-        padding: 0 2px;
+    .nav-logo {
+        height: 35px; /* 更小的屏幕上进一步减小logo大小 */
+    }
+    
+    .nav-links {
+        height: auto;
+        padding: 5px 0;
+    }
+    
+    .nav-links li {
+        margin: 0 10px;
+    }
+    
+    .nav-links a {
+        font-size: 0.9rem;
+        padding: 8px 0;
     }
 }
 
@@ -1057,9 +1096,6 @@ footer {
     font-size: 0.9rem;
 }
 
-
-
-
 /* Button Styles */
 .btn {
     display: inline-block;
@@ -1270,6 +1306,10 @@ footer {
     
     nav {
         padding: 3px 0;
+    }
+    
+    .nav-logo {
+        height: 35px; /* 更小的屏幕上进一步减小logo大小 */
     }
     
     .nav-links {

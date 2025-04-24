@@ -261,7 +261,7 @@ function loadPublications() {
             if (!isHomepage) {
                 const publicationsList = document.querySelector('.publications-list');
                 if (publicationsList) {
-                    renderPublications(publications, publicationsList);
+                renderPublications(publications, publicationsList);
                 }
                 return;
             }
@@ -285,14 +285,14 @@ function loadPublications() {
 
             // Get years in descending order
             const years = Object.keys(pubsByYear).sort((a, b) => b - a);
-
+            
             // Render publications for each year
             years.forEach(year => {
                 const yearContainer = document.getElementById(`publications-${year}`);
                 if (yearContainer) {
                     yearContainer.innerHTML = ''; // Clear existing content
                     renderPublications(pubsByYear[year], yearContainer);
-                }
+            }
             });
         })
         .catch(error => {
