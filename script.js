@@ -196,7 +196,7 @@ function loadProfileInfo() {
             // Add subtitle
             const subtitleElement = document.createElement('p');
             subtitleElement.className = 'subtitle';
-            subtitleElement.innerHTML = data.subtitle;
+            subtitleElement.innerHTML = processChinese(data.subtitle);
             profileInfoContainer.appendChild(subtitleElement);
             
             // Add social links container
@@ -242,6 +242,12 @@ function loadProfileInfo() {
         .catch(error => {
             console.error('Error loading profile information:', error);
         });
+}
+
+// Helper: Wrap Chinese characters in a span for font styling
+function processChinese(text) {
+    if (!text) return text;
+    return text.replace(/([\u4e00-\u9fa5]+)/g, '<span class="chinese-text">$1</span>');
 }
 
 // Function to load publications from JSON
