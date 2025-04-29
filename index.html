@@ -109,76 +109,121 @@
         <section id="research" class="section">
             <div class="container">
                 <h2 class="section-title">Research Interests</h2>
-                <div class="research-areas">
-                    <div class="research-area">
-                        <i class="fas fa-wifi"></i>
-                        <h3>Internet of Things</h3>
-                        <ul class="research-list">
-                            <li><strong>IoT Technologies:</strong> Developing advanced IoT frameworks and solutions for smart city applications.</li>
-                            <li><strong>Wireless Communications:</strong> Research on communication protocols and technologies for IoT networks.</li>
-                        </ul>
-                    </div>
-                    <div class="research-area">
-                        <i class="fas fa-chart-line"></i>
-                        <h3>Federated Learning</h3>
-                        <ul class="research-list">
-                            <li><strong>Distributed Learning:</strong> Developing privacy-preserving machine learning techniques where models can be trained across devices without sharing data.</li>
-                        </ul>
-                    </div>
-                    <div class="research-area">
-                        <i class="fas fa-city"></i>
-                        <h3>Smart City</h3>
-                        <ul class="research-list">
-                            <li><strong>Urban Intelligence:</strong> Creating technologies that help cities operate more efficiently through connected data and infrastructure.</li>
-                        </ul>
-                    </div>
-                    <div class="research-area">
-                        <i class="fas fa-signal"></i>
-                        <h3>Wireless Communication</h3>
-                        <ul class="research-list">
-                            <li><strong>Advanced Wireless Protocols:</strong> Researching and developing next-generation wireless communication technologies.</li>
-                        </ul>
-                    </div>
-                    <div class="research-area">
-                        <i class="fas fa-car"></i>
-                        <h3>Vehicle as a Service (VaaS)</h3>
-                        <ul class="research-list">
-                            <li><strong>Connected Vehicles:</strong> Exploring how vehicles can serve as mobile service platforms in smart cities.</li>
-                            <li><strong>Collaborative Perception:</strong> Developing systems where vehicles can share sensor data to enhance perception capabilities.</li>
-                        </ul>
-                    </div>
-                    <div class="research-area">
-                        <i class="fas fa-user-secret"></i>
-                        <h3>Security & Privacy</h3>
-                        <ul class="research-list">
-                            <li><strong>Secure IoT Systems:</strong> Developing protection mechanisms for IoT and connected vehicle systems.</li>
-                            <li><strong>Privacy-Preserving Technologies:</strong> Creating methods to protect user data in connected environments.</li>
-                        </ul>
-                    </div>
-                    <div class="research-area">
-                        <i class="fas fa-heartbeat"></i>
-                        <h3>Health Monitoring</h3>
-                        <ul class="research-list">
-                            <li><strong>IoT-based Health Systems:</strong> Developing technologies for remote health monitoring and assistance.</li>
-                        </ul>
-                    </div>
-                    <div class="research-area">
-                        <i class="fas fa-brain"></i>
-                        <h3>Semantic + AI Communications</h3>
-                        <ul class="research-list">
-                            <li><strong>Intelligent Information Exchange:</strong> Research on leveraging AI for more efficient and contextual communications.</li>
-                        </ul>
-                    </div>
-                    <div class="research-area">
-                        <i class="fas fa-users"></i>
-                        <h3>Collaborative Distributed ML</h3>
-                        <ul class="research-list">
-                            <li><strong>Multi-agent Systems:</strong> Creating frameworks for collaborative machine learning across distributed systems and devices.</li>
-                        </ul>
-                    </div>
+                <div class="research-areas" id="research-areas-container">
+                    <!-- Research areas will be dynamically loaded from research.json -->
                 </div>
             </div>
         </section>
+
+        <script>
+            // Load research data from JSON
+            document.addEventListener('DOMContentLoaded', function() {
+                fetch('data/research.json')
+                    .then(response => response.json())
+                    .then(data => {
+                        const container = document.getElementById('research-areas-container');
+                        
+                        // Process each main research category (一级方向)
+                        Object.entries(data).forEach(([category, subcategories]) => {
+                            // Select appropriate icon for main category
+                            let icon = 'fas fa-flask';
+                            if (category.includes('Transportation') || category.includes('Vehicle')) 
+                                icon = 'fas fa-car';
+                            else if (category.includes('Health')) 
+                                icon = 'fas fa-heartbeat';
+                            else if (category.includes('Communication') || category.includes('Wireless')) 
+                                icon = 'fas fa-signal';
+                            else if (category.includes('Security') || category.includes('Privacy')) 
+                                icon = 'fas fa-user-secret';
+                            else if (category.includes('Maritime')) 
+                                icon = 'fas fa-ship';
+                            
+                            // Create HTML structure for main category
+                            let subcategoryHtml = '';
+                            
+                            // Process subcategories (二级方向)
+                            Object.keys(subcategories).forEach(subcategory => {
+                                subcategoryHtml += `<li><strong>${subcategory}</strong></li>`;
+                            });
+                            
+                            const researchArea = document.createElement('div');
+                            researchArea.className = 'research-area';
+                            researchArea.setAttribute('data-category', encodeURIComponent(category));
+                            
+                            researchArea.innerHTML = `
+                                <i class="${icon}"></i>
+                                <h3>${category}</h3>
+                                <ul class="research-list">
+                                    ${subcategoryHtml}
+                                </ul>
+                                <div class="research-overlay">
+                                    <span>View Details</span>
+                                </div>
+                            `;
+                            
+                            container.appendChild(researchArea);
+                            
+                            // Add click event to the entire area
+                            researchArea.addEventListener('click', function() {
+                                // Store selected category in localStorage for the details page
+                                localStorage.setItem('selectedResearchCategory', this.dataset.category);
+                                // Navigate to details page
+                                window.location.href = 'pages/research-details.html';
+                            });
+                        });
+                    })
+                    .catch(error => console.error('Error loading research data:', error));
+            });
+        </script>
+        
+        <style>
+            .research-area {
+                flex: 1 0 45%;
+                margin: 15px;
+                border-radius: 8px;
+                box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+                background: rgba(189, 56, 75, 0.05);
+                overflow: hidden;
+                transition: transform 0.3s ease, box-shadow 0.3s ease;
+                position: relative;
+                cursor: pointer;
+                padding: 20px;
+            }
+            
+            .research-area:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 12px 24px rgba(0,0,0,0.15);
+            }
+            
+            .research-overlay {
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                background: var(--primary-color);
+                color: white;
+                padding: 10px;
+                text-align: center;
+                opacity: 0;
+                transition: opacity 0.3s ease;
+            }
+            
+            .research-area:hover .research-overlay {
+                opacity: 1;
+            }
+            
+            @media (max-width: 768px) {
+                .research-area {
+                    flex: 1 0 100%;
+                }
+            }
+            
+            .research-areas {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+        </style>
 
         <section id="team" class="section">
             <div class="container">

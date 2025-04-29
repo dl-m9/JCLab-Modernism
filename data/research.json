@@ -1,0 +1,56 @@
+{
+  "Intelligent Transportation and Autonomous Systems": {
+    "Vehicle Perception, Learning and Computing": {
+      "Collaborative Perception & Learning": [
+        "Multi-agent collaborative perception to overcome occlusion and limited sensing in autonomous driving.",
+        "Security challenges in collaborative perception, including adversarial attacks and defense mechanisms.",
+        "Use of large language/vision models for multi-agent reasoning and decision-making.",
+        "Automated fine-tuning of perception models for autonomous vehicles/robots using pseudo labels generated from improved prediction confidence as agents approach objects."
+      ],
+      "Edge Computing for Vehicles": [
+        "UAV-enabled dynamic computing power networks for offloading computation in high-demand scenarios.",
+        "Enhancing vehicular data transmission rates using reflecting surfaces and optimizing wireless channels for moving vehicles.",
+        "Crowdsensing-enhanced federated learning: vehicles act as both data collectors and FL clients, enabling region-specific model training and improved perception quality."
+      ]
+    },
+    "Intelligent Transportation Perception": {
+      "Maritime Perception": [
+        "AI and computer vision for intelligent maritime transportation, focusing on perception in challenging waterway scenarios and generative AI for data scarcity."
+      ]
+    }
+  },
+  "Health, Safety, and Human Sensing": {
+    "Health Monitoring and Behavior Detection": {
+      "Remote and Multimodal Health Monitoring": [
+        "Multimodal outdoor status monitoring for public safety, integrating physiological, visual, and audio signals.",
+        "Wireless sensing for smart health, leveraging privacy-preserving technologies like RIS to enhance resolution.",
+        "Non-invasive blood glucose monitoring using remote photoplethysmography (rPPG)."
+      ],
+      "Elderly Behavior Detection": [
+        "Indoor elderly behavior detection using RIS and millimeter-wave radar for privacy-preserving monitoring.",
+        "Focus on disease-related abnormal behaviors and optimal RIS deployment."
+      ]
+    }
+  },
+  "Wireless Communication and Networking": {
+    "Secure and Robust Wireless Communication": {
+      "Signal Processing and Security": [
+        "Robust signal processing and secure wireless communication in challenging environments (UAV, 6G, IoT).",
+        "Enhancing reliability, secrecy, and efficiency under adversarial and fast-varying conditions."
+      ]
+    },
+    "Low-Power and Backscatter Communication": [
+      "WiFi backscatter systems for low-power IoT communication, focusing on demodulation, modulation, and protocol compatibility."
+    ]
+  },
+  "Artificial Intelligence Security and Data Privacy": {
+    "Model and Data Protection": {
+      "AI Model Intellectual Property Protection": [
+        "Secure and robust watermarking for deep neural networks, especially for generative models, aiming for non-intrusive, high-fidelity watermarking."
+      ],
+      "Privacy-Preserving Data Transactions": [
+        "Secure data evaluation and fair transactions in data marketplaces, focusing on privacy-preserving mechanisms for encrypted data and trustless exchanges."
+      ]
+    }
+  }
+}
