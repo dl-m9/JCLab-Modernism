@@ -891,7 +891,7 @@ nav .container {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 120px;
+    width: 160px;
     background-color: var(--background-color);
     color: var(--primary-color);
     text-align: center;
@@ -900,14 +900,14 @@ nav .container {
 }
 
 .pub-number {
-    font-size: 1.3rem;
+    font-size: 1.5rem;
     font-weight: 800;
     margin-bottom: 0.3rem;
 }
 
 .venue-text {
-    font-size: 0.9rem;
-    line-height: 1.1;
+    font-size: 0.95rem;
+    line-height: 1.2;
     font-weight: 800;
     /* text-transform: uppercase; */
     word-break: break-word;
