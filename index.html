@@ -96,10 +96,11 @@
             <div class="container">
                 <h2 class="section-title">About</h2>
                 <div class="about-content">
-                    <p>The <b>JC STEM Lab of Smart City</b> was led by <a href="https://www.cs.cityu.edu.hk/~yugufang/">Prof. Yuguang "Michael" Fang</a>. The <b>Wireless Intelligence and Networked Things Laboratory (WINET)</b> was founded by Prof. Fang in 2000 in University of Florida and was moved to City University of Hong Kong in 2022. It is currently home to graduate students, postdoctoral researchers, and visiting scholars.</p><br>
+                    <p>The <b>JC STEM Lab of Smart City</b> was led by <a href="https://www.cs.cityu.edu.hk/~yugufang/">Prof. Yuguang "Michael" Fang</a>. It was founded in January 2023 on a fund from Hong Kong Jockey Club Charities Trust. It is currently the home to graduate students, postdoctoral researchers, and visiting scholars.
+                        </p><br>
                     
 
-                    <p>We focus on cutting-edge research in Internet of Things, Wireless Communications, Machine Learning, Computer Vision, Privacy and Security, Health Monitoring, and more. Our goal is to leverage vehicles to build a smarter city.</p>
+                    <p>The Lab focuses on the cutting-edge research in Smart Cities, Internet of Things, Wireless Communications and Networking, Machine Learning, Computer Vision, Privacy and Security, Health Monitoring, and more, exploring how to leverage mobile things to help things, leading to cost-effective and sustainable solutions to building smarter cities.</p>
                     
                     
                 </div>
@@ -108,7 +109,7 @@
 
         <section id="research" class="section">
             <div class="container">
-                <h2 class="section-title">Research Interests</h2>
+                <h2 class="section-title">Research Thrusts</h2>
                 <div class="research-areas" id="research-areas-container">
                     <!-- Research areas will be dynamically loaded from research.json -->
                 </div>
@@ -127,24 +128,35 @@
                         Object.entries(data).forEach(([category, subcategories]) => {
                             // Select appropriate icon for main category
                             let icon = 'fas fa-flask';
-                            if (category.includes('Transportation') || category.includes('Vehicle')) 
+                            if (category === "Connected and Autonomous Driving (CAD)") {
+                                icon = 'fas fa-car-alt';
+                            } else if (category === "Integrated Design of Smart City and Low Altitude Economy (LAE)") {
+                                icon = 'fas fa-drone-alt';
+                            } else if (category.includes("Transportation") || category.includes("Vehicle")) {
                                 icon = 'fas fa-car';
-                            else if (category.includes('Health')) 
+                            } else if (category.includes("Health")) {
                                 icon = 'fas fa-heartbeat';
-                            else if (category.includes('Communication') || category.includes('Wireless')) 
+                            } else if (category.includes("Communication") || category.includes("Wireless")) {
                                 icon = 'fas fa-signal';
-                            else if (category.includes('Security') || category.includes('Privacy')) 
+                            } else if (category.includes("Security") || category.includes("Privacy")) {
                                 icon = 'fas fa-user-secret';
-                            else if (category.includes('Maritime')) 
+                            } else if (category.includes("Maritime")) {
                                 icon = 'fas fa-ship';
+                            } else if (category.includes("Smart City")) {
+                                icon = 'fas fa-city';
+                            }
                             
-                            // Create HTML structure for main category
-                            let subcategoryHtml = '';
-                            
-                            // Process subcategories (二级方向)
-                            Object.keys(subcategories).forEach(subcategory => {
-                                subcategoryHtml += `<li><strong>${subcategory}</strong></li>`;
-                            });
+                            // Font Awesome 6 has different drone icon options
+                            if (category === "Integrated Design of Smart City and Low Altitude Economy (LAE)") {
+                                icon = 'fas fa-drone';
+                                // Fallbacks if the specific drone icon isn't available
+                                if (!document.querySelector(`.${icon}`)) {
+                                    icon = 'fas fa-helicopter';
+                                }
+                                if (!document.querySelector(`.${icon}`)) {
+                                    icon = 'fas fa-plane';
+                                }
+                            }
                             
                             const researchArea = document.createElement('div');
                             researchArea.className = 'research-area';
@@ -154,7 +166,7 @@
                                 <i class="${icon}"></i>
                                 <h3>${category}</h3>
                                 <ul class="research-list">
-                                    ${subcategoryHtml}
+                                    ${Object.keys(subcategories).map(subcategory => `<li><strong>${subcategory}</strong></li>`).join('')}
                                 </ul>
                                 <div class="research-overlay">
                                     <span>View Details</span>
@@ -229,13 +241,13 @@
             <div class="container">
                 <h2 class="section-title">Our Team</h2>
                 <div class="about-content">
-                    <p>Our lab is led by <a href="https://www.cs.cityu.edu.hk/~yugufang/">Chair Professor of Internet of Things, Fellow of ACM & IEEE & AAAS, <b>Prof. Yuguang "Michael" Fang</b></a> and consists of talented researchers and PhD students working on cutting-edge research in IoT, wireless communications, and smart city technologies.</p>
+                    <p>Our lab is led by <a href="https://www.cs.cityu.edu.hk/~yugufang/"><b>Prof. Yuguang "Michael" Fang</b>, Chair Professor of Internet of Things, Fellow of ACM & IEEE & AAAS, </a> and consists of talented researchers and PhD students working on cutting-edge research in IoT, wireless communications, and smart city technologies.</p>
                     
                     <p>Our team includes:</p>
                     <ul style="margin-left: 20px; margin-bottom: 20px;">
-                        <li>Distinguished faculty members</li>
-                        <li>PhD students and researchers</li>
-                        <li>Former members who have gone on to successful careers</li>
+                        <li>Faculty Members</li>
+                        <li>Graduate Students and Visiting Researchers</li>
+                        <li>Former Lab Members</li>
                     </ul>
                 </div>
                 <div class="view-all-members">

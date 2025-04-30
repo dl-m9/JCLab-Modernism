@@ -1,47 +1,86 @@
 {
-  "Intelligent Transportation and Autonomous Systems": {
-    "Vehicle Perception, Learning and Computing": {
+  "Connected and Autonomous Driving (CAD)": {
+    "Vehicular Perception, Learning and Computing": {
       "Collaborative Perception & Learning": [
         "Multi-agent collaborative perception to overcome occlusion and limited sensing in autonomous driving.",
         "Security challenges in collaborative perception, including adversarial attacks and defense mechanisms.",
         "Use of large language/vision models for multi-agent reasoning and decision-making.",
-        "Automated fine-tuning of perception models for autonomous vehicles/robots using pseudo labels generated from improved prediction confidence as agents approach objects."
+        "Automated fine-tuning of perception models for connected and autonomous vehicles/robots using pseudo labels generated from improved prediction confidence as agents approach objects."
       ],
-      "Edge Computing for Vehicles": [
-        "UAV-enabled dynamic computing power networks for offloading computation in high-demand scenarios.",
+      "RIS-aided Communications and Computing": [
         "Enhancing vehicular data transmission rates using reflecting surfaces and optimizing wireless channels for moving vehicles.",
+        "Task-oriented semantic communications for CAD.",
+        "Height-adjustable RIS-assisted V2I communications.",
+        "Multi-hop RIS communications and computing."
+      ],
+      "Vehicular Edge Computing and Computing Power Networks": [
+        "UAV-enabled dynamic computing power networks for mission critical task computation.",
+        "How to leverage mobile things to build computing power networks.",
         "Crowdsensing-enhanced federated learning: vehicles act as both data collectors and FL clients, enabling region-specific model training and improved perception quality."
       ]
     },
-    "Intelligent Transportation Perception": {
-      "Maritime Perception": [
-        "AI and computer vision for intelligent maritime transportation, focusing on perception in challenging waterway scenarios and generative AI for data scarcity."
+    "Maritime Perception, Communications, and Computing": {
+      "Maritime Perception and Control": [
+        "Maritime perception dataset construction and model building.",
+        "AI and computer vision for intelligent maritime transportation, focusing on perception in challenging waterway scenarios and generative AI for data scarcity.",
+        "Maritime navigation, collision avoidance, and control."
+      ],
+      "Smart Ports": [
+        "Vision-based smart docking.",
+        "UAV-assisted cargo inspection and docking."
       ]
     }
   },
+ 
   "Health, Safety, and Human Sensing": {
-    "Health Monitoring and Behavior Detection": {
+    "Health Monitoring and Behavioral Detection": {
       "Remote and Multimodal Health Monitoring": [
-        "Multimodal outdoor status monitoring for public safety, integrating physiological, visual, and audio signals.",
-        "Wireless sensing for smart health, leveraging privacy-preserving technologies like RIS to enhance resolution.",
+        "Multimodal outdoor health monitoring for elderly care and public health by integrating physiological, visual, and audio signals.",
+        "Outdoor wireless sensing for smart health, leveraging privacy-preserving technologies like RIS and multi-modal sensing to enhance resolution.",
         "Non-invasive blood glucose monitoring using remote photoplethysmography (rPPG)."
       ],
-      "Elderly Behavior Detection": [
-        "Indoor elderly behavior detection using RIS and millimeter-wave radar for privacy-preserving monitoring.",
-        "Focus on disease-related abnormal behaviors and optimal RIS deployment."
+      "Elderly Healthcare Behavioral Detection": [
+        "Indoor elderly behavior detection using RIS and millimeter-wave radar for privacy-preserving monitoring and intervention (e.g., smart aging).",
+        "Disease-related abnormal behavioral detection and optimal RIS deployment."
+      ]
+    },
+    "Wireless Sensing for Public Safety": {
+      "Crime Deterrence": [
+        "Security monitoring in public environments to deter crime progress by leveraging controllable vehicles or opportunistic vehicles.",
+        "Crime escape by guiding victims to the safe location.",
+        "UAV-assisted surveillance for public safety."
       ]
     }
+  },
+  "Integrated Design of Smart City and Low Altitude Economy (LAE)": {
+    "Smart city facilitates LAE": [
+      "Ground resources can be utilized to facilitate the LAE operations.",
+      "Ground guiding and control system design for air flight.",
+      "SC design for LAE development."
+    ],
+    "LAE offers the over-the-air advantage and opportunity for SC operations": [
+      "OTA mobile things (UAVs) enrich the air relay opportunity.",
+      "OTA delivery of multi-dimensional resources upon request.",
+      "Help ground traffic control.",
+      "Enrich SC’s service dimension: transport people and needs for smart mobility."
+    ]
   },
   "Wireless Communication and Networking": {
     "Secure and Robust Wireless Communication": {
       "Signal Processing and Security": [
         "Robust signal processing and secure wireless communication in challenging environments (UAV, 6G, IoT).",
         "Enhancing reliability, secrecy, and efficiency under adversarial and fast-varying conditions."
+      ],
+      "Low-Power and Backscatter Communication": [
+      "WiFi backscatter systems for low-power IoT communication, focusing on modulation, demodulation, and protocol compatibility."
+      ],
+      "Fast V2I Communications": [
+        "RIS cluster formation for collaborative transmissions and receptions.",
+        "Layered adaptive MIMO.",
+        "Semantic and/or emergent communications."
       ]
-    },
-    "Low-Power and Backscatter Communication": [
-      "WiFi backscatter systems for low-power IoT communication, focusing on demodulation, modulation, and protocol compatibility."
-    ]
+    }
+    
   },
   "Artificial Intelligence Security and Data Privacy": {
     "Model and Data Protection": {

@@ -224,6 +224,8 @@
         
         // Research icons for each category (Font Awesome)
         const categoryIcons = {
+            "Connected and Autonomous Driving (CAD)": "fas fa-car-alt",
+            "Integrated Design of Smart City and Low Altitude Economy (LAE)": "fas fa-plane",
             "Intelligent Transportation and Autonomous Systems": "fas fa-car-side",
             "Health, Safety, and Human Sensing": "fas fa-heartbeat",
             "Wireless Communication and Networking": "fas fa-broadcast-tower",
@@ -263,7 +265,7 @@
             fetch('../data/research.json')
                 .then(response => response.json())
                 .then(data => {
-                    // Special handling for Wireless Communication and Networking
+                    // Get category data
                     let categoryData = data[selectedCategory];
                     
                     if (!categoryData) {
@@ -281,12 +283,12 @@
                         
                         subcategoryDiv.innerHTML = `<h3>${subcategory}</h3>`;
                         
-                        // Handle special case for Low-Power and Backscatter Communication
-                        if (subcategory === "Low-Power and Backscatter Communication" && Array.isArray(topics)) {
+                        // Special case handling for array-type topics (direct list of items without nested topics)
+                        if (Array.isArray(topics)) {
                             const topicDiv = document.createElement('div');
                             topicDiv.className = 'research-topic';
                             topicDiv.innerHTML = `
-                                <h4>Low-Power and Backscatter Communication</h4>
+                                <h4>${subcategory}</h4>
                                 <ul>
                                     ${topics.map(item => `<li class="research-item">${item}</li>`).join('')}
                                 </ul>
