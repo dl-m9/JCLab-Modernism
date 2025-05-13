@@ -862,7 +862,7 @@
                 },
                 {
                   "type": "cv",
-                  "url": "files/CV_JinhangZuo.pdf",
+                  "url": "../data/people/Faculty_ZuoJinhang/CV_JinhangZuo.pdf",
                   "icon": "fas fa-file-pdf",
                   "title": "CV"
                 }
@@ -992,7 +992,7 @@
                 },
                 {
                   "type": "cv",
-                  "url": "files/CV_Longzhi.pdf",
+                  "url": "../data/people/PD_YuanLongzhi/CV_Longzhi.pdf",
                   "icon": "fas fa-file-pdf",
                   "title": "CV"
                 }
@@ -1874,6 +1874,52 @@
               ],
               "detailPage": "data/people/PhD25_GuoYu/index.html",
               "last_name": "25guoyu"
+            },
+            {
+              "id": "phd26-gaojunhui",
+              "title": "Mr. GAO, Junhui",
+              "role": [
+                {
+                  "text": "PhD Student @ 26 Spring",
+                  "highlighted": true
+                },
+                {
+                  "text": "BSc @ Northwestern Polytechnical University",
+                  "highlighted": false
+                }
+              ],
+              "avatar": "data/people/PhD26_GaoJunhui/avatar.jpg",
+              "socialLinks": [
+                {
+                  "type": "envelope",
+                  "url": "mailto:gaojh.cityu@gmail.com",
+                  "icon": "fas fa-envelope",
+                  "title": "Email"
+                },
+                {
+                  "type": "cv",
+                  "url": "../data/people/PhD26_GaoJunhui/cv.pdf",
+                  "icon": "fas fa-file-pdf",
+                  "title": "CV"
+                }
+              ],
+              "interests": [
+                "Big Data",
+                "Robotics",
+                "Machine Learning",
+                "Crowdsensing",
+                "Crowd Intelligent Cooperation with Human and Robots"
+              ],
+              "biography": "Junhui Gao received the B.E. degree from the School of Computer Science, Northwestern Polytechnical University, Xi’an, China, in 2023. His research interests include Big Data, Robotics, Machine Learning, Crowdsensing, and Crowd Intelligent Cooperation with Human and Robots.",
+              "education": [
+                {
+                  "degree": "BEng in Computer Science and Technology",
+                  "institution": "Northwestern Polytechnical University",
+                  "year": "2019-2023"
+                }
+              ],
+              "detailPage": "data/people/PhD25_GaoJunhui/index.html",
+              "last_name": "gaojunhui"
             }
           ]
         },
